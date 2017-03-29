@@ -53,13 +53,13 @@ class MembreRepository extends EntityRepository
     }
 
 
-    public function findByfullNameDQL($first ,$name){
+    public function findByfullNameDQL($name){
 
         $query = $this->getEntityManager()
 
-            ->createQuery(" select m  from LinkarBundle:Membre m  where m.lastName like :name and m.firstName like :first")
-            ->setParameter('name',$name+'%')
-            ->setParameter('first',$first+'%');
+            ->createQuery(" select m  from LinkarBundle:Membre m  where m.lastName like :name or m.firstName like :first")
+            ->setParameter('name',$name.'%')
+            ->setParameter('first',$name.'%');
 
 
         return $query->getResult();

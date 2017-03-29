@@ -25,6 +25,9 @@ utilisateurs:
 editUser:
     path:     /editUser
     defaults: { _controller: LinkarBundle:Membre:EditUser}
+rechercheUtilisateur:
+    path:     /rechercheUtilisateur
+    defaults: { _controller: LinkarBundle:Membre:search}
 
 
 

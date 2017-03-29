@@ -8,8 +8,49 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 
     <style type="text/css">
+        .container2{
+            margin-top:30px;
+        }
+
+        .filter-col{
+            padding-left:10px;
+            padding-right:10px;
+        }
+
         .media-photo {
             width: 35px;
+        }
+
+        #custom-search-input{
+            padding: 3px;
+            border: solid 1px #E4E4E4;
+            border-radius: 6px;
+            background-color: #fff;
+        }
+
+        #custom-search-input input{
+            border: 0;
+            box-shadow: none;
+        }
+
+        #custom-search-input button{
+            margin: 2px 0 0 0;
+            background: none;
+            box-shadow: none;
+            border: 0;
+            color: #666666;
+            padding: 0 8px 0 10px;
+            border-left: solid 1px #ccc;
+        }
+
+        #custom-search-input button:hover{
+            border: 0;
+            box-shadow: none;
+            border-left: solid 1px #ccc;
+        }
+
+        #custom-search-input .glyphicon-search{
+            font-size: 23px;
         }
     </style>
 
@@ -57,7 +98,7 @@
 
                         document.getElementById('span'+id).innerHTML= ' <span   class="label label-danger">Blocked</span>';
                         document.getElementById('btn'+id).innerHTML='    <a id="'+id+'" onclick="showConfirmActiveDialog(this.id)" class="btn btn-success btn-xs" href="#"><span class="glyphicon  "></span> activer</a>';
-
+                        changeStatus(id,'blocked');
                     }
                 }
             });
@@ -81,7 +122,7 @@
                         document.getElementById('span'+id).innerHTML= '<span  class="label label-success">Active</span>';
 
                         document.getElementById('btn'+id).innerHTML='    <a id="'+id+'" onclick="showConfirmBlockDialog(this.id)" class="btn btn-warning btn-xs" href="#"><span class="glyphicon  "></span> blocker</a>';
-
+changeStatus(id,'active');
                     }
                 }
             });
@@ -115,14 +156,14 @@
 
         function showConfirmDeleteDialog (id) {
             bootbox.confirm({
-                message: "This is a confirm with custom button text and color! Do you like it?",
+                message: "voulez vous vraiment supprimer cet utilisateur ?",
                 buttons: {
                     confirm: {
-                        label: 'Yes',
+                        label: 'oui',
                         className: 'btn-success'
                     },
                     cancel: {
-                        label: 'No',
+                        label: 'non',
                         className: 'btn-danger'
                     }
                 },
@@ -157,9 +198,183 @@
             alert(id);
             document.getElementById(id).innerHTML= '<span   class="label label-success">Active</span>';
         }
+
+        function showConfirmChangeRoleDialog (id) {
+            bootbox.confirm({
+                message: "voulez vous vraiment changer le role de cet utilisateur ?",
+                buttons: {
+                    confirm: {
+                        label: 'oui',
+                        className: 'btn-success'
+                    },
+                    cancel: {
+                        label: 'non',
+                        className: 'btn-danger'
+                    }
+                },
+                callback: function (result) {
+                    if(result == true){
+
+                       changeRole(id);
+
+                    }
+                    else
+                    {
+                        index = document.getElementById(id).selectedIndex;
+                            if(index == 0){
+                                document.getElementById(id).selectedIndex=1;
+                            }
+                            else {
+                                document.getElementById(id).selectedIndex=0;
+                            }
+                    }
+                }
+            });
+        }
+        function  changeRole(id) {
+
+            role=document.getElementById(id).value ;
+
+
+
+            x = new XMLHttpRequest();
+            x.onreadystatechange=function () {
+              //  alert(x.responseText);
+                if ((x.readyState==4) && (x.status==200)){
+
+                }
+            }
+            url="{{path('editUser')}}?id="+ id.slice(6)+"&role="+ role.toLowerCase();
+
+
+
+            alert(url);
+            x.open('GET',url,true);
+            x.send();
+        }
+
+        function  changeStatus(id,status) {
+
+
+
+
+            x = new XMLHttpRequest();
+            x.onreadystatechange=function () {
+                if ((x.readyState==4) && (x.status==200)){
+                    // document.getElementById('divUsers').innerHTML=x.responseText;
+                }
+            }
+            url="{{path('editUser')}}?id="+id+"&status="+status;
+
+
+
+           // alert(url);
+            x.open('GET',url,true);
+            x.send();
+        }
+
+        function rechercher() {
+
+            name=document.getElementById('text').value ;
+
+
+            x = new XMLHttpRequest();
+            x.onreadystatechange=function () {
+                if ((x.readyState==4) && (x.status==200)){
+                    document.getElementById('divUsers').innerHTML=x.responseText;
+                }
+            }
+            url="{{path('rechercheUtilisateur')}}?name="+encodeURIComponent(name);
+
+
+
+            //alert(url);
+            x.open('GET',url,true);
+            x.send();
+        }
     </script>
 </head>
 <body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" id="text" class="form-control input-lg" placeholder="Buscar" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button" onclick="rechercher()" >
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container2">
+    <div class="row">
+        <div id="filter-panel" class="collapse filter-panel">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <label class="filter-col" style="margin-right:0;" for="pref-perpage">Rows per page:</label>
+                            <select id="pref-perpage" class="form-control">
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option selected="selected" value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="200">200</option>
+                                <option value="300">300</option>
+                                <option value="400">400</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                            </select>
+                        </div> <!-- form group [rows] -->
+                        <div class="form-group">
+                            <label class="filter-col" style="margin-right:0;" for="pref-search">Search:</label>
+                            <input type="text" class="form-control input-sm" id="pref-search">
+                        </div><!-- form group [search] -->
+                        <div class="form-group">
+                            <label class="filter-col" style="margin-right:0;" for="pref-orderby">Order by:</label>
+                            <select id="pref-orderby" class="form-control">
+                                <option>Descendent</option>
+                            </select>
+                        </div> <!-- form group [order by] -->
+                        <div class="form-group">
+                            <div class="checkbox" style="margin-left:10px; margin-right:10px;">
+                                <label><input type="checkbox"> Ingested</label>
+                            </div>
+                            <div class="checkbox" style="margin-left:10px; margin-right:10px;">
+                                <label><input type="checkbox"> Automated</label>
+                            </div>
+                            <button type="submit" class="btn btn-default filter-col">
+                                <span class="glyphicon glyphicon-record"></span> Save Settings
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#filter-panel">
+            <span class="glyphicon glyphicon-cog"></span> Advanced Search
+        </button>
+    </div>
+</div>
+<div id="divUsers">
 
             <table class="table  table-responsive table-striped " id="users" >
                 <thead>
@@ -185,14 +400,17 @@
 
                         <td>{{ k.gender }}</td>
                         <td>{{ k.email }}</td>
-                        {% if k.role == true %}
-                            <td>admin</td>
 
-                        {% endif %}
-                        {% if k.role  == false %}
-                            <td>membre</td>
+                            <td>
+                            <select class="form-control"   id="select{{ k.id }}"  onchange="showConfirmChangeRoleDialog(this.id)"  >
+                                <option  {% if k.role == true%}   selected="selected"      {% endif %}>Admin</option>
+                                <option   {% if k.role == false%}   selected="selected"      {% endif %}   >Membre</option   >
 
-                        {% endif %}
+                            </select>
+                            </td>
+
+
+
 
                         {% if k.statut  == true %}
                             <td id="span{{ k.id }}" > <span   class="label label-success">Active</span></td>
@@ -225,7 +443,7 @@
                 {% endfor %}
                 </tbody>
             </table>
-
+</div>
 <script type="text/javascript">
 
 </script>

@@ -1,0 +1,67 @@
+
+
+            <table class="table  table-responsive table-striped " id="users" >
+                <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>genre</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th class="text-center">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr>
+
+                    {% for k in m %}
+
+
+                        <td>
+                            <img src="{{ k.urlPicture }}" class="media-photo"> 	{{ k.firstName }} {{ k.lastName }}
+                        </td>
+
+                        <td>{{ k.gender }}</td>
+                        <td>{{ k.email }}</td>
+                        {% if k.role == true %}
+                            <td>admin</td>
+
+                        {% endif %}
+                        {% if k.role  == false %}
+                            <td>membre</td>
+
+                        {% endif %}
+
+                        {% if k.statut  == true %}
+                            <td id="span{{ k.id }}" > <span   class="label label-success">Active</span></td>
+
+                        {% endif %}
+
+                        {% if k.statut  == false %}
+                            <td id="span{{ k.id }}" ><span class="label label-danger">Blocked</span></td>
+
+                        {% endif %}
+
+                        <td class="text-center">
+                            <span id="btn{{ k.id }}">
+                            {% if k.statut  == true %}
+                                <a id="{{ k.id }}" onclick="showConfirmBlockDialog(this.id)" class=' btn btn-warning btn-xs' ><span class=" glyphicons   "></span> blocker</a>
+
+                            {% else %}
+                                <a id="{{ k.id }}" onclick="showConfirmActiveDialog(this.id)" class='btn btn-success btn-xs' ><span class="glyphicon  "></span> activer</a>
+                    {% endif %}
+                            </span>
+
+                            <a href="#"  onclick="showConfirmDeleteDialog($(this).closest('td').parent()[0].sectionRowIndex+1)"  class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> supprimer</a>
+
+                        </td>
+
+
+
+
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
