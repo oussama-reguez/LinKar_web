@@ -1,0 +1,33 @@
+linkar_homepage:
+    path:     /exemple
+    defaults: { _controller: LinkarBundle:Default:index }
+conversation:
+    path:     /conversation
+    defaults: { _controller: LinkarBundle:Message:getConversation}
+test:
+    path:     /test
+    defaults: { _controller: LinkarBundle:Message:getConversation2}
+list:
+    path:     /list
+    defaults: { _controller: LinkarBundle:Message:getListMembers}
+notification:
+    path:     /notifications
+    defaults: { _controller: LinkarBundle:Notification:index}
+notificationCenter:
+    path:     /notificationCenter
+    defaults: { _controller: LinkarBundle:Notification:getNotifications}
+showNotification:
+    path:     /showNotification
+    defaults: { _controller: LinkarBundle:Notification:showNotification}
+utilisateurs:
+    path:     /utilisateurs
+    defaults: { _controller: LinkarBundle:Membre:showAll}
+editUser:
+    path:     /editUser
+    defaults: { _controller: LinkarBundle:Membre:EditUser}
+
+
+
+
+
+

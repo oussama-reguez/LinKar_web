@@ -1,0 +1,30 @@
+
+
+
+    <script id="script">
+
+
+
+
+            {% for k in m %}
+
+            {% if k.type  == 'message' %}
+            $.notify('{{ k.Sender.firstName  }} {{ k.Sender.lastName  }} vous envoie un message', { allow_dismiss: false });
+
+            {% endif %}
+
+            {% if  k.type  == 'reclamation' %}
+            $.notify('{{ k.Sender.firstName  }} {{ k.Sender.lastName  }}a deposer une reclamation', { allow_dismiss: false });
+
+            {% endif %}
+
+
+            {% endfor %}
+
+
+
+
+    </script>
+
+
+
