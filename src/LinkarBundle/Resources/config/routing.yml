@@ -28,6 +28,9 @@ editUser:
 rechercheUtilisateur:
     path:     /rechercheUtilisateur
     defaults: { _controller: LinkarBundle:Membre:search}
+stat:
+    path:     /stat
+    defaults: { _controller: LinkarBundle:Membre:index}
 
 
 

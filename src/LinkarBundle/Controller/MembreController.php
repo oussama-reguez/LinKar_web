@@ -9,8 +9,12 @@ use Symfony\Component\HttpFoundation\Response;
 class MembreController extends Controller
 {
     public function indexAction()
+
     {
-        return $this->render('LinkarBundle:Default:index.html.twig');
+        $em=$this->getDoctrine()->getManager();
+        $users=$em->getRepository('LinkarBundle:Membre')->gettBlockedUsers();
+        var_dump($users);
+        return new Response();
     }
 
     public function showAllAction()

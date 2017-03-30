@@ -69,12 +69,79 @@ class MembreRepository extends EntityRepository
 
         $query = $this->getEntityManager()
 
-            ->createQuery(" select m  from LinkarBundle:Membre m  where m.gender = :gender")
+            ->createQuery(" select m   from LinkarBundle:Membre m  where m.gender = :gender")
             ->setParameter('gender',$genre);
 
 
         return $query->getResult();
     }
 
-    
+    public function getStatCreatedUsersDql(){
+//  String req = "select  DATE(CreatedTime) d ,count(id_member) from membre   GROUP BY YEAR(d), MONTH(d)  order by CreatedTime ";
+
+        $query = $this->getEntityManager()
+
+            ->createQuery(" select  SUBSTRING(m.createdtime, 1, 7) as d  , count(m.id)    from LinkarBundle:Membre m   group by  d ");
+
+
+
+        return $query->getResult();
+
+    }
+
+  public function getStatCreatedUsersbyYearDql(){
+        //String req = "select  DATE(CreatedTime) d ,count(id_member) from membre   GROUP BY YEAR(d) order by CreatedTime ";
+      $query = $this->getEntityManager()
+
+          ->createQuery(" select  SUBSTRING(m.createdtime, 1, 4) as d  , count(m.id)    from LinkarBundle:Membre m   group by  d ");
+
+
+
+      return $query->getResult();
+
+    }
+
+  public function  getStatnbrUsersbyGender(){
+
+    //  String req = "select  gender ,count(id_member) from membre  group by  gender ";
+
+      $query = $this->getEntityManager()
+
+          ->createQuery(" select  m.gender  , count(m.id)    from LinkarBundle:Membre m   group by  m.gender ");
+
+
+
+      return $query->getResult();
+  }
+
+  public function countNbrUsers(){
+      $query = $this->getEntityManager()
+
+          ->createQuery(" select   count(m.id)    from LinkarBundle:Membre m   ");
+
+
+
+      return $query->getResult();
+
+  }
+
+    public function gettBlockedUsers(){
+        $query = $this->getEntityManager()
+
+            ->createQuery(" select   count(m.id)    from LinkarBundle:Membre m  where m.statut =  0 ");
+
+
+
+        return $query->getResult();
+
+    }
+    public function getActiveUsers(){
+        $query = $this->getEntityManager()
+
+            ->createQuery(" select   m   , (select count (a)  from LinkarBundle:Annonce a where a.Membre = m )  as d  from LinkarBundle:Membre m   ")
+
+ ->setMaxResults(30);
+
+        return $query->getResult();
+    }
 }

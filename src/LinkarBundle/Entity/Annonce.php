@@ -134,7 +134,7 @@ class Annonce
      *   @ORM\JoinColumn(name="id_membre", referencedColumnName="id")
      * })
      */
-    private $idMembre;
+    private $Membre;
 
 
 }
