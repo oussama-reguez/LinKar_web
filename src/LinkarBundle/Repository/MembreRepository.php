@@ -135,6 +135,7 @@ class MembreRepository extends EntityRepository
         return $query->getResult();
 
     }
+
     public function getActiveUsers(){
         $query = $this->getEntityManager()
 
@@ -144,4 +145,46 @@ class MembreRepository extends EntityRepository
 
         return $query->getResult();
     }
+
+    public function countInactiveUsers(){
+
+      //  select count(id) from membre d where 0=(select COUNT(id_annonce)from annonce where id_membre =d.id)
+        $query = $this->getEntityManager()
+
+            ->createQuery(" select  count(m) from  LinkarBundle:Membre m where  0=(select count(d) from LinkarBundle:Annonce d  where d.Membre=m) ");
+
+
+
+        return $query->getSingleResult();
+    }
+
+
+    public function countAnnouncers(){
+
+        //  select count(id) from membre d where 0=(select COUNT(id_annonce)from annonce where id_membre =d.id)
+        $query = $this->getEntityManager()
+
+            ->createQuery(" select  count(m) from  LinkarBundle:Membre m where  (select count(d) from LinkarBundle:Annonce d  where d.Membre=m) > 0 ");
+
+
+
+        return $query->getSingleResult();
+    }
+
+    public function countDemanders(){
+
+        //  select count(id) from membre d where 0=(select COUNT(id_annonce)from annonce where id_membre =d.id)
+        $query = $this->getEntityManager()
+
+            ->createQuery(" select  count(m) from  LinkarBundle:Membre m where  (select count(d) from LinkarBundle:Demande d  where d.Membre=m) > 0 ");
+
+
+
+        return $query->getSingleResult();
+    }
+
+
+
+
+
 }

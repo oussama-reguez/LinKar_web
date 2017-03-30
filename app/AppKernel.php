@@ -19,6 +19,8 @@ class AppKernel extends Kernel
             new LinkarBundle\LinkarBundle(),
             new UserBundle\UserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Ob\HighchartsBundle\ObHighchartsBundle(),
+            new StatBundle\StatBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

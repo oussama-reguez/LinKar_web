@@ -1,0 +1,8 @@
+stat_homepage:
+    path:     /
+    defaults: { _controller: StatBundle:Default:index }
+statestic:
+    path:     /ss
+    defaults: { _controller: StatBundle:Graphe:chartLineAnnounce }
+
+

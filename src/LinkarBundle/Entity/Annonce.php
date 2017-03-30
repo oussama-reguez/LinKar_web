@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Annonce
  *
  * @ORM\Table(name="annonce", indexes={@ORM\Index(name="id_membre", columns={"id_membre", "id_voiture"}), @ORM\Index(name="id_voiture", columns={"id_voiture"}), @ORM\Index(name="IDX_F65593E5D0834EC4", columns={"id_membre"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="LinkarBundle\Repository\AnnonceRepository")
  */
 class Annonce
 {
@@ -122,7 +122,7 @@ class Annonce
     /**
      * @var boolean
      *
-     * @ORM\Column(name="etat", type="boolean", nullable=false)
+     * @ORM\Column(name="etat", type="integer", nullable=false)
      */
     private $etat;
 

@@ -12,8 +12,20 @@ class MembreController extends Controller
 
     {
         $em=$this->getDoctrine()->getManager();
-        $users=$em->getRepository('LinkarBundle:Membre')->gettBlockedUsers();
-        var_dump($users);
+        $users=$em->getRepository('LinkarBundle:Annonce')->getYears();
+        foreach ($users as $year) {
+            var_dump($year);
+        }
+
+
+
+
+
+
+
+dump($users);
+
+
         return new Response();
     }
 
