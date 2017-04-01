@@ -121,18 +121,18 @@ class MembreRepository extends EntityRepository
 
 
 
-      return $query->getResult();
+      return $query->getSingleResult();
 
   }
 
-    public function gettBlockedUsers(){
+    public function countBlockedUsers(){
         $query = $this->getEntityManager()
 
             ->createQuery(" select   count(m.id)    from LinkarBundle:Membre m  where m.statut =  0 ");
 
 
 
-        return $query->getResult();
+        return  $query->getSingleResult();
 
     }
 

@@ -8,14 +8,45 @@ use Symfony\Component\HttpFoundation\Response;
 
 class MembreController extends Controller
 {
+    public function index2Action()
+    {
+        return $this->render('LinkarBundle:Compte:compte.html.twig');
+    }
+
+
+    public function verificationAction()
+    {
+        return $this->render('LinkarBundle:Compte:verification.html.twig');
+    }
+
+
+    public function uploadAction(Request $req)
+    {
+
+
+       $response = new Response();
+
+        $uploadedFile = $req->files->get('upfile'); //upfile must be the value of the name attribute in the <input> tag
+        if (null === $uploadedFile)
+            $response->setContent('null');
+        $filename = $uploadedFile->getPathname();
+        rename($filename, 'C:\wamp\www\upload\uploads\syfony.pdf');
+        var_dump( $uploadedFile);
+
+
+dump($filename);
+        $response->setContent($filename);
+        return $response;
+    }
+
+
     public function indexAction()
 
     {
         $em=$this->getDoctrine()->getManager();
-        $users=$em->getRepository('LinkarBundle:Annonce')->getYears();
-        foreach ($users as $year) {
-            var_dump($year);
-        }
+        $users=$em->getRepository('LinkarBundle:Membre')->getActiveUsers();
+        dump($users);
+
 
 
 

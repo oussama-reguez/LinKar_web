@@ -31,7 +31,15 @@ rechercheUtilisateur:
 stat:
     path:     /stat
     defaults: { _controller: LinkarBundle:Membre:index}
-
+compte:
+    path:     /compte
+    defaults: { _controller: LinkarBundle:Membre:index2}
+upload:
+    path:     /upload
+    defaults: { _controller: LinkarBundle:Membre:upload}
+verification:
+    path:     /verification
+    defaults: { _controller: LinkarBundle:Membre:verification}
 
 
 

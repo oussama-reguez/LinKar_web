@@ -15,123 +15,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AnnonceRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Repository/AnnonceRepository.php">
+      <file leaf-file-name="MembreRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Repository/MembreRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="75" column="62" lean-forward="false" selection-start-line="75" selection-start-column="62" selection-end-line="75" selection-end-column="62" />
+            <state relative-caret-position="753">
+              <caret line="134" column="33" lean-forward="false" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
               <folding>
-                <element signature="e#1160#1409#0#PHP" expanded="false" />
-                <element signature="e#2286#2577#0#PHP" expanded="false" />
-                <element signature="e#2584#2872#0#PHP" expanded="false" />
-                <marker date="1490912614082" expanded="true" signature="675:753" ph="select DISTI... LinkarBundle" />
-                <marker date="1490912614082" expanded="true" signature="1045:1103" ph="select count... LinkarBundle" />
-                <marker date="1490912614082" expanded="true" signature="1271:1342" ph="select count... LinkarBundle" />
-                <marker date="1490912614082" expanded="true" signature="1271:1357" ph="select m.eta... LinkarBundle" />
-                <marker date="1490912614082" expanded="true" signature="1647:1732" ph="select DISTI... LinkarBundle" />
-                <marker date="1490912614082" expanded="true" signature="2039:2194" ph="select SUBST... LinkarBundle" />
-                <marker date="1490912614082" expanded="true" signature="2399:2467" ph="select from LinkarBundle" />
-                <marker date="1490912614082" expanded="true" signature="2399:2509" ph="select m.des... LinkarBundle" />
-                <marker date="1490912614082" expanded="true" signature="2692:2792" ph="select m.dep... LinkarBundle" />
+                <element signature="e#4390#4784#0#PHP" expanded="false" />
+                <marker date="1490995044028" expanded="true" signature="694:790" ph="select m fro... LinkarBundle" />
+                <marker date="1490995044028" expanded="true" signature="1043:1109" ph="select m fro... LinkarBundle" />
+                <marker date="1490995044028" expanded="true" signature="1323:1388" ph="select m fro... LinkarBundle" />
+                <marker date="1490995044028" expanded="true" signature="1602:1694" ph="select m fro... LinkarBundle" />
+                <marker date="1490995044028" expanded="true" signature="1948:2011" ph="select m fro... LinkarBundle" />
+                <marker date="1490995044028" expanded="true" signature="2353:2443" ph="select m fro... LinkarBundle" />
+                <marker date="1490995044028" expanded="true" signature="2353:2454" ph="select m.cre... LinkarBundle" />
+                <marker date="1490995044028" expanded="true" signature="2353:2455" ph="select SUBST... LinkarBundle" />
+                <marker date="1490995044028" expanded="true" signature="2750:2852" ph="select SUBST... LinkarBundle" />
+                <marker date="1490995044028" expanded="true" signature="3106:3188" ph="select m.gen... LinkarBundle" />
+                <marker date="1490995044028" expanded="true" signature="3338:3388" ph="select count... LinkarBundle" />
+                <marker date="1490995044028" expanded="true" signature="3557:3628" ph="select count... LinkarBundle" />
+                <marker date="1490995044028" expanded="true" signature="3797:3913" ph="select m , (... LinkarBundle" />
+                <marker date="1490995044028" expanded="true" signature="4211:4218" ph="select Membr... " />
+                <marker date="1490995044028" expanded="true" signature="4211:4328" ph="select count... LinkarBundle" />
+                <marker date="1490995044028" expanded="true" signature="4610:4729" ph="select count... LinkarBundle" />
+                <marker date="1490995044028" expanded="true" signature="5009:5128" ph="select count... LinkarBundle" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GrapheController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StatBundle/Controller/GrapheController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="82" column="26" lean-forward="false" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
-              <folding>
-                <element signature="e#41#98#0#PHP" expanded="true" />
-                <element signature="e#435#456#1#PHP" expanded="true" />
-                <element signature="e#1735#2840#0#PHP" expanded="false" />
-                <element signature="e#1852#1873#1#PHP" expanded="true" />
-                <element signature="e#2847#4030#0#PHP" expanded="false" />
-                <element signature="e#2969#2990#1#PHP" expanded="true" />
-                <element signature="e#3068#3089#1#PHP" expanded="true" />
-                <element signature="e#3156#3177#1#PHP" expanded="true" />
-                <element signature="e#4037#4957#0#PHP" expanded="false" />
-                <element signature="e#4160#4181#1#PHP" expanded="true" />
-                <element signature="e#4963#5896#0#PHP" expanded="false" />
-                <element signature="e#5091#5113#1#PHP" expanded="true" />
-                <element signature="e#5902#6820#0#PHP" expanded="false" />
-                <element signature="e#6025#6047#1#PHP" expanded="true" />
-                <element signature="e#6826#8228#0#PHP" expanded="false" />
-                <element signature="e#6960#6982#1#PHP" expanded="true" />
-                <element signature="e#7095#7117#1#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userStat.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StatBundle/Resources/views/stat/userStat.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="205" column="0" lean-forward="false" selection-start-line="205" selection-start-column="0" selection-end-line="377" selection-end-column="9" />
-              <folding>
-                <element signature="n#style#0;n#!!top" expanded="false" />
-                <element signature="n#style#1;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#body#0;n#!!top" expanded="true" />
-                <element signature="e#3117#3123#0" expanded="true" />
-                <element signature="e#3149#3155#0" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#td#1;n#tr#1;n#tbody#0;n#table#1;n#body#0;n#!!top" expanded="true" />
-                <element signature="e#3585#3591#0" expanded="true" />
-                <element signature="e#3617#3623#0" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#1;n#tr#1;n#tbody#0;n#table#1;n#body#0;n#!!top" expanded="true" />
-                <element signature="e#4052#4058#0" expanded="true" />
-                <element signature="e#4084#4090#0" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#td#1;n#tr#1;n#tbody#0;n#table#1;n#body#0;n#!!top" expanded="true" />
-                <element signature="e#4519#4525#0" expanded="true" />
-                <element signature="e#4551#4557#0" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#td#1;n#tr#1;n#tbody#0;n#table#1;n#body#0;n#!!top" expanded="true" />
-                <element signature="e#4986#4992#0" expanded="true" />
-                <element signature="e#5018#5024#0" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#td#0;n#tr#4;n#tbody#0;n#table#0;n#td#1;n#tr#1;n#tbody#0;n#table#1;n#body#0;n#!!top" expanded="true" />
-                <element signature="e#5375#6531#0" expanded="false" />
-                <element signature="e#6573#8042#0" expanded="false" />
-                <element signature="e#8078#9920#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnnonceStat.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/StatBundle/Resources/views/stat/AnnonceStat.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="98" column="25" lean-forward="false" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="25" />
-              <folding>
-                <element signature="n#style#0;n#!!top" expanded="false" />
-                <element signature="n#style#1;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#body#0;n#!!top" expanded="true" />
-                <element signature="e#2739#3895#0" expanded="false" />
-                <element signature="e#3936#5405#0" expanded="false" />
-                <element signature="e#5452#6921#0" expanded="false" />
-                <element signature="e#6963#8432#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userTable.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/gestionUtilisateur/userTable.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-85">
-              <caret line="10" column="55" lean-forward="false" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gestionUtilisateur.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/gestionUtilisateur/gestionUtilisateur.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="59" selection-end-column="99" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -139,8 +47,8 @@
       <file leaf-file-name="showNotification.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Notification/showNotification.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="23" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="99" />
               <folding>
                 <element signature="e#5438#5450#0#Twig" expanded="false" />
               </folding>
@@ -148,21 +56,66 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StatBundle/Resources/config/routing.yml">
+      <file leaf-file-name="account_management.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/account_management.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="64" lean-forward="false" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+            <state relative-caret-position="-120">
+              <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+              <folding>
+                <element signature="e#5330#5335#0" expanded="true" />
+                <element signature="e#5572#5577#0" expanded="true" />
+                <element signature="e#5735#5740#0" expanded="true" />
+                <element signature="e#5878#5883#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="password.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/password.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="graphe.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StatBundle/Resources/views/stat/graphe.html.twig">
+      <file leaf-file-name="verification.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/verification.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            <state relative-caret-position="187">
+              <caret line="49" column="32" lean-forward="false" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1491074136065" expanded="true" signature="4507:4543" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verification.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/verification.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="54" column="99" lean-forward="false" selection-start-line="54" selection-start-column="99" selection-end-line="54" selection-end-column="99" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#6270#6276#0#Twig" expanded="true" />
+                <marker date="1491074541615" expanded="true" signature="4507:4543" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="41" column="61" lean-forward="false" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -171,10 +124,35 @@
       <file leaf-file-name="MembreController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Controller/MembreController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="221">
+              <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
               <folding>
-                <element signature="e#43#100#0#PHP" expanded="true" />
+                <element signature="e#309#347#1#PHP" expanded="true" />
+                <element signature="e#434#478#1#PHP" expanded="true" />
+                <element signature="e#1149#1170#1#PHP" expanded="true" />
+                <element signature="e#1399#1420#1#PHP" expanded="true" />
+                <element signature="e#1812#1833#1#PHP" expanded="true" />
+                <element signature="e#2652#2673#1#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="id-card555.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/id-card555.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profil.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/profil.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="99" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -194,9 +172,10 @@
       <find>email</find>
       <find>img</find>
       <find>created</find>
-      <find>gender</find>
       <find>stat</find>
       <find>date</find>
+      <find>gender</find>
+      <find>src</find>
     </findStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
@@ -228,21 +207,30 @@
         <option value="$PROJECT_DIR$/src/UserBundle/Resources/views/HomePage/Home.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/FosUserBundle/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/.idea/commandlinetools/Symfony_10_03_17_15_31_s.xml" />
         <option value="$PROJECT_DIR$/src/StatBundle/Resources/views/stat/graphe.html" />
         <option value="$PROJECT_DIR$/src/LinkarBundle/Entity/Demande.php" />
         <option value="$PROJECT_DIR$/src/StatBundle/Resources/views/stat/graphe.html.twig" />
-        <option value="$PROJECT_DIR$/src/LinkarBundle/Repository/MembreRepository.php" />
         <option value="$PROJECT_DIR$/src/LinkarBundle/Entity/Annonce.php" />
-        <option value="$PROJECT_DIR$/src/LinkarBundle/Repository/AnnonceRepository.php" />
-        <option value="$PROJECT_DIR$/src/StatBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/LinkarBundle/Controller/MembreController.php" />
-        <option value="$PROJECT_DIR$/src/StatBundle/Controller/GrapheController.php" />
         <option value="$PROJECT_DIR$/src/StatBundle/Resources/views/stat/userStat.html" />
+        <option value="$PROJECT_DIR$/src/LinkarBundle/Repository/AnnonceRepository.php" />
         <option value="$PROJECT_DIR$/src/StatBundle/Resources/views/stat/AnnonceStat.html" />
+        <option value="$PROJECT_DIR$/src/StatBundle/Resources/views/stat/annonceStat.html.twig" />
+        <option value="$PROJECT_DIR$/src/StatBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/LinkarBundle/Repository/MembreRepository.php" />
+        <option value="$PROJECT_DIR$/src/StatBundle/Resources/views/stat/userStat.html.twig" />
+        <option value="$PROJECT_DIR$/src/StatBundle/Controller/GrapheController.php" />
+        <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/compte.html" />
+        <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/compte.html.twig" />
+        <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/profil.html" />
+        <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/account_management.html" />
+        <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/password.html" />
+        <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/verification.html" />
+        <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/verification.html.twig" />
+        <option value="$PROJECT_DIR$/src/LinkarBundle/Controller/MembreController.php" />
       </list>
     </option>
   </component>
@@ -254,9 +242,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1372" />
-    <option name="height" value="653" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1376" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -273,7 +262,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -297,6 +285,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontoffice" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontoffice" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -510,36 +546,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gestionUtilisateur" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkar" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LinkarBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Notification" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -571,6 +577,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LinkarBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compte" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -722,6 +758,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -734,15 +771,24 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\linkar\src\LinkarBundle\Resources\views\Compte" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\linkar\src\LinkarBundle\Resources\views\Compte" />
+      <recent name="C:\wamp\www\linkar\web\assets\frontoffice\images" />
       <recent name="C:\wamp\www\linkar\src\StatBundle\Resources\views\stat" />
       <recent name="C:\wamp\www\linkar\src\LinkarBundle\Repository" />
       <recent name="C:\wamp\www\linkar\web" />
-      <recent name="C:\wamp\www\linkar\src\StatBundle\Controller" />
-      <recent name="C:\wamp64\www\linkar\app\Resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.verification.html">
+    <configuration default="false" name="profil.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/linkar/src/LinkarBundle/Resources/views/Compte/profil.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="verification.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/linkar/src/LinkarBundle/Resources/views/Compte/verification.html">
+      <method />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -799,6 +845,16 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.profil.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.verification.html" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.verification.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.profil.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -821,36 +877,37 @@
       <workItem from="1489394062838" duration="1414000" />
       <workItem from="1490823868840" duration="1071000" />
       <workItem from="1490881182097" duration="26569000" />
-      <workItem from="1490961945958" duration="9868000" />
+      <workItem from="1490961945958" duration="14617000" />
+      <workItem from="1491052993869" duration="10349000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60407000" />
+    <option name="totallyTimeSpent" value="75505000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1372" height="653" extended-state="1" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2652439" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20592706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="GitLabIntegration" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -859,12 +916,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="GitLabIntegration" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26139817" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2652439" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -887,83 +944,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="46" lean-forward="false" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Mapping/Loader/bad-format.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/Default/index2.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/config/doctrine/Membre.orm.xml" />
-    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/Default/index3.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/config/doctrine/Annonce.orm.xml" />
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/config/doctrine/Demande.orm.xml" />
-    <entry file="file://$PROJECT_DIR$/web/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="e#216#254#1#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/FOSuserBundle/layout.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/UserBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1074,7 +1054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1100,55 +1079,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Entity/Demande.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="108" column="13" lean-forward="false" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Entity/Membre.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7888">
-          <caret line="464" column="26" lean-forward="false" selection-start-line="464" selection-start-column="22" selection-end-line="464" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Repository/MembreRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="83" column="58" lean-forward="false" selection-start-line="83" selection-start-column="58" selection-end-line="83" selection-end-column="58" />
-          <folding>
-            <element signature="e#3442#3671#0#PHP" expanded="false" />
-            <element signature="e#3976#4369#0#PHP" expanded="false" />
-            <element signature="e#4376#4770#0#PHP" expanded="false" />
-            <marker date="1490903995691" expanded="true" signature="694:790" ph="select m fro... LinkarBundle" />
-            <marker date="1490903995691" expanded="true" signature="1043:1109" ph="select m fro... LinkarBundle" />
-            <marker date="1490903995691" expanded="true" signature="1323:1388" ph="select m fro... LinkarBundle" />
-            <marker date="1490903995691" expanded="true" signature="1602:1694" ph="select m fro... LinkarBundle" />
-            <marker date="1490903995691" expanded="true" signature="1948:2011" ph="select m fro... LinkarBundle" />
-            <marker date="1490903995691" expanded="true" signature="2353:2443" ph="select m fro... LinkarBundle" />
-            <marker date="1490903995691" expanded="true" signature="2353:2454" ph="select m.cre... LinkarBundle" />
-            <marker date="1490903995691" expanded="true" signature="2353:2455" ph="select SUBST... LinkarBundle" />
-            <marker date="1490903995691" expanded="true" signature="2750:2852" ph="select SUBST... LinkarBundle" />
-            <marker date="1490903995691" expanded="true" signature="3106:3188" ph="select m.gen... LinkarBundle" />
-            <marker date="1490903995691" expanded="true" signature="3338:3388" ph="select count... LinkarBundle" />
-            <marker date="1490903995691" expanded="true" signature="3550:3621" ph="select count... LinkarBundle" />
-            <marker date="1490903995691" expanded="true" signature="3783:3899" ph="select m , (... LinkarBundle" />
-            <marker date="1490903995691" expanded="true" signature="4197:4204" ph="select Membr... " />
-            <marker date="1490903995691" expanded="true" signature="4197:4314" ph="select count... LinkarBundle" />
-            <marker date="1490903995691" expanded="true" signature="4596:4715" ph="select count... LinkarBundle" />
-            <marker date="1490903995691" expanded="true" signature="4995:5114" ph="select count... LinkarBundle" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1160,102 +1095,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StatBundle/Resources/views/stat/graphe.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StatBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="64" lean-forward="false" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Controller/MembreController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="e#43#100#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Notification/showNotification.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="23" />
-          <folding>
-            <element signature="e#5438#5450#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/gestionUtilisateur/userTable.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="10" column="55" lean-forward="false" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/gestionUtilisateur/gestionUtilisateur.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="47">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="59" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StatBundle/Controller/GrapheController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="82" column="26" lean-forward="false" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
-          <folding>
-            <element signature="e#41#98#0#PHP" expanded="true" />
-            <element signature="e#435#456#1#PHP" expanded="true" />
-            <element signature="e#1735#2840#0#PHP" expanded="false" />
-            <element signature="e#1852#1873#1#PHP" expanded="true" />
-            <element signature="e#2847#4030#0#PHP" expanded="false" />
-            <element signature="e#2969#2990#1#PHP" expanded="true" />
-            <element signature="e#3068#3089#1#PHP" expanded="true" />
-            <element signature="e#3156#3177#1#PHP" expanded="true" />
-            <element signature="e#4037#4957#0#PHP" expanded="false" />
-            <element signature="e#4160#4181#1#PHP" expanded="true" />
-            <element signature="e#4963#5896#0#PHP" expanded="false" />
-            <element signature="e#5091#5113#1#PHP" expanded="true" />
-            <element signature="e#5902#6820#0#PHP" expanded="false" />
-            <element signature="e#6025#6047#1#PHP" expanded="true" />
-            <element signature="e#6826#8228#0#PHP" expanded="false" />
-            <element signature="e#6960#6982#1#PHP" expanded="true" />
-            <element signature="e#7095#7117#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Repository/AnnonceRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="75" column="62" lean-forward="false" selection-start-line="75" selection-start-column="62" selection-end-line="75" selection-end-column="62" />
-          <folding>
-            <element signature="e#1160#1409#0#PHP" expanded="false" />
-            <element signature="e#2286#2577#0#PHP" expanded="false" />
-            <element signature="e#2584#2872#0#PHP" expanded="false" />
-            <marker date="1490912614082" expanded="true" signature="675:753" ph="select DISTI... LinkarBundle" />
-            <marker date="1490912614082" expanded="true" signature="1045:1103" ph="select count... LinkarBundle" />
-            <marker date="1490912614082" expanded="true" signature="1271:1342" ph="select count... LinkarBundle" />
-            <marker date="1490912614082" expanded="true" signature="1271:1357" ph="select m.eta... LinkarBundle" />
-            <marker date="1490912614082" expanded="true" signature="1647:1732" ph="select DISTI... LinkarBundle" />
-            <marker date="1490912614082" expanded="true" signature="2039:2194" ph="select SUBST... LinkarBundle" />
-            <marker date="1490912614082" expanded="true" signature="2399:2467" ph="select from LinkarBundle" />
-            <marker date="1490912614082" expanded="true" signature="2399:2509" ph="select m.des... LinkarBundle" />
-            <marker date="1490912614082" expanded="true" signature="2692:2792" ph="select m.dep... LinkarBundle" />
-          </folding>
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="59" selection-end-column="99" />
         </state>
       </provider>
     </entry>
@@ -1263,44 +1106,287 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="205" column="0" lean-forward="false" selection-start-line="205" selection-start-column="0" selection-end-line="377" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StatBundle/Resources/views/stat/graphe.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/gestionUtilisateur/userTable.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="10" column="55" lean-forward="false" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StatBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="55" lean-forward="false" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Repository/AnnonceRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="44" column="24" lean-forward="false" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
           <folding>
-            <element signature="n#style#0;n#!!top" expanded="false" />
-            <element signature="n#style#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#body#0;n#!!top" expanded="true" />
-            <element signature="e#3117#3123#0" expanded="true" />
-            <element signature="e#3149#3155#0" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#td#1;n#tr#1;n#tbody#0;n#table#1;n#body#0;n#!!top" expanded="true" />
-            <element signature="e#3585#3591#0" expanded="true" />
-            <element signature="e#3617#3623#0" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#td#1;n#tr#1;n#tbody#0;n#table#1;n#body#0;n#!!top" expanded="true" />
-            <element signature="e#4052#4058#0" expanded="true" />
-            <element signature="e#4084#4090#0" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#td#1;n#tr#1;n#tbody#0;n#table#1;n#body#0;n#!!top" expanded="true" />
-            <element signature="e#4519#4525#0" expanded="true" />
-            <element signature="e#4551#4557#0" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#td#1;n#tr#1;n#tbody#0;n#table#1;n#body#0;n#!!top" expanded="true" />
-            <element signature="e#4986#4992#0" expanded="true" />
-            <element signature="e#5018#5024#0" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#td#0;n#tr#4;n#tbody#0;n#table#0;n#td#1;n#tr#1;n#tbody#0;n#table#1;n#body#0;n#!!top" expanded="true" />
-            <element signature="e#5375#6531#0" expanded="false" />
-            <element signature="e#6573#8042#0" expanded="false" />
-            <element signature="e#8078#9920#0" expanded="false" />
+            <element signature="e#2292#2583#0#PHP" expanded="false" />
+            <element signature="e#2590#2878#0#PHP" expanded="false" />
+            <marker date="1490991588537" expanded="true" signature="675:753" ph="select DISTI... LinkarBundle" />
+            <marker date="1490991588537" expanded="true" signature="1045:1103" ph="select count... LinkarBundle" />
+            <marker date="1490991588537" expanded="true" signature="1277:1348" ph="select count... LinkarBundle" />
+            <marker date="1490991588537" expanded="true" signature="1277:1363" ph="select m.eta... LinkarBundle" />
+            <marker date="1490991588537" expanded="true" signature="1653:1738" ph="select DISTI... LinkarBundle" />
+            <marker date="1490991588537" expanded="true" signature="2045:2200" ph="select SUBST... LinkarBundle" />
+            <marker date="1490991588537" expanded="true" signature="2405:2473" ph="select from LinkarBundle" />
+            <marker date="1490991588537" expanded="true" signature="2405:2515" ph="select m.des... LinkarBundle" />
+            <marker date="1490991588537" expanded="true" signature="2698:2798" ph="select m.dep... LinkarBundle" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Entity/Membre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="75" column="31" lean-forward="false" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StatBundle/Resources/views/stat/AnnonceStat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="98" column="25" lean-forward="false" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="25" />
+        <state relative-caret-position="459">
+          <caret line="110" column="27" lean-forward="false" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#!!top" expanded="false" />
             <element signature="n#style#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#body#0;n#!!top" expanded="false" />
             <element signature="e#2739#3895#0" expanded="false" />
             <element signature="e#3936#5405#0" expanded="false" />
             <element signature="e#5452#6921#0" expanded="false" />
             <element signature="e#6963#8432#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StatBundle/Resources/views/stat/annonceStat.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1989">
+          <caret line="117" column="19" lean-forward="false" selection-start-line="117" selection-start-column="19" selection-end-line="117" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StatBundle/Controller/GrapheController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#41#98#0#PHP" expanded="false" />
+            <element signature="e#4585#5435#0#PHP" expanded="false" />
+            <element signature="e#5441#6271#0#PHP" expanded="false" />
+            <element signature="e#6278#7391#0#PHP" expanded="false" />
+            <element signature="e#7397#8689#0#PHP" expanded="false" />
+            <element signature="e#8694#9259#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/frontoffice/images/saved_resource">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Controller/MessageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/compte.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="364" column="11" lean-forward="false" selection-start-line="364" selection-start-column="11" selection-end-line="364" selection-end-column="11" />
+          <folding>
+            <element signature="e#2667#2673#0#HTML" expanded="true" />
+            <element signature="e#2674#2680#0#HTML" expanded="true" />
+            <element signature="e#4500#4550#0#HTML" expanded="true" />
+            <element signature="e#6522#6541#0#HTML" expanded="true" />
+            <element signature="e#6678#6733#0#HTML" expanded="true" />
+            <element signature="e#6850#6904#0#HTML" expanded="true" />
+            <element signature="e#7025#7079#0#HTML" expanded="true" />
+            <element signature="e#16913#16919#0#HTML" expanded="true" />
+            <element signature="e#16920#16926#0#HTML" expanded="true" />
+            <element signature="e#18391#18422#0#HTML" expanded="true" />
+            <element signature="e#18789#18820#0#HTML" expanded="true" />
+            <element signature="e#18864#18883#0#HTML" expanded="true" />
+            <marker date="1491055574236" expanded="true" signature="45:20966" ph="{% block main ...%}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StatBundle/Resources/views/stat/userStat.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Notification/notificationDialog.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Notification/showNotification.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="99" />
+          <folding>
+            <element signature="e#5438#5450#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/profil.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="99" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/id-card555.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Repository/MembreRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="134" column="33" lean-forward="false" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
+          <folding>
+            <element signature="e#4390#4784#0#PHP" expanded="false" />
+            <marker date="1490995044028" expanded="true" signature="694:790" ph="select m fro... LinkarBundle" />
+            <marker date="1490995044028" expanded="true" signature="1043:1109" ph="select m fro... LinkarBundle" />
+            <marker date="1490995044028" expanded="true" signature="1323:1388" ph="select m fro... LinkarBundle" />
+            <marker date="1490995044028" expanded="true" signature="1602:1694" ph="select m fro... LinkarBundle" />
+            <marker date="1490995044028" expanded="true" signature="1948:2011" ph="select m fro... LinkarBundle" />
+            <marker date="1490995044028" expanded="true" signature="2353:2443" ph="select m fro... LinkarBundle" />
+            <marker date="1490995044028" expanded="true" signature="2353:2454" ph="select m.cre... LinkarBundle" />
+            <marker date="1490995044028" expanded="true" signature="2353:2455" ph="select SUBST... LinkarBundle" />
+            <marker date="1490995044028" expanded="true" signature="2750:2852" ph="select SUBST... LinkarBundle" />
+            <marker date="1490995044028" expanded="true" signature="3106:3188" ph="select m.gen... LinkarBundle" />
+            <marker date="1490995044028" expanded="true" signature="3338:3388" ph="select count... LinkarBundle" />
+            <marker date="1490995044028" expanded="true" signature="3557:3628" ph="select count... LinkarBundle" />
+            <marker date="1490995044028" expanded="true" signature="3797:3913" ph="select m , (... LinkarBundle" />
+            <marker date="1490995044028" expanded="true" signature="4211:4218" ph="select Membr... " />
+            <marker date="1490995044028" expanded="true" signature="4211:4328" ph="select count... LinkarBundle" />
+            <marker date="1490995044028" expanded="true" signature="4610:4729" ph="select count... LinkarBundle" />
+            <marker date="1490995044028" expanded="true" signature="5009:5128" ph="select count... LinkarBundle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="41" column="61" lean-forward="false" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/verification.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="54" column="99" lean-forward="false" selection-start-line="54" selection-start-column="99" selection-end-line="54" selection-end-column="99" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#6270#6276#0#Twig" expanded="true" />
+            <marker date="1491074541615" expanded="true" signature="4507:4543" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Controller/MembreController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+          <folding>
+            <element signature="e#309#347#1#PHP" expanded="true" />
+            <element signature="e#434#478#1#PHP" expanded="true" />
+            <element signature="e#1149#1170#1#PHP" expanded="true" />
+            <element signature="e#1399#1420#1#PHP" expanded="true" />
+            <element signature="e#1812#1833#1#PHP" expanded="true" />
+            <element signature="e#2652#2673#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/verification.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="49" column="32" lean-forward="false" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1491074136065" expanded="true" signature="4507:4543" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/account_management.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+          <folding>
+            <element signature="e#5330#5335#0" expanded="true" />
+            <element signature="e#5572#5577#0" expanded="true" />
+            <element signature="e#5735#5740#0" expanded="true" />
+            <element signature="e#5878#5883#0" expanded="true" />
           </folding>
         </state>
       </provider>

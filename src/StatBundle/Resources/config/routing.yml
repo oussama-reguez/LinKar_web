@@ -1,8 +1,14 @@
 stat_homepage:
     path:     /
     defaults: { _controller: StatBundle:Default:index }
-statestic:
-    path:     /ss
-    defaults: { _controller: StatBundle:Graphe:chartLineAnnounce }
+annoucneStatestic:
+    path:     /announceStat
+    defaults: { _controller: StatBundle:Graphe:AnnounceStat }
+userStatestic:
+    path:     /userStat
+    defaults: { _controller: StatBundle:Graphe:UserStat }
+
+
+
 
 

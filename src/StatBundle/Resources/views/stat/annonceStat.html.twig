@@ -1,0 +1,134 @@
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+<style type="text/css">
+
+    #annoncelinechart {
+       width:inherit;
+        height: 400px;
+        margin: 0 auto
+    }
+
+    #statepiechart {
+        width:inherit;
+        height: auto ;
+        margin: 0 auto
+    }
+
+    #departpiechart {
+        width:inherit;
+        height: auto ;
+        margin: 0 auto
+    }
+    #destinationpiechart {
+        width:inherit;
+        height: auto ;
+        margin: 0 auto
+    }
+
+    /* DivTable.com */
+    .divTable{
+        display: table;
+        width: 100%;
+    }
+    .divTableRow {
+        display: table-row;
+    }
+    .divTableHeading {
+        background-color: #EEE;
+        display: table-header-group;
+    }
+    .divTableCell, .divTableHead {
+        border: 1px solid #999999;
+        display: table-cell;
+        padding: 3px 10px;
+    }
+    .divTableHeading {
+        background-color: #EEE;
+        display: table-header-group;
+        font-weight: bold;
+    }
+    .divTableFoot {
+        background-color: #EEE;
+        display: table-footer-group;
+        font-weight: bold;
+    }
+    .divTableBody {
+        display: table-row-group;
+    }
+
+
+
+
+
+</style>
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"> </script>
+<script src="https://use.fontawesome.com/b2d961dbda.js"></script>
+<script type="text/javascript">
+
+    {{ chart(annoncelinechart) }}
+    {{ chart(statepiechart) }}
+    {{ chart(destinationpiechart) }}
+    {{ chart(departpiechart) }}
+
+</script>
+<style type="text/css">
+    .media-photo {
+        width: 35px;
+    }
+    .table-fixed thead {
+        width: 97%;
+    }
+    .table-fixed tbody {
+        height: 230px;
+        overflow-y: auto;
+        width: inherit;
+    ;
+    }
+    .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+        display: block;
+
+    }
+    .table-fixed tbody td, .table-fixed thead > tr> th {
+        float: left;
+        border-bottom-width: 0;
+    }
+
+
+</style>
+<body>
+<table  width="100%" align="center">
+    <tbody>
+    <tr valign="center">
+        <td align="center" >Annonce totale {{ nbrannonce }} </td>
+
+
+    </tr>
+    </tbody>
+</table>
+<table border="1" width="100%">
+
+    <tbody>
+
+    <tr>
+        <td style="width: 800px;"><div id="annoncelinechart"></div></td>
+        <td><div id="statepiechart"></div></td>
+    </tr>
+    <tr>
+        <td><div id="destinationpiechart"></div></td>
+        <td  >
+            <div id="departpiechart"></div>
+
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+<!-- DivTable.com -->
+</body>

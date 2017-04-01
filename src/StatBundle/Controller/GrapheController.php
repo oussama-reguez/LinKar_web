@@ -13,7 +13,7 @@ class GrapheController extends Controller
     }
 
 
-    public function chartLineAction()
+    public function userChartLine()
 
     {
 
@@ -46,7 +46,7 @@ class GrapheController extends Controller
 
         $series = array(
             array("name" => "Data Serie Name",    "data" => $tab2),
-            array("name" => "Data Serie Name",    "data" => array(1,5,9,10))
+
         );
 
         $categorie = array(
@@ -58,7 +58,7 @@ class GrapheController extends Controller
         dump($tab);
         dump($tab2);
         $ob = new Highchart();
-        $ob->chart->renderTo('chart');  // The #id of the div where to render the chart
+        $ob->chart->renderTo('linechart');  // The #id of the div where to render the chart
         $ob->title->text('Chart Title');
         $ob->xAxis->title(array('text'  => "Horizontal axis title"));
         $ob->yAxis->title(array('text'  => "Vertical axis title"));
@@ -66,21 +66,14 @@ class GrapheController extends Controller
         $ob->xAxis->categories($tab);
 
 
-
-        return $this->render('StatBundle:stat:graphe.html.twig',
-
-            array(
-
-                'chart' => $ob
-
-            ));
+return $ob;
 
     }
 
 
 
 
-    public function barChartAction() {
+    public function barChart() {
         $em=$this->getDoctrine()->getManager();
         $users=$em->getRepository('LinkarBundle:Membre')->getStatCreatedUsersbyYearDql();
 
@@ -123,9 +116,7 @@ class GrapheController extends Controller
 
         $ob->series($series);
 
-        return $this->render('StatBundle:stat:graphe.html.twig', array(
-            'chart' => $ob
-        ));
+       return $ob;
     }
 
 
@@ -151,7 +142,7 @@ class GrapheController extends Controller
 
 
         $ob = new Highchart();
-        $ob->chart->renderTo('piechart');
+        $ob->chart->renderTo('genderpiechart');
         $ob->title->text('Browser market shares at a specific website in 2010');
         $ob->plotOptions->pie(array(
             'allowPointSelect'  => true,
@@ -172,7 +163,7 @@ class GrapheController extends Controller
     }
 
 
-    public function pieGenderChartAction() {
+    public function pieGenderChart() {
         $em=$this->getDoctrine()->getManager();
         $users=$em->getRepository('LinkarBundle:Membre')->getStatnbrUsersbyGender();
 
@@ -192,7 +183,7 @@ class GrapheController extends Controller
 
 
         $ob = new Highchart();
-        $ob->chart->renderTo('chart');
+        $ob->chart->renderTo('genderpiechart');
         $ob->title->text('Browser market shares at a specific website in 2010');
         $ob->plotOptions->pie(array(
             'allowPointSelect'  => true,
@@ -203,12 +194,10 @@ class GrapheController extends Controller
 
         $ob->series(array(array('type' => 'pie','name' => 'Browser share', 'data' => $data)));
 
-        return $this->render('StatBundle:stat:graphe.html.twig', array(
-            'chart' => $ob
-        ));
+       return $ob;
     }
 
-    public function pieDestinationChartAction() {
+    public function pieDestinationChart() {
         $em=$this->getDoctrine()->getManager();
         $users=$em->getRepository('LinkarBundle:Annonce')->getPopularDestination();
 
@@ -228,7 +217,7 @@ class GrapheController extends Controller
 
 
         $ob = new Highchart();
-        $ob->chart->renderTo('chart');
+        $ob->chart->renderTo('destinationpiechart');
         $ob->title->text('Browser market shares at a specific website in 2010');
         $ob->plotOptions->pie(array(
             'allowPointSelect'  => true,
@@ -239,12 +228,10 @@ class GrapheController extends Controller
 
         $ob->series(array(array('type' => 'pie','name' => 'Browser share', 'data' => $data)));
 
-        return $this->render('StatBundle:stat:graphe.html.twig', array(
-            'chart' => $ob
-        ));
+        return $ob;
     }
 
-    public function pieDepartChartAction() {
+    public function pieDepartChart() {
         $em=$this->getDoctrine()->getManager();
         $users=$em->getRepository('LinkarBundle:Annonce')->getPopularDepart();
 
@@ -264,7 +251,7 @@ class GrapheController extends Controller
 
 
         $ob = new Highchart();
-        $ob->chart->renderTo('chart');
+        $ob->chart->renderTo('departpiechart');
         $ob->title->text('Browser market shares at a specific website in 2010');
         $ob->plotOptions->pie(array(
             'allowPointSelect'  => true,
@@ -275,12 +262,56 @@ class GrapheController extends Controller
 
         $ob->series(array(array('type' => 'pie','name' => 'Browser share', 'data' => $data)));
 
-        return $this->render('StatBundle:stat:graphe.html.twig', array(
-            'chart' => $ob
-        ));
+        return $ob;
     }
 
-    public function chartLineAnnounceAction()
+
+    public function pieStateChart() {
+        $em=$this->getDoctrine()->getManager();
+        $users=$em->getRepository('LinkarBundle:Annonce')->countAnnonceByState();
+
+        dump($users);
+
+        $data= array();
+
+        foreach ($users as $classe) {
+            $i=intval($classe['etat']);
+            $etat='';
+            if($i==0){
+                $etat="terminé" ;
+            }
+            if($i==1){
+                $etat="en cours" ;
+            }
+
+            if($i==2){
+                $etat="supprimé" ;
+            }
+
+            array_push($data, array($etat,intval($classe[1])));
+
+
+
+        }
+
+
+
+        $ob = new Highchart();
+        $ob->chart->renderTo('statepiechart');
+        $ob->title->text('Browser market shares at a specific website in 2010');
+        $ob->plotOptions->pie(array(
+            'allowPointSelect'  => true,
+            'cursor'    => 'pointer',
+            'dataLabels'    => array('enabled' => false),
+            'showInLegend'  => true
+        ));
+
+        $ob->series(array(array('type' => 'pie','name' => 'Browser share', 'data' => $data)));
+
+        return $ob;
+    }
+
+    public function chartLineAnnounce()
 
     {
 
@@ -327,25 +358,60 @@ class GrapheController extends Controller
 
         dump($tab2);
         $ob = new Highchart();
-        $ob->chart->renderTo('chart');  // The #id of the div where to render the chart
+        $ob->chart->renderTo('annoncelinechart');  // The #id of the div where to render the chart
         $ob->title->text('Chart Title');
         $ob->xAxis->title(array('text'  => "Horizontal axis title"));
         $ob->yAxis->title(array('text'  => "Vertical axis title"));
         $ob->series($series);
         $ob->xAxis->categories($categorie);
 
+        return $ob;
 
 
-        return $this->render('StatBundle:stat:graphe.html.twig',
+    }
 
-            array(
+   public function  AnnounceStatAction(){
+        $em=$this->getDoctrine()->getManager();
 
-                'chart' => $ob
+       $count=$em->getRepository('LinkarBundle:Annonce')->countNbrAnnonce()[1];
+ $ob =$this->chartLineAnnounce();
+       $ob2 =$this->pieDestinationChart();
+       $ob3=$this->pieDepartChart();
+       $ob4=$this->pieStateChart();
 
-            ));
+
+
+
+
+
+       return $this->render('StatBundle:stat:annonceStat.html.twig', array( 'nbrannonce'=>$count,
+           'annoncelinechart' => $ob ,   'destinationpiechart' => $ob2 ,   'departpiechart' => $ob3 , 'statepiechart' => $ob4
+       ));
 
     }
 
 
+    public function  UserStatAction(){
+        $em=$this->getDoctrine()->getManager();
+
+        $nbrTotal=$em->getRepository('LinkarBundle:Membre')->countNbrUsers()[1];
+        $blocked=$em->getRepository('LinkarBundle:Membre')->countBlockedUsers()[1];;
+        $inactive=$em->getRepository('LinkarBundle:Membre')->countInactiveUsers()[1];
+        $users=$em->getRepository('LinkarBundle:Membre')->getActiveUsers();
+        $ob =$this->userChartLine();
+        $ob2 =$this->barChart();
+        $ob3=$this->pieGenderChart();
+
+
+
+
+
+
+
+        return $this->render('StatBundle:stat:userStat.html.twig', array( 'nbrusers'=>$nbrTotal,'nbrblocked'=>$blocked,'nbrinactive'=>$inactive,
+            'linechart' => $ob ,   'barchart' => $ob2 ,   'genderpiechart' => $ob3 , 'users' => $users
+        ));
+
+    }
 
 }

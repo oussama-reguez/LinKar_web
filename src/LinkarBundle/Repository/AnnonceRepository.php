@@ -39,7 +39,7 @@ class AnnonceRepository extends EntityRepository
 
 
 
-        return $query->getResult();
+        return $query->getSingleResult();
 
     }
     public function countAnnonceByState(){
