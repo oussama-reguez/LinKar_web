@@ -19,6 +19,18 @@ class MembreController extends Controller
         return $this->render('LinkarBundle:Compte:verification.html.twig');
     }
 
+    public function personnelAction()
+    {
+        return $this->render('LinkarBundle:Compte:informationPersonnel.html.twig');
+    }
+
+    public function changePasswordAction()
+    {
+        return $this->render('LinkarBundle:Compte:changePassword.html.twig');
+    }
+
+
+
 
     public function uploadAction(Request $req)
     {
@@ -75,7 +87,7 @@ dump($uploadedFile);
                         return $this->render('@Linkar/Compte/verifierCompte.html.twig',array('m'=>$user,'error'=>true));
                     }
 
-             
+
                 $em=$this->getDoctrine()->getManager();
                 $em->persist($user);
                 $em->flush();//execution de la requete

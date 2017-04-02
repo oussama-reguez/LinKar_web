@@ -43,6 +43,13 @@ verificationCompte:
 verificationCin:
     path:     /verifcin
     defaults: { _controller: LinkarBundle:Membre:unverifiedUsers}
+changePassword:
+    path:     /changePassword
+    defaults: { _controller: LinkarBundle:Membre:changePassword}
+personnelInfo:
+    path:     /personnelInfo
+    defaults: { _controller: LinkarBundle:Membre:personnel}
+
 
 
 
