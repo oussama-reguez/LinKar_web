@@ -17,6 +17,17 @@ use Doctrine\ORM\Mapping\ClassMetadata;
 class MembreRepository extends EntityRepository
 {
 
+    public function getUnverifiedUsers(){
+        $query = $this->getEntityManager()
+
+            ->createQuery(" select   a    from LinkarBundle:Membre a where a.verifCin=false and a.urlCin !=''  ")
+            ;
+
+
+
+        return $query->getResult();
+    }
+
 
     public function showAllReceiversMessagesDQL($idMembre,$idSender){
 

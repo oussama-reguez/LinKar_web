@@ -37,10 +37,12 @@ compte:
 upload:
     path:     /upload
     defaults: { _controller: LinkarBundle:Membre:upload}
-verification:
-    path:     /verification
-    defaults: { _controller: LinkarBundle:Membre:verification}
-
+verificationCompte:
+    path:     /verifierCompte
+    defaults: { _controller: LinkarBundle:Membre:verifierCompte}
+verificationCin:
+    path:     /verifcin
+    defaults: { _controller: LinkarBundle:Membre:unverifiedUsers}
 
 
 

@@ -110,7 +110,7 @@ class Membre
      *
      * @ORM\Column(name="url_cin", type="string", length=255, nullable=true)
      */
-    private $urlCin = 'http://localhost/upload/uploads/user.png';
+    private $urlCin ;
 
     /**
      * @var string

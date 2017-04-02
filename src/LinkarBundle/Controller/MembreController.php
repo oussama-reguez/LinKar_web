@@ -27,37 +27,93 @@ class MembreController extends Controller
        $response = new Response();
 
         $uploadedFile = $req->files->get('upfile'); //upfile must be the value of the name attribute in the <input> tag
-        if (null === $uploadedFile)
-            $response->setContent('null');
-        $filename = $uploadedFile->getPathname();
-        rename($filename, 'C:\wamp\www\upload\uploads\syfony.pdf');
+        if (null != $uploadedFile){
+
+        $path = $uploadedFile->getPathname();
+        if($uploadedFile->getMimeType()=='image/jpeg') {
+            rename($path, 'C:\wamp\www\upload\uploads\\'.$uploadedFile->getFileName().'.jpg' );
+        }
+        else
+            if ($uploadedFile->getMimeType()=='image/png'){
+                rename($path, 'C:\wamp\www\upload\uploads\\'.$uploadedFile->getFileName().'.png' );
+            }
+            else{
+               $response->setContent('err');
+            }
+
         var_dump( $uploadedFile);
 
+        }
+dump($uploadedFile);
 
-dump($filename);
-        $response->setContent($filename);
         return $response;
     }
 
+
+    public function verifierCompteAction(Request $req)
+    {
+        $em=$this->getDoctrine()->getManager();
+        $user=$em->getRepository('LinkarBundle:Membre')->find(14);
+
+        if($req->isMethod('Post')){
+            $uploadedFile = $req->files->get('upfile'); //upfile must be the value of the name attribute in the <input> tag
+
+            if (null != $uploadedFile){
+
+                $path = $uploadedFile->getPathname();
+                if($uploadedFile->getMimeType()=='image/jpeg') {
+                    rename($path, 'C:\wamp\www\upload\uploads\\'.$uploadedFile->getFileName().'.jpg' );
+                    $user->setUrlCin('http://localhost/upload/uploads/'.$uploadedFile->getFileName().'.jpg');
+
+                }
+                else
+                    if ($uploadedFile->getMimeType()=='image/png'){
+                        rename($path, 'C:\wamp\www\upload\uploads\\'.$uploadedFile->getFileName().'.png' );
+                        $user->setUrlCin('http://localhost/upload/uploads/'.$uploadedFile->getFileName().'.png');
+                    }
+                    else{
+                        return $this->render('@Linkar/Compte/verifierCompte.html.twig',array('m'=>$user,'error'=>true));
+                    }
+
+             
+                $em=$this->getDoctrine()->getManager();
+                $em->persist($user);
+                $em->flush();//execution de la requete
+                return $this->render('@Linkar/Compte/verifierCompte.html.twig',array('m'=>$user,'success'=>true));
+            }
+
+
+
+        }
+
+
+
+        return $this->render('@Linkar/Compte/verifierCompte.html.twig',array('m'=>$user));
+
+
+    }
 
     public function indexAction()
 
     {
         $em=$this->getDoctrine()->getManager();
-        $users=$em->getRepository('LinkarBundle:Membre')->getActiveUsers();
+        $users=$em->getRepository('LinkarBundle:Membre')->getUnverifiedUsers();
         dump($users);
 
 
-
-
-
-
-
-
-dump($users);
-
-
         return new Response();
+    }
+
+    public function unverifiedUsersAction()
+
+    {
+        $em=$this->getDoctrine()->getManager();
+        $users=$em->getRepository('LinkarBundle:Membre')->getUnverifiedUsers();
+
+        return $this->render('@Linkar/gestionUtilisateur/verificationUtilisateur.html.twig',array('m'=>$users));
+
+
+
     }
 
     public function showAllAction()
@@ -104,6 +160,7 @@ dump($users);
               $id=$req->get('id');
               $role=$req->get('role');
               $status=$req->get('status');
+              $verify=$req->get('verify');
                 $check=false;
 
               if(isset($id)){
@@ -137,6 +194,17 @@ dump($users);
                   if($status=='blocked'){
                       $check=true;
                       $user->setStatut(false);
+                  }
+              }
+
+              if(isset($verify)){
+                  if($verify=='on'){
+                      $check=true;
+                      $user->setVerifCin(true);
+                  }
+                  if($verify=='off'){
+                      $check=true;
+                      $user->setVerifCin(false);
                   }
               }
 
