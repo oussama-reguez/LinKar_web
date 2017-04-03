@@ -9,7 +9,7 @@
             {% for k in m %}
 
             {% if k.type  == 'message' %}
-            $.notify('{{ k.Sender.firstName  }} {{ k.Sender.lastName  }} vous envoie un message', { allow_dismiss: false });
+            $.notify(' <img src="{{ k.Sender.urlPicture }}" class="media-photo">  {{ k.Sender.firstName  }} {{ k.Sender.lastName  }} vous envoie un message', { allow_dismiss: false });
 
             {% endif %}
 

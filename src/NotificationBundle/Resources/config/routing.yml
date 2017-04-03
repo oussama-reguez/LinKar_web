@@ -1,0 +1,9 @@
+notification:
+    path:     /notifications
+    defaults: { _controller: NotificationBundle:Notification:handleNotification}
+notificationCenter:
+    path:     /notificationCenter
+    defaults: { _controller: NotificationBundle:Notification:getNotifications}
+showNotification:
+    path:     /showNotification
+    defaults: { _controller: NotificationBundle:Notification:showNotification}

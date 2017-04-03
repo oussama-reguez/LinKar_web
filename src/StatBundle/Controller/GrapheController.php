@@ -45,23 +45,19 @@ class GrapheController extends Controller
 
 
         $series = array(
-            array("name" => "Data Serie Name",    "data" => $tab2),
+            array("name" => "Les utilisateurs inscrits",    "data" => $tab2),
 
         );
 
-        $categorie = array(
-            array("name" => "Data Serie Name",    "data" => array('2015','2016')),
-            array("name" => "Data Serie Name",    "data" => array('2015','2016','df','dfd'))
 
-        );
 
         dump($tab);
         dump($tab2);
         $ob = new Highchart();
         $ob->chart->renderTo('linechart');  // The #id of the div where to render the chart
-        $ob->title->text('Chart Title');
-        $ob->xAxis->title(array('text'  => "Horizontal axis title"));
-        $ob->yAxis->title(array('text'  => "Vertical axis title"));
+        $ob->title->text('Evolution mensuelle du nombre des utilisateurs inscrits');
+        $ob->xAxis->title(array('text'  => "date"));
+        $ob->yAxis->title(array('text'  => "nombre dutilisateur"));
         $ob->series($series);
         $ob->xAxis->categories($tab);
 
@@ -106,12 +102,12 @@ return $ob;
         $ob = new Highchart();
         // ID de l'élement de DOM que vous utilisez comme conteneur
         $ob->chart->renderTo('barchart');
-        $ob->title->text('Bénéfices du 21/06/2013 au 27/06/2013');
+        $ob->title->text('Nombre totale des utilisateurs groupés par année');
         $ob->chart->type('column');
 
-        $ob->yAxis->title(array('text' => "Bénéfices (millions d'euros)"));
+        $ob->yAxis->title(array('text' => "nombre d'utilisateur"));
 
-        $ob->xAxis->title(array('text' => "Date du jours"));
+        $ob->xAxis->title(array('text' => "Année"));
         $ob->xAxis->categories($dates);
 
         $ob->series($series);
@@ -120,47 +116,6 @@ return $ob;
     }
 
 
-    public function pieUsersChartAction() {
-        $em=$this->getDoctrine()->getManager();
-        $users=$em->getRepository('LinkarBundle:Membre')->getStatCreatedUsersbyYearDql();
-
-        $total= intval($em->getRepository('LinkarBundle:Membre')->countNbrUsers());
-        $annoncers= intval($em->getRepository('LinkarBundle:Membre')->countAnnouncers());
-        $others=intval($total-$annoncers);
-
-        $data= array();
-
-        foreach ($users as $classe) {
-
-
-            array_push($data, intval($classe[1]));
-
-
-
-        }
-
-
-
-        $ob = new Highchart();
-        $ob->chart->renderTo('genderpiechart');
-        $ob->title->text('Browser market shares at a specific website in 2010');
-        $ob->plotOptions->pie(array(
-            'allowPointSelect'  => true,
-            'cursor'    => 'pointer',
-            'dataLabels'    => array('enabled' => false),
-            'showInLegend'  => true
-        ));
-        $data = array(
-            array('annonceurs', $annoncers),
-            array('Membres inactives', 26.8),
-            array('Chrome', 12.8),
-
-        );
-
-        return $this->render('StatBundle:stat:graphe.html.twig', array(
-            'chart' => $ob
-        ));
-    }
 
 
     public function pieGenderChart() {
@@ -184,7 +139,7 @@ return $ob;
 
         $ob = new Highchart();
         $ob->chart->renderTo('genderpiechart');
-        $ob->title->text('Browser market shares at a specific website in 2010');
+        $ob->title->text('Nombre totale des utilisateurs par sexe');
         $ob->plotOptions->pie(array(
             'allowPointSelect'  => true,
             'cursor'    => 'pointer',
@@ -218,7 +173,7 @@ return $ob;
 
         $ob = new Highchart();
         $ob->chart->renderTo('destinationpiechart');
-        $ob->title->text('Browser market shares at a specific website in 2010');
+        $ob->title->text('Les villes de destination les plus populaires');
         $ob->plotOptions->pie(array(
             'allowPointSelect'  => true,
             'cursor'    => 'pointer',
@@ -252,7 +207,7 @@ return $ob;
 
         $ob = new Highchart();
         $ob->chart->renderTo('departpiechart');
-        $ob->title->text('Browser market shares at a specific website in 2010');
+        $ob->title->text('Les villes de départ les plus populaires ');
         $ob->plotOptions->pie(array(
             'allowPointSelect'  => true,
             'cursor'    => 'pointer',
@@ -298,7 +253,7 @@ return $ob;
 
         $ob = new Highchart();
         $ob->chart->renderTo('statepiechart');
-        $ob->title->text('Browser market shares at a specific website in 2010');
+        $ob->title->text('Nombre des annonces selon leur état');
         $ob->plotOptions->pie(array(
             'allowPointSelect'  => true,
             'cursor'    => 'pointer',
@@ -343,7 +298,7 @@ return $ob;
 
         }
 
-            array_push($series, array("name" => "Data Serie Name",    "data" => $tab2) );
+            array_push($series, array("name" => $year['d'],    "data" => $tab2) );
 
 
         }
@@ -359,9 +314,9 @@ return $ob;
         dump($tab2);
         $ob = new Highchart();
         $ob->chart->renderTo('annoncelinechart');  // The #id of the div where to render the chart
-        $ob->title->text('Chart Title');
-        $ob->xAxis->title(array('text'  => "Horizontal axis title"));
-        $ob->yAxis->title(array('text'  => "Vertical axis title"));
+        $ob->title->text('Evolution mensuel des nombres d’annonces groupé par année');
+        $ob->xAxis->title(array('text'  => "Mois"));
+        $ob->yAxis->title(array('text'  => "Nombre d'annonce"));
         $ob->series($series);
         $ob->xAxis->categories($categorie);
 

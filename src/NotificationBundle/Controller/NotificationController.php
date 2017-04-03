@@ -1,6 +1,6 @@
 <?php
 
-namespace LinkarBundle\Controller;
+namespace NotificationBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Session;
@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Session;
 class NotificationController extends Controller
 {
 
-    public function indexAction()
+    public function handleNotificationAction()
     {
         $session  = $this->get("session");
       $notification=null;
@@ -29,11 +29,11 @@ class NotificationController extends Controller
             $notification =$em->getRepository('LinkarBundle:Notification')->getNotifications(14,$count-$oldCount);
            $session->set("notification",$count);
 
-                return $this->render('LinkarBundle:Notification:notificationDialog.html.twig',array('m'=>$notification));
+                return $this->render('NotificationBundle:Notification:notificationDialog.html.twig',array('m'=>$notification));
         }
 
 
-        return $this->render('LinkarBundle:Notification:notificationDialog.html.twig',array('m'=>$notification));
+        return $this->render('NotificationBundle:Notification:notificationDialog.html.twig',array('m'=>$notification));
     }
 
     public function getNotificationsAction(){
@@ -41,7 +41,7 @@ class NotificationController extends Controller
         $em=$this->getDoctrine()->getManager();
         $notifications =$em->getRepository('LinkarBundle:Notification')->getAllNotifications(14);
 
-        return $this->render('LinkarBundle:Notification:notificationCenter.html.twig',array('m'=>$notifications));
+        return $this->render('NotificationBundle:Notification:notificationCenter.html.twig',array('m'=>$notifications));
     }
 
 
@@ -49,6 +49,10 @@ class NotificationController extends Controller
 
 
 
-        return $this->render('LinkarBundle:Notification:showNotification.html.twig');
+        return $this->render('NotificationBundle:Notification:showNotification.html.twig');
     }
+
+
+
+
 }

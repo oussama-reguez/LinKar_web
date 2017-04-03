@@ -1,0 +1,36 @@
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    .media-photo {
+        width: 35px;
+    }
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="{{ asset('bootstrap-notify.js')}}"> </script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+ajax() ;
+        setInterval( ajax, 5000 );
+    });
+    function ajax(){
+        x = new XMLHttpRequest();
+        x.onreadystatechange=function () {
+            if ((x.readyState==4) && (x.status==200)){
+                $(document).find('#content').append(x.responseText);
+                // alert(x.responseText);
+            }
+        }
+        url="{{path('notification')}}";
+
+
+
+        //alert(url);
+        x.open('GET',url,true);
+        x.send();
+    }
+</script>
+<div id="content">
+
+</div>

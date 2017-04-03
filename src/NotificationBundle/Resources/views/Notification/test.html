@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="/linkar/web/bootstrap-notify.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    .media-photo {
+        width: 35px;
+    }
+</style>
+</head>
+<body>
+
+<script>
+    $.notify({
+        // options
+        message: '  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo"> Hello World'
+    },{
+        // settings
+        type: 'danger'
+    });
+</script>
+
+</body>
+</html>
