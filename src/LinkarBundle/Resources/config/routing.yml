@@ -1,6 +1,6 @@
 linkar_homepage:
     path:     /exemple
-    defaults: { _controller: LinkarBundle:Default:index }
+    defaults: { _controller: LinkarBundle:Membre:exemple }
 utilisateurs:
     path:     /utilisateurs
     defaults: { _controller: LinkarBundle:Membre:showAll}

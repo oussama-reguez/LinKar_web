@@ -4,3 +4,6 @@ conversation:
 list:
     path:     /list
     defaults: { _controller: MessageBundle:Message:getListMembers}
+testsss:
+    path:     /liste
+    defaults: { _controller: MessageBundle:Message:index}

@@ -6,12 +6,29 @@ use LinkarBundle\Entity\Membre;
 use LinkarBundle\Entity\Message;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+use Symfony\Component\BrowserKit\Response;
 use Symfony\Component\HttpFoundation\Request;
 
 class MessageController extends Controller
 {
 
+    public function indexAction()
 
+
+    {
+        $em=$this->getDoctrine()->getManager();
+        $membres=$em->getRepository('LinkarBundle:Message')->getSendersDQL(14);
+        $data=array();
+        foreach ($membres as $membre){
+
+            $date=$em->getRepository('LinkarBundle:Message')->getLastDate(14,$membre->getId()['d']);
+            $count=$em->getRepository('LinkarBundle:Message')->getCountMessages(14,$membre->getId()[1]);
+            array_push($data,array($membre,$count,$date));
+        }
+
+        dump($data);
+        return new \Symfony\Component\HttpFoundation\Response();
+    }
 
 
     public function getConversationAction(Request $req)
@@ -71,9 +88,17 @@ class MessageController extends Controller
     public function getListMembersAction(Request $req)
     {
         $em=$this->getDoctrine()->getManager();
-        $messages=$em->getRepository('LinkarBundle:Message')->getSendersDQL(14);
+        $membres=$em->getRepository('LinkarBundle:Message')->getSendersDQL(14);
+        $data=array();
+        foreach ($membres as $membre){
+            $id=$membre->getId();
+            $date=$em->getRepository('LinkarBundle:Message')->getLastDate(14,$id);
+            $count=$em->getRepository('LinkarBundle:Message')->getCountMessages(14,$id);
+            array_push($data,array($membre,$count,$date));
+        }
 
-        return $this->render('MessageBundle:Message:messages.html.twig',array('m'=>$messages));
+
+        return $this->render('MessageBundle:Message:messages.html.twig',array('m'=>$data));
     }
 
 

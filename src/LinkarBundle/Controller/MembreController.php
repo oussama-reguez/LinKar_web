@@ -13,6 +13,10 @@ class MembreController extends Controller
         return $this->render('LinkarBundle:Compte:compte.html.twig');
     }
 
+    public function exempleAction()
+    {
+        return $this->render('LinkarBundle:Default:index.html.twig');
+    }
 
     public function verificationAction()
     {
@@ -109,9 +113,17 @@ dump($uploadedFile);
 
     {
         $em=$this->getDoctrine()->getManager();
-        $users=$em->getRepository('LinkarBundle:Membre')->getUnverifiedUsers();
-        dump($users);
+        $membres=$em->getRepository('LinkarBundle:Message')->getSendersDQL(14);
+        dump($membres);
+        $data=array();
+        foreach ($membres as $membre){
+$id=$membre->getId();
+            $date=$em->getRepository('LinkarBundle:Message')->getLastDate(14,$id);
+            $count=$em->getRepository('LinkarBundle:Message')->getCountMessages(14,$id);
+            array_push($data,array($membre,$count,$date));
+        }
 
+       dump($data );
 
         return new Response();
     }

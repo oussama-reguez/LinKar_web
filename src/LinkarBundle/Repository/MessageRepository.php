@@ -57,6 +57,8 @@ class MessageRepository extends EntityRepository
 
 
 
+
+
     public function getSendersDQL($idMembre){
 
         $query = $this->getEntityManager()
@@ -67,6 +69,36 @@ class MessageRepository extends EntityRepository
 
         return $query->getResult();
     }
+    public function getLastDate($idMembre,$idSender){
+
+        $query = $this->getEntityManager()
+
+            ->createQuery(" select m.date from LinkarBundle:Message m  where m.Receiver=:id or  m.Receiver=:id2 or m.Sender=:sender or m.Sender=:sender2  order by m.date desc")
+            ->setParameter('sender',$idMembre)
+            ->setParameter('sender2',$idSender)
+            ->setParameter('id2',$idMembre)
+            ->setParameter('id',$idSender)
+            ->setMaxResults(1);
+
+
+
+        return $query->getSingleResult();
+    }
+
+    public function getCountMessages($idMembre,$idSender){
+
+        $query = $this->getEntityManager()
+
+            ->createQuery(" select count(m) from LinkarBundle:Message m  where (m.Receiver=:id and  m.Sender=:id2 ) or ( m.Receiver=:sender and m.Sender=:sender2 ) order by m.date desc")
+            ->setParameter('sender',$idMembre)
+            ->setParameter('sender2',$idSender)
+            ->setParameter('id2',$idMembre)
+            ->setParameter('id',$idSender)
+            ->setMaxResults(1);
+
+        return $query->getSingleResult();
+    }
+
 
     public function  searchDQL($search){
         $query = $this->getEntityManager()

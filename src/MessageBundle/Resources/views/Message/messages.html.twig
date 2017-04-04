@@ -302,17 +302,17 @@
                         <ul class="list-unstyled">
                             {% for k in m %}
 
-                                <li class="left clearfix"  id="{{ k.id }}" onclick="chargement(this.id)">
+                                <li class="left clearfix"  id="{{ k[0].id }}" onclick="chargement(this.id)">
                      <span class="chat-img pull-left">
-                     <img src="{{ k.urlPicture }}" alt="User Avatar" class="img-circle">
+                     <img src="{{ k[0].urlPicture }}" alt="User Avatar" class="img-circle">
                      </span>
                                     <div class="chat-body clearfix">
                                         <div class="header_sec">
-                                            <strong class="primary-font">{{ k.firstName }} {{ k.LastName }} </strong> <strong class="pull-right">
-                                                09:45AM</strong>
+                                            <strong class="primary-font">{{ k[0].firstName }} {{ k[0].LastName }} </strong> <strong class="pull-right">
+                                                {{ k[2]['date']|date("h:i")}}</strong>
                                         </div>
                                         <div class="contact_sec">
-                                            <strong class="primary-font">(123) 123-456</strong> <span class="badge pull-right">3</span>
+                                            <strong class="primary-font">{{ k[0].email }}</strong> <span class="badge pull-right">{{  k[1][1] }}</span>
                                         </div>
                                     </div>
                                 </li>
