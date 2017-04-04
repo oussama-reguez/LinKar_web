@@ -76,7 +76,7 @@ swiftmailer:
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
-    user_class: LinkarBundle\Entity\User
+    user_class: LinkarBundle\Entity\Membre
     from_email:
           address: you@example.com
           sender_name: You

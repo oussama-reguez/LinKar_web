@@ -69,7 +69,8 @@ dump($uploadedFile);
     public function verifierCompteAction(Request $req)
     {
         $em=$this->getDoctrine()->getManager();
-        $user=$em->getRepository('LinkarBundle:Membre')->find(14);
+        $user=$this->getUser();
+        var_dump($user);
 
         if($req->isMethod('Post')){
             $uploadedFile = $req->files->get('upfile'); //upfile must be the value of the name attribute in the <input> tag
