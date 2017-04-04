@@ -112,18 +112,10 @@ dump($uploadedFile);
     public function indexAction()
 
     {
-        $em=$this->getDoctrine()->getManager();
-        $membres=$em->getRepository('LinkarBundle:Message')->getSendersDQL(14);
-        dump($membres);
-        $data=array();
-        foreach ($membres as $membre){
-$id=$membre->getId();
-            $date=$em->getRepository('LinkarBundle:Message')->getLastDate(14,$id);
-            $count=$em->getRepository('LinkarBundle:Message')->getCountMessages(14,$id);
-            array_push($data,array($membre,$count,$date));
-        }
+       $aa =$this->getUser();
+       dump($aa);
 
-       dump($data );
+
 
         return new Response();
     }
