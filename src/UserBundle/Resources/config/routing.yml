@@ -1,13 +1,9 @@
 user_homepage:
     path:     /
     defaults: { _controller: UserBundle:Default:index }
-
-
-
 crm_homepage:
     path:     /user
     defaults: { _controller: UserBundle:Default:index2 }
-
 member_homepage:
     path:     /member
     defaults: { _controller: UserBundle:Default:index3 }
@@ -15,6 +11,10 @@ member_homepage:
 backoffice_homepage:
     path:     /admin
     defaults: { _controller: UserBundle:Default:index2 }
+
+
+
+
 
 
 

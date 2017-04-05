@@ -5,7 +5,7 @@
     <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
     <title>chat room design - Bootsnipp.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <style type="text/css">
         #custom-search-input {
             background: #e8e6e7 none repeat scroll 0 0;
@@ -201,13 +201,23 @@
             width:100%;
         }
         .member_list li:hover {
-            background: #428bca none repeat scroll 0 0;
+            background: #81CFE0 none repeat scroll 0 0;
             color: #fff;
             cursor:pointer;
         }
+        .member_list li.selected {
+            background: #e070d3 none repeat scroll 0 0;
+            color: #fff;
+            cursor:pointer;
+        }
+
+
+
     </style>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/fontAwesome.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <script>
 
         function chargement(clicked_id) {
@@ -218,6 +228,7 @@
              domaineUsage=document.getElementById('domaineUsage').value;
              nbrCarat=document.getElementById('nbCarats').value;
              */
+
             x = new XMLHttpRequest();
             x.onreadystatechange=function () {
                 if ((x.readyState==4) && (x.status==200)){
@@ -248,6 +259,8 @@
             x.onreadystatechange=function () {
                 if ((x.readyState==4) && (x.status==200)){
                     document.getElementById('message_container').innerHTML=x.responseText;
+                    messages = document.getElementById('chat');
+                    messages.scrollTop = messages.scrollHeight;
                 }
             }
             url="{{path('conversation')}}?sender="+sender;
@@ -261,10 +274,28 @@
              x.open('GET',url,true);
              x.send();
         }
+        function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+        }
+        $( document ).ready(function() {
+               id=  getUrlParameter('sender');
+            $( '#'+id ).trigger( "click" );
+        });
     </script>
 </head>
 <body>
-<script src="https://use.fontawesome.com/45e03a14ce.js"></script>
+
 <div class="main_section">
     <div class="container">
         <div class="chat_container">

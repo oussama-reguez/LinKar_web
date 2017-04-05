@@ -27,9 +27,51 @@ class MembreController extends Controller
     {
         return $this->render('LinkarBundle:Compte:informationPersonnel.html.twig');
     }
-
-    public function changePasswordAction()
+    public function indexAction()
     {
+        $userManager = $this->get('fos_user.user_manager');
+        $user=$this->getUser();
+        $user->setPlainPassword('oussama');
+        //  $userManager->updateUser($user);
+
+
+
+
+
+
+       // $dd= $encoder->encodePassword('oussama',null);
+       // var_dump($encoder);
+        //var_dump($dd);
+        return new Response();
+    }
+
+    public function changePasswordAction(Request $req)
+    {
+        $userManager = $this->get('fos_user.user_manager');
+        $factory = $this->get('security.encoder_factory');
+        $user=$this->getUser();
+        $encoder = $factory->getEncoder($user);
+        if($req->isMethod('Post')){
+
+            $password =$req->get('passwordinput');
+            $newPassword=$req->get('newpasswordinput');var_dump($password);;var_dump($newPassword);
+            ;var_dump($user->getPassword());
+            ;var_dump( $encoder->encodePassword($password,null));
+
+
+
+
+            if( $encoder->isPasswordValid($user->getPassword(),$password,null)){
+                $user->setPlainPassword($newPassword);
+                $userManager->updateUser($user);
+                return $this->render('LinkarBundle:Compte:changePassword.html.twig',array('m'=>$user,'success'=>true));
+            }
+            else{
+                return $this->render('LinkarBundle:Compte:changePassword.html.twig',array('m'=>$user,'validatePassword'=>true));
+            }
+
+        }
+
         return $this->render('LinkarBundle:Compte:changePassword.html.twig');
     }
 
@@ -110,16 +152,7 @@ dump($uploadedFile);
 
     }
 
-    public function indexAction()
 
-    {
-       $aa =$this->getUser();
-       dump($aa);
-
-
-
-        return new Response();
-    }
 
     public function unverifiedUsersAction()
 
