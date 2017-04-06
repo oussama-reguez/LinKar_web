@@ -1,15 +1,6 @@
 linkar_homepage:
     path:     /exemple
     defaults: { _controller: LinkarBundle:Membre:exemple }
-utilisateurs:
-    path:     /utilisateurs
-    defaults: { _controller: LinkarBundle:Membre:showAll}
-editUser:
-    path:     /editUser
-    defaults: { _controller: LinkarBundle:Membre:EditUser}
-rechercheUtilisateur:
-    path:     /rechercheUtilisateur
-    defaults: { _controller: LinkarBundle:Membre:search}
 stat:
     path:     /stat
     defaults: { _controller: LinkarBundle:Membre:index}
@@ -22,9 +13,6 @@ upload:
 verificationCompte:
     path:     /verifierCompte
     defaults: { _controller: LinkarBundle:Membre:verifierCompte}
-verificationCin:
-    path:     /verifcin
-    defaults: { _controller: LinkarBundle:Membre:unverifiedUsers}
 changePassword:
     path:     /changePassword
     defaults: { _controller: LinkarBundle:Membre:changePassword}

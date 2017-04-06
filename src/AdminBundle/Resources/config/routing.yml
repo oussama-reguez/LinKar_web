@@ -1,3 +1,15 @@
 admin_homepage:
     path:     /
     defaults: { _controller: AdminBundle:Default:index }
+utilisateurs:
+    path:     /utilisateurs
+    defaults: { _controller: AdminBundle:Admin:showAll}
+editUser:
+    path:     /editUser
+    defaults: { _controller: AdminBundle:Admin:EditUser}
+rechercheUtilisateur:
+    path:     /rechercheUtilisateur
+    defaults: { _controller: AdminBundle:Admin:search}
+verificationCin:
+    path:     /verifcin
+    defaults: { _controller: AdminBundle:Admin:unverifiedUsers}

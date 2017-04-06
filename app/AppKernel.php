@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new StatBundle\StatBundle(),
             new MessageBundle\MessageBundle(),
             new NotificationBundle\NotificationBundle(),
+            new AdminBundle\AdminBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
