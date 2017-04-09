@@ -5,6 +5,7 @@ namespace LinkarBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use \DateTime;
 
 class MembreController extends Controller
 {
@@ -29,19 +30,16 @@ class MembreController extends Controller
     }
     public function indexAction()
     {
-        $userManager = $this->get('fos_user.user_manager');
-        $user=$this->getUser();
-        $user->setPlainPassword('oussama');
-        //  $userManager->updateUser($user);
+        $em=$this->getDoctrine()->getManager();
+
+        $dateDebut= new DateTime('02/31/2011');
+        $dateFin= new DateTime('04/08/2017');
+        $users=$em->getRepository('LinkarBundle:Membre')->autoCompleteByCriteria('',1,null,$dateFin,'asc','all');
+        dump($users);
+        $tab =[];
+        $t =[];
 
 
-
-
-
-
-       // $dd= $encoder->encodePassword('oussama',null);
-       // var_dump($encoder);
-        //var_dump($dd);
         return new Response();
     }
 

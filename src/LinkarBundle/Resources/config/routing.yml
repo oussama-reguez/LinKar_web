@@ -2,7 +2,7 @@ linkar_homepage:
     path:     /exemple
     defaults: { _controller: LinkarBundle:Membre:exemple }
 stat:
-    path:     /stat
+    path:     /state
     defaults: { _controller: LinkarBundle:Membre:index}
 compte:
     path:     /compte

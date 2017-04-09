@@ -76,6 +76,140 @@ class MembreRepository extends EntityRepository
         return $query->getResult();
     }
 
+    public function findByCriteria($name , $type ,$dateDebut,$dateFin ,$order,$status){
+
+        $query = $this->getEntityManager();
+        $query->createQuery(" select m  from LinkarBundle:Membre m  where m.lastName like :name or m.firstName like :first");
+        $parameters = [];
+        $statement='select m  from LinkarBundle:Membre m  where ';
+        if($type!=null){
+        if($type=='1'){
+          // $query ->setParameter('first',$name.'%');
+            //$query ->setParameter('last',$name.'%');
+            $parameters['first']=$name.'%';
+            $parameters['last']=$name.'%';
+            $statement=  $statement .' m.lastName like :last or m.firstName like :first';
+        }
+        if($type=='2'){
+            //$query ->setParameter('last',$name.'%');
+            $parameters['last']=$name.'%';
+            $statement= $statement. ' m.lastName like :last ';
+        }
+        if($type=='3'){
+            //$query ->setParameter('first',$name.'%');
+            $parameters['first']=$name.'%';
+            $statement=  $statement. '  m.firstName like :first ';
+        }
+        }
+        if($dateFin!=null){
+            if($dateDebut==null){
+                //convert string to date
+                //$query ->setParameter('dateFin',$dateFin);
+                $parameters['dateFin']=$dateFin;
+                $statement=   $statement. ' and   m.createdtime < :dateFin';
+            }
+            else{
+                $parameters['dateFin']=$dateFin;
+                $parameters['dateDebut']=$dateDebut;
+                //$query ->setParameter('dateFin',$dateFin);
+                //$query ->setParameter('dateDebut',$dateDebut);
+                $statement=  $statement. ' and   m.createdtime < :dateFin and   m.createdtime > :dateDebut  ';
+            }
+        }
+
+
+        if($status != null){
+            if ($status=='active'){
+                $statement= $statement. ' and   m.statut=1  ';
+            }
+            if ($status=='blocked'){
+                $statement= $statement. ' and   m.statut=0  ';
+            }
+        }
+        if($order != null){
+            if($order=='asc'){
+                $statement=  $statement. ' order by m.createdtime asc ';
+            }
+
+            if($order=='desc'){
+                $statement=    $statement. ' order by m.createdtime desc ';
+            }
+
+        }
+
+
+
+        $query = $this->getEntityManager();
+        return    $query->createQuery($statement)->setParameters($parameters)->getResult();
+
+
+
+
+
+
+    }
+
+
+    public function autoCompleteByCriteria($name , $type ,$dateDebut,$dateFin ,$order,$status){
+
+        $query = $this->getEntityManager();
+
+        $parameters = [];
+        $statement='select  m.firstName , m.lastName from LinkarBundle:Membre m  where ';
+        if($type=='1'){
+            // $query ->setParameter('first',$name.'%');
+            //$query ->setParameter('last',$name.'%');
+            $parameters['first']=$name.'%';
+            $parameters['last']=$name.'%';
+            $statement=  $statement .' m.lastName like :last or m.firstName like :first';
+        }
+        if($type=='2'){
+            //$query ->setParameter('last',$name.'%');
+            $parameters['last']=$name.'%';
+            $statement= $statement. ' m.lastName like :last ';
+        }
+        if($type=='3'){
+            //$query ->setParameter('first',$name.'%');
+            $parameters['first']=$name.'%';
+            $statement=  $statement. '  m.firstName like :first ';
+        }
+        if($dateDebut==null){
+            //convert string to date
+            //$query ->setParameter('dateFin',$dateFin);
+            $parameters['dateFin']=$dateFin;
+            $statement=   $statement. ' and   m.createdtime < :dateFin';
+        }
+        else{
+            $parameters['dateFin']=$dateFin;
+            $parameters['dateDebut']=$dateDebut;
+            //$query ->setParameter('dateFin',$dateFin);
+            //$query ->setParameter('dateDebut',$dateDebut);
+            $statement=  $statement. ' and   m.createdtime < :dateFin and   m.createdtime > :dateDebut  ';
+        }
+
+        if ($status=='active'){
+            $statement= $statement. ' and   m.statut=1  ';
+        }
+        if ($status=='blocked'){
+            $statement= $statement. ' and   m.statut=0  ';
+        }
+        if($order=='asc'){
+            $statement=  $statement. ' order by m.createdtime asc ';
+        }
+
+        if($order=='desc'){
+            $statement=    $statement. ' order by m.createdtime desc ';
+        }
+
+        $query = $this->getEntityManager();
+        return    $query->createQuery($statement)->setParameters($parameters)->getResult();
+
+
+
+
+
+
+    }
     public function findByGenre($genre){
 
         $query = $this->getEntityManager()

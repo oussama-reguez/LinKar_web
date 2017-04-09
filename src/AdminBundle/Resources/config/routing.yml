@@ -13,3 +13,6 @@ rechercheUtilisateur:
 verificationCin:
     path:     /verifcin
     defaults: { _controller: AdminBundle:Admin:unverifiedUsers}
+autoComplete:
+    path:     /autoComplete
+    defaults: { _controller: AdminBundle:Admin:autoComplete}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+
+        <script src="../../../../../web/assets/js/jquery-3.2.0.min.js"></script>
+        <script src="../../../../../web/assets/js/bootstrap.min.js"></script>
+
+        <script src="../../../../../web/assets/js/bootstrap-typeahead.js"> </script>
+    </head>
+
+
+<body>
+
+http://localhost/linkar_web/web/app_dev.php/autoComplete?name=&type=2&order=desc&status=all&dateFin=20%2F04%2F2017
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $('#text').typeahead({
+                source: function (query, process) {
+                    return $.get('/typeahead', { query: query }, function (data) {
+                        return process(data.options);
+                    });
+                }
+            });
+        });
+</script>
+    <input type="search" id="text" placeholder="Search..." data-provide="typeahead" />
+
+</body>
+</html>
