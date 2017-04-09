@@ -16,3 +16,6 @@ verificationCin:
 autoComplete:
     path:     /autoComplete
     defaults: { _controller: AdminBundle:Admin:autoComplete}
+dashboard:
+    path:     /dashboard
+    defaults: { _controller: AdminBundle:Admin:dashBoard}

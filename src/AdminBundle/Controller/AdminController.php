@@ -8,6 +8,19 @@ use Symfony\Component\HttpFoundation\Response;
 use \DateTime;
 class AdminController extends Controller
 {
+    public function dashBoardAction()
+
+    {
+
+
+        return $this->render('@Admin/layout.html.twig');
+
+
+
+    }
+
+
+
     public function unverifiedUsersAction()
 
     {
