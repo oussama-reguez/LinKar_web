@@ -8,6 +8,9 @@ use Symfony\Component\HttpFoundation\Response;
 use \DateTime;
 class AdminController extends Controller
 {
+
+
+
     public function dashBoardAction()
 
     {
@@ -35,6 +38,9 @@ class AdminController extends Controller
     public function unverifiedUsersAction()
 
     {
+
+
+
         $em=$this->getDoctrine()->getManager();
         $users=$em->getRepository('LinkarBundle:Membre')->getUnverifiedUsers();
 
@@ -240,12 +246,18 @@ class AdminController extends Controller
 
                if($role=='admin' ){
                    $user->setRole(true);
+                   $user->setRoles(array());
+                   $user->addRole("ROLE_ADMIN");
+
                    $check=true;
                 //   $user->setRoles()
                }
 
                   if($role=='membre' ){
                       $user->setRole(false);
+                      $user->setRoles(array());
+
+                      $user->addRole("ROLE_USER");
                       //   $user->setRoles()
                       $check=true;
                   }
@@ -255,10 +267,12 @@ class AdminController extends Controller
                  if($status=='active'){
                      $check=true;
                      $user->setStatut(true);
+                     $user->setEnabled(true);
                  }
                   if($status=='blocked'){
                       $check=true;
                       $user->setStatut(false);
+                      $user->setEnabled(false);
                   }
               }
 

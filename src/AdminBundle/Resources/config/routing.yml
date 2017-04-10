@@ -2,22 +2,22 @@ admin_homepage:
     path:     /
     defaults: { _controller: AdminBundle:Default:index }
 utilisateurs:
-    path:     /utilisateurs
+    path:     /admin/utilisateurs
     defaults: { _controller: AdminBundle:Admin:showAll}
 editUser:
-    path:     /editUser
+    path:     /admin/editUser
     defaults: { _controller: AdminBundle:Admin:EditUser}
 rechercheUtilisateur:
-    path:     /rechercheUtilisateur
+    path:     /admin/rechercheUtilisateur
     defaults: { _controller: AdminBundle:Admin:search}
 verificationCin:
-    path:     /verifcin
+    path:     /admin/verifcin
     defaults: { _controller: AdminBundle:Admin:unverifiedUsers}
 autoComplete:
     path:     /autoComplete
     defaults: { _controller: AdminBundle:Admin:autoComplete}
 dashboard:
-    path:     /dashboard
+    path:     /admin/dashboard
     defaults: { _controller: AdminBundle:Admin:dashBoard}
 dashboadrd:
     path:     /tala

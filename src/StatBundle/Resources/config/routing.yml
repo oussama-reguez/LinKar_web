@@ -2,10 +2,10 @@ stat_homepage:
     path:     /
     defaults: { _controller: StatBundle:Default:index }
 annoucneStatestic:
-    path:     /announceStat
+    path:     /admin/announceStat
     defaults: { _controller: StatBundle:Graphe:AnnounceStat }
 userStatestic:
-    path:     /userStat
+    path:     /admin/userStat
     defaults: { _controller: StatBundle:Graphe:UserStat }
 
 

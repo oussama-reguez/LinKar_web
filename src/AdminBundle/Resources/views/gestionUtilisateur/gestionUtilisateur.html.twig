@@ -1,5 +1,6 @@
 {% extends "@Admin/layout.html.twig" %}
 {% block main %}
+    {% include '@Notification/Notification/showNotification.html.twig' %}
     {# comment {% include '@Notification/Notification/showNotification.html.twig' %} #}
     <style type="text/css">
         .container2{
@@ -48,7 +49,7 @@
         }
     </style>
 
-    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+
     <script src="{{ asset('assets/js/bootbox.min.js') }}"> </script>
     <script src=" https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"> </script>
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">

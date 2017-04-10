@@ -2,30 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fbf879e-c46d-45bf-9266-04da13fe3a5a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/test.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/Message/displayInbox.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/Message/messages2.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/displayNotifCenter.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/gestionUtilisateur/verificationUtilisateur.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/verificationCompte/verificationUtilisateur.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Form/RegistrationType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/AdminController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/AdminController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/gestionUtilisateur/gestionUtilisateur.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/gestionUtilisateur/gestionUtilisateur.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/test.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/test.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/verificationCompte/verificationUtilisateur.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/verificationCompte/verificationUtilisateur.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkarBundle/Controller/MembreController.php" afterPath="$PROJECT_DIR$/src/LinkarBundle/Controller/MembreController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/changePassword.html.twig" afterPath="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/changePassword.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/informationPersonnel.html.twig" afterPath="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/informationPersonnel.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/verifierCompte.html.twig" afterPath="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/verifierCompte.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkarBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/LinkarBundle/Resources/views/layout.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MessageBundle/Controller/MessageController.php" afterPath="$PROJECT_DIR$/src/MessageBundle/Controller/MessageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MessageBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MessageBundle/Resources/views/Message/conversation.html.twig" afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/Message/conversation.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MessageBundle/Resources/views/Message/messages.html.twig" afterPath="$PROJECT_DIR$/src/MessageBundle/Resources/views/Message/messages.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NotificationBundle/Controller/NotificationController.php" afterPath="$PROJECT_DIR$/src/NotificationBundle/Controller/NotificationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NotificationBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/NotificationBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/notificationCenter.html.twig" afterPath="$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/notificationCenter.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/showNotification.html.twig" afterPath="$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/showNotification.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Resources/views/Security/login.html.twig" afterPath="$PROJECT_DIR$/src/UserBundle/Resources/views/Security/login.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StatBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/StatBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StatBundle/Resources/views/stat/annonceStat.html.twig" afterPath="$PROJECT_DIR$/src/StatBundle/Resources/views/stat/annonceStat.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StatBundle/Resources/views/stat/userStat.html.twig" afterPath="$PROJECT_DIR$/src/StatBundle/Resources/views/stat/userStat.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Resources/views/Registration/register.html.twig" afterPath="$PROJECT_DIR$/src/UserBundle/Resources/views/Registration/register.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/UserBundle/Resources/views/layout.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,14 +43,44 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="showNotification.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/showNotification.html.twig">
+      <file leaf-file-name="MessageController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MessageBundle/Controller/MessageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="53" />
+            <state relative-caret-position="-34">
+              <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding>
-                <element signature="e#744#756#0#Twig" expanded="false" />
+                <element signature="e#308#904#0#PHP" expanded="false" />
+                <element signature="e#430#452#1#PHP" expanded="true" />
+                <element signature="e#574#596#1#PHP" expanded="true" />
+                <element signature="e#676#698#1#PHP" expanded="true" />
+                <element signature="e#911#1082#0#PHP" expanded="false" />
+                <element signature="e#1033#1074#1#PHP" expanded="true" />
+                <element signature="e#1089#2943#0#PHP" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NotificationController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/NotificationBundle/Controller/NotificationController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding>
+                <element signature="e#209#1174#0#PHP" expanded="false" />
+                <element signature="e#1600#1742#0#PHP" expanded="false" />
+                <element signature="e#1876#1933#1#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,124 +88,36 @@
       <file leaf-file-name="test.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/test.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+            <state relative-caret-position="119">
+              <caret line="7" column="73" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="73" />
               <folding>
                 <element signature="e#12#34#0#Twig" expanded="true" />
+                <element signature="e#77#130#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NotificationBundle/Resources/config/routing.yml">
+      <file leaf-file-name="gestionUtilisateur.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/gestionUtilisateur/gestionUtilisateur.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MembreController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Controller/MembreController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="73" lean-forward="false" selection-start-line="2" selection-start-column="73" selection-end-line="2" selection-end-column="73" />
               <folding>
-                <element signature="e#1152#2286#0#PHP" expanded="false" />
-                <element signature="e#2295#3058#0#PHP" expanded="false" />
-                <element signature="e#4661#4958#0#PHP" expanded="false" />
-                <element signature="e#5246#5930#0#PHP" expanded="false" />
-                <element signature="e#5937#8050#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="changePassword.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/changePassword.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="18" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="16" selection-end-column="18" />
-              <folding>
-                <element signature="e#12#34#0#Twig" expanded="true" />
-                <element signature="e#347#360#0#Twig" expanded="true" />
-                <element signature="e#496#510#0#Twig" expanded="true" />
-                <element signature="e#654#672#0#Twig" expanded="true" />
-                <element signature="e#1109#1123#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="informationPersonnel.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/informationPersonnel.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="58" column="14" lean-forward="false" selection-start-line="51" selection-start-column="7" selection-end-line="58" selection-end-column="14" />
-              <folding>
-                <element signature="e#13#35#0#Twig" expanded="true" />
+                <element signature="e#12#35#0#Twig" expanded="true" />
+                <element signature="e#73#126#0#Twig" expanded="true" />
                 <element signature="n#style#0;n#!!top" expanded="false" />
-                <marker date="1491784081442" expanded="true" signature="4630:4666" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="verifierCompte.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/verifierCompte.html.twig">
+      <file leaf-file-name="showNotification.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/showNotification.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="77" column="18" lean-forward="false" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
-              <folding>
-                <element signature="e#13#35#0#Twig" expanded="true" />
-                <element signature="e#6778#6791#0#Twig" expanded="true" />
-                <element signature="e#6927#6941#0#Twig" expanded="true" />
-                <element signature="e#7085#7103#0#Twig" expanded="true" />
-                <marker date="1491784200811" expanded="true" signature="4953:4989" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MessageBundle/Controller/MessageController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="37" column="72" lean-forward="false" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
-              <folding>
-                <element signature="e#430#452#1#PHP" expanded="true" />
-                <element signature="e#574#596#1#PHP" expanded="true" />
-                <element signature="e#676#698#1#PHP" expanded="true" />
-                <element signature="e#978#1019#1#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="messages.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MessageBundle/Resources/views/Message/messages.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="296" column="0" lean-forward="false" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#7028#7040#0#Twig" expanded="false" />
-                <element signature="e#8039#8051#0#Twig" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="255" column="0" lean-forward="false" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -197,9 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>path</find>
-      <find>media</find>
-      <find>geti</find>
       <find>inclu</find>
       <find>username</find>
       <find>user</find>
@@ -227,6 +160,9 @@
       <find>jquer</find>
       <find>bootstrap</find>
       <find>datatab</find>
+      <find>tables</find>
+      <find>role</find>
+      <find>roles</find>
     </findStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
@@ -251,23 +187,23 @@
       <command text="git" />
       <command text="git commit -m &quot;fixing urls &quot;" />
       <command text="git push" />
+      <command text="s debug:router " />
+      <command text="s doctrine:generate:form Membre" />
+      <command text="s cache:clear" />
+      <command text="s debug:router " />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/gestionUtilisateur/condensed_table_example.html" />
-        <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/verification.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/LinkarBundle/Controller/MessageController.php" />
-        <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Notification/notificationDialog.html.twig" />
         <option value="$PROJECT_DIR$/src/LinkarBundle/Controller/NotificationController.php" />
         <option value="$PROJECT_DIR$/src/StatBundle/Controller/GrapheController.php" />
-        <option value="$PROJECT_DIR$/src/StatBundle/Resources/views/stat/userStat.html.twig" />
         <option value="$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/notificationDialog.html.twig" />
         <option value="$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/test.html" />
         <option value="$PROJECT_DIR$/src/LinkarBundle/Repository/MessageRepository.php" />
@@ -277,39 +213,46 @@
         <option value="$PROJECT_DIR$/src/LinkarBundle/Entity/Membre.php" />
         <option value="$PROJECT_DIR$/src/UserBundle/UserBundle.php" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/UserBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/gestionUtilisateur/verificationUtilisateur.html.twig" />
         <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/gestionUtilisateur/gestionUtilisateur.html.twig" />
-        <option value="$PROJECT_DIR$/src/StatBundle/Resources/views/stat/annonceStat.html.twig" />
         <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/LinkarBundle/Repository/MembreRepository.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/gestionUtilisateur/date.html" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/test.html" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/gestionUtilisateur/gestionUtilisateur.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/AdminController.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/verificationCompte/verificationUtilisateur.html.twig" />
         <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/UserBundle/Resources/views/Security/login.html.twig" />
-        <option value="$PROJECT_DIR$/src/LinkarBundle/Controller/MembreController.php" />
         <option value="$PROJECT_DIR$/src/MessageBundle/Resources/views/Message/conversation.html.twig" />
         <option value="$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/notificationCenter.html.twig" />
-        <option value="$PROJECT_DIR$/src/NotificationBundle/Controller/NotificationController.php" />
         <option value="$PROJECT_DIR$/src/NotificationBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/displayNotifCenter.html.twig" />
-        <option value="$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/showNotification.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/test.html.twig" />
         <option value="$PROJECT_DIR$/src/MessageBundle/Resources/views/Message/messages.html.twig" />
         <option value="$PROJECT_DIR$/src/MessageBundle/Resources/views/Message/displayInbox.html.twig" />
-        <option value="$PROJECT_DIR$/src/MessageBundle/Controller/MessageController.php" />
         <option value="$PROJECT_DIR$/src/MessageBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/UserBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/informationPersonnel.html.twig" />
         <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/changePassword.html.twig" />
         <option value="$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/verifierCompte.html.twig" />
+        <option value="$PROJECT_DIR$/src/StatBundle/Resources/views/stat/annonceStat.html.twig" />
+        <option value="$PROJECT_DIR$/src/StatBundle/Resources/views/stat/userStat.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/verificationCompte/verificationUtilisateur.html.twig" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Form/RegistrationType.php" />
+        <option value="$PROJECT_DIR$/app/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Resources/views/Registration/register.html.twig" />
+        <option value="$PROJECT_DIR$/app/Form/RegistrationType.php" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php" />
+        <option value="$PROJECT_DIR$/src/LinkarBundle/Controller/MembreController.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/StatBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/AdminController.php" />
+        <option value="$PROJECT_DIR$/src/MessageBundle/Controller/MessageController.php" />
+        <option value="$PROJECT_DIR$/src/NotificationBundle/Controller/NotificationController.php" />
+        <option value="$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/showNotification.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/test.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/gestionUtilisateur/gestionUtilisateur.html.twig" />
       </list>
     </option>
   </component>
@@ -366,7 +309,143 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StatBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StatBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stat" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StatBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StatBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StatBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -398,7 +477,23 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NotificationBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Notification" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -412,7 +507,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NotificationBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -421,6 +520,172 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NotificationBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NotificationBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gestionUtilisateur" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkar_web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -434,7 +699,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="SearchEverywhereHistoryKey" value="layou&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/UserBundle/Resources/views/layout.html.twig&#10;messageCon&#9;null&#9;null&#10;tes&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/AdminBundle/Resources/views/test.html.twig&#10;te&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/AdminBundle/Resources/views/test.html.twig&#10;layo&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/UserBundle/Resources/views/layout.html.twig&#10;test&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/AdminBundle/Resources/views/test.html.twig&#10;layout&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/UserBundle/Resources/views/layout.html.twig&#10;ver&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/LinkarBundle/Resources/views/Compte/verifierCompte.html.twig&#10;membr&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/LinkarBundle/Controller/MembreController.php&#10;orm.yml&#9;FILE&#9;file://C:/wamp64/www/linkar/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Mapping/Loader/bad-format.yml" />
+    <property name="SearchEverywhereHistoryKey" value="test&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/AdminBundle/Resources/views/test.html.twig&#10;tes&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/NotificationBundle/Resources/views/Notification/test.html&#10;layou&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/UserBundle/Resources/views/layout.html.twig&#10;messageCon&#9;null&#9;null&#10;te&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/AdminBundle/Resources/views/test.html.twig&#10;layo&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/UserBundle/Resources/views/layout.html.twig&#10;layout&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/UserBundle/Resources/views/layout.html.twig&#10;ver&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/LinkarBundle/Resources/views/Compte/verifierCompte.html.twig&#10;membr&#9;FILE&#9;file://C:/wamp/www/linkar_web/src/LinkarBundle/Controller/MembreController.php&#10;orm.yml&#9;FILE&#9;file://C:/wamp64/www/linkar/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Mapping/Loader/bad-format.yml" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
@@ -447,6 +712,7 @@
       <recent name="C:\wamp\www\linkar_web\web\assets\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\linkar_web\app" />
       <recent name="C:\wamp\www\linkar_web\src\AdminBundle\Resources\views\verificationCompte" />
       <recent name="C:\wamp\www\linkar_web\web\assets\css" />
       <recent name="C:\wamp\www\linkar_web\src\UserBundle\Resources\views\Security" />
@@ -569,33 +835,33 @@
       <workItem from="1491556652899" duration="1120000" />
       <workItem from="1491658926990" duration="21575000" />
       <workItem from="1491738073707" duration="731000" />
-      <workItem from="1491763909651" duration="17620000" />
+      <workItem from="1491763909651" duration="27512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188205000" />
+    <option name="totallyTimeSpent" value="198097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37841946" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3487842" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="GitLabIntegration" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40425533" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32405892" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -635,136 +901,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/verification.html.twig" />
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/layout.html.twig" />
-    <entry file="file://$PROJECT_DIR$/src/UserBundle/UserBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/js/bootstrap-datetimepicker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/js/bootstrap-datetimepicker.css" />
-    <entry file="file://$PROJECT_DIR$/web/assets/js/bootstrap-datetimepicker.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/bootstrap-datetimepicker.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/js/moment-with-locales.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="e#215#252#1#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Entity/Membre.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="115" column="31" lean-forward="false" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/gestionUtilisateur/userTable.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Repository/MembreRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#254#0#PHP" expanded="false" />
-            <element signature="e#422#457#0#PHP" expanded="false" />
-            <element signature="e#2479#2791#0#PHP" expanded="false" />
-            <element signature="e#2800#2986#0#PHP" expanded="false" />
-            <element signature="e#2995#3187#0#PHP" expanded="false" />
-            <marker date="1491678206329" expanded="true" signature="664:745" ph="select a fro... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="954:1050" ph="select m fro... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="1303:1369" ph="select m fro... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="1583:1648" ph="select m fro... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="1862:1954" ph="select m fro... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="2257:2349" ph="select m fro... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="2399:2442" ph="select m fro... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="4772:4838" ph="select m fro... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="6840:6903" ph="select m fro... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="7245:7347" ph="select SUBST... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="7642:7744" ph="select SUBST... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="7998:8080" ph="select m.gen... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="8230:8280" ph="select count... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="8449:8520" ph="select count... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="8689:8805" ph="select m , (... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="9103:9220" ph="select count... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="9502:9621" ph="select count... LinkarBundle" />
-            <marker date="1491678206329" expanded="true" signature="9901:10020" ph="select count... LinkarBundle" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/js/jquery-3.2.0.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/js/bootstrap-typeahead.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1485253636000" expanded="true" signature="408:439" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/jquery.typeahead.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/gestionUtilisateur/date.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -791,73 +927,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#214#251#1#PHP" expanded="false" />
-            <element signature="e#330#367#1#PHP" expanded="false" />
-            <element signature="e#446#482#1#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/verificationCompte/verificationUtilisateur.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#35#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#!!top" expanded="false" />
-            <element signature="n#script#3;n#!!top" expanded="false" />
-            <element signature="n#table#0;n#!!top" expanded="false" />
-            <marker date="1491768827006" expanded="true" signature="823:841" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Repository/AnnonceRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1490991588537" expanded="true" signature="675:753" ph="select DISTI... LinkarBundle" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="40" column="89" lean-forward="false" selection-start-line="40" selection-start-column="89" selection-end-line="40" selection-end-column="89" />
-          <folding>
-            <element signature="e#327#352#1#PHP" expanded="true" />
-            <element signature="e#437#460#1#PHP" expanded="true" />
-            <element signature="e#683#744#0#PHP" expanded="true" />
-            <element signature="e#780#1048#0#PHP" expanded="false" />
-            <element signature="e#1054#3373#0#PHP" expanded="false" />
-            <element signature="e#1570#1724#0#PHP" expanded="false" />
-            <element signature="e#1742#1890#0#PHP" expanded="false" />
-            <element signature="e#3378#5614#0#PHP" expanded="false" />
-            <element signature="e#3900#4054#0#PHP" expanded="false" />
-            <element signature="e#4072#4220#0#PHP" expanded="false" />
-            <element signature="e#5620#7733#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/gestionUtilisateur/gestionUtilisateur.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="16" />
-          <folding>
-            <element signature="e#12#35#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#!!top" expanded="false" />
-            <element signature="n#script#5;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -878,32 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/Security/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-          <folding>
-            <element signature="e#13#41#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -911,22 +960,6 @@
           <folding>
             <element signature="n#script#23;n#head#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MessageBundle/MessageBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1003,69 +1036,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NotificationBundle/Controller/NotificationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="58" column="86" lean-forward="false" selection-start-line="58" selection-start-column="86" selection-end-line="58" selection-end-column="86" />
-          <folding>
-            <element signature="e#209#1118#0#PHP" expanded="false" />
-            <element signature="e#1671#1728#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/showNotification.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="53" />
-          <folding>
-            <element signature="e#744#756#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/test.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding>
-            <element signature="e#12#34#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/NotificationBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Controller/MembreController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding>
-            <element signature="e#1152#2286#0#PHP" expanded="false" />
-            <element signature="e#2295#3058#0#PHP" expanded="false" />
-            <element signature="e#4661#4958#0#PHP" expanded="false" />
-            <element signature="e#5246#5930#0#PHP" expanded="false" />
-            <element signature="e#5937#8050#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MessageBundle/Controller/MessageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="37" column="72" lean-forward="false" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
-          <folding>
-            <element signature="e#430#452#1#PHP" expanded="true" />
-            <element signature="e#574#596#1#PHP" expanded="true" />
-            <element signature="e#676#698#1#PHP" expanded="true" />
-            <element signature="e#978#1019#1#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1077,16 +1052,6 @@
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#7028#7040#0#Twig" expanded="false" />
             <element signature="e#8039#8051#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="255" column="0" lean-forward="false" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1110,8 +1075,10 @@
         <state relative-caret-position="306">
           <caret line="58" column="14" lean-forward="false" selection-start-line="51" selection-start-column="7" selection-end-line="58" selection-end-column="14" />
           <folding>
-            <element signature="e#13#35#0#Twig" expanded="true" />
             <element signature="n#style#0;n#!!top" expanded="false" />
+            <element signature="e#6461#6474#0#Twig" expanded="false" />
+            <element signature="e#6592#6606#0#Twig" expanded="false" />
+            <element signature="e#6746#6764#0#Twig" expanded="false" />
             <marker date="1491784081442" expanded="true" signature="4630:4666" ph="..." />
           </folding>
         </state>
@@ -1119,14 +1086,325 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Resources/views/Compte/changePassword.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="18" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="16" selection-end-column="18" />
+        <state relative-caret-position="442">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="e#12#34#0#Twig" expanded="true" />
             <element signature="e#347#360#0#Twig" expanded="true" />
             <element signature="e#496#510#0#Twig" expanded="true" />
             <element signature="e#654#672#0#Twig" expanded="true" />
             <element signature="e#1109#1123#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StatBundle/Resources/views/stat/userStat.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+          <folding>
+            <element signature="e#14#37#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="372" column="63" lean-forward="false" selection-start-line="372" selection-start-column="63" selection-end-line="372" selection-end-column="63" />
+          <folding>
+            <element signature="e#20775#20787#0#Twig" expanded="true" />
+            <element signature="e#20901#20916#0#Twig" expanded="true" />
+            <element signature="e#21465#21478#0#Twig" expanded="true" />
+            <element signature="e#21598#21615#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StatBundle/StatBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StatBundle/Resources/views/stat/annonceStat.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#13#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/verificationCompte/verificationUtilisateur.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#35#0#Twig" expanded="true" />
+            <marker date="1491785798891" expanded="true" signature="692:710" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1511">
+          <caret line="554" column="66" lean-forward="false" selection-start-line="554" selection-start-column="66" selection-end-line="554" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/Security/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="16" />
+          <folding>
+            <element signature="e#13#41#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/Registration/register_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="7" selection-end-column="20" />
+          <folding>
+            <element signature="e#99#129#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="32" />
+          <folding>
+            <element signature="e#214#251#1#PHP" expanded="false" />
+            <element signature="e#330#367#1#PHP" expanded="false" />
+            <element signature="e#446#482#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="85" column="43" lean-forward="false" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/Registration/register.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="133" lean-forward="false" selection-start-line="3" selection-start-column="133" selection-end-line="3" selection-end-column="133" />
+          <folding>
+            <element signature="e#12#40#0#Twig" expanded="false" />
+            <element signature="e#122#152#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Form/RegistrationType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="e#27#67#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="39" column="39" lean-forward="false" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="100" column="20" lean-forward="false" selection-start-line="100" selection-start-column="15" selection-end-line="100" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Redirection/AfterLoginRedirection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="48" column="41" lean-forward="false" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Entity/Membre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1173">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/security.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StatBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#258#366#0#PHP" expanded="false" />
+            <element signature="e#330#355#1#PHP" expanded="true" />
+            <element signature="e#373#474#0#PHP" expanded="false" />
+            <element signature="e#440#463#1#PHP" expanded="true" />
+            <element signature="e#689#750#0#PHP" expanded="true" />
+            <element signature="e#786#1054#0#PHP" expanded="false" />
+            <element signature="e#1060#3379#0#PHP" expanded="false" />
+            <element signature="e#1576#1730#0#PHP" expanded="false" />
+            <element signature="e#1748#1896#0#PHP" expanded="false" />
+            <element signature="e#3384#5620#0#PHP" expanded="false" />
+            <element signature="e#3906#4060#0#PHP" expanded="false" />
+            <element signature="e#4078#4226#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkarBundle/Controller/MembreController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="52" column="52" lean-forward="false" selection-start-line="50" selection-start-column="6" selection-end-line="52" selection-end-column="52" />
+          <folding>
+            <element signature="e#761#1148#0#PHP" expanded="false" />
+            <element signature="e#2345#3108#0#PHP" expanded="false" />
+            <element signature="e#3115#4757#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MessageBundle/MessageBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MessageBundle/Controller/MessageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="e#308#904#0#PHP" expanded="false" />
+            <element signature="e#430#452#1#PHP" expanded="true" />
+            <element signature="e#574#596#1#PHP" expanded="true" />
+            <element signature="e#676#698#1#PHP" expanded="true" />
+            <element signature="e#911#1082#0#PHP" expanded="false" />
+            <element signature="e#1033#1074#1#PHP" expanded="true" />
+            <element signature="e#1089#2943#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NotificationBundle/Controller/NotificationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#209#1174#0#PHP" expanded="false" />
+            <element signature="e#1600#1742#0#PHP" expanded="false" />
+            <element signature="e#1876#1933#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NotificationBundle/Resources/views/Notification/showNotification.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/test.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="73" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="73" />
+          <folding>
+            <element signature="e#12#34#0#Twig" expanded="true" />
+            <element signature="e#77#130#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/gestionUtilisateur/gestionUtilisateur.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="73" lean-forward="false" selection-start-line="2" selection-start-column="73" selection-end-line="2" selection-end-column="73" />
+          <folding>
+            <element signature="e#12#35#0#Twig" expanded="true" />
+            <element signature="e#73#126#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

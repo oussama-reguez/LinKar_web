@@ -5,48 +5,7 @@
 
 {% block main %}
 
-
-    <style>
-        .media-photo {
-            width: 35px;
-        }
-    </style>
-    <script src="{{ asset('bootstrap-notify.js')}}"> </script>
-
-
-
-    <script>
-        $(document).ready(function(){
-            ajax() ;
-            setInterval( ajax, 5000 );
-        });
-        function ajax(){
-            x = new XMLHttpRequest();
-            x.onreadystatechange=function () {
-                if ((x.readyState==4) && (x.status==200)){
-                    $(document).find('#content').append(x.responseText);
-                    // alert(x.responseText);
-                }
-            }
-            url="{{path('notification')}}";
-
-
-
-            //alert(url);
-            x.open('GET',url,true);
-            x.send();
-        }
-    </script>
-    <div id="content">
-
-    </div>
-
-    <script>
-        function resizeIframe(obj) {
-            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-
-        }
-    </script>
+    {% include '@Notification/Notification/showNotification.html.twig' %}
 
 
 

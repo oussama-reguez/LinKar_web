@@ -9,4 +9,7 @@ services:
      redirect.after.login:
          class: UserBundle\Redirection\AfterLoginRedirection
          arguments: ["@router"]
-
+     app.form.registration:
+            class: App\Form\RegistrationType
+            tags:
+                - { name: form.type, alias: app_user_registration }

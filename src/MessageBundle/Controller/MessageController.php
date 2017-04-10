@@ -35,13 +35,18 @@ class MessageController extends Controller
 
 
     {
+
+
+        $this->denyAccessUnlessGranted('ROLE_USER');
         return $this->render('@Message/Message/displayInbox.html.twig');
     }
 
 
     public function getConversationAction(Request $req)
     {
+
         if($req->isMethod('GET')){
+            $user=$this->getUser();
             $r=$req->get('sender');
             $send=$req->get('message');
             if(isset($r)){
@@ -51,7 +56,7 @@ class MessageController extends Controller
                     $em=$this->getDoctrine()->getManager();
                     $message= new Message();
                     $receiver=$em->getRepository('LinkarBundle:Membre')->find($r);
-                    $sender=$em->getRepository('LinkarBundle:Membre')->find(14);
+                    $sender=$em->getRepository('LinkarBundle:Membre')->find($user->getId());
                     $message->setReceiver($receiver);
                     $message->setSender($sender);
                     $message->setDate(new \DateTime('now'));
@@ -64,8 +69,8 @@ class MessageController extends Controller
 
 
                 $em=$this->getDoctrine()->getManager();
-                $senders=$em->getRepository('LinkarBundle:Message')->showAllSendersMessagesDQL(14,$r);
-                $receivers=$em->getRepository('LinkarBundle:Message')->showAllReceiversMessagesDQL(14,$r);
+                $senders=$em->getRepository('LinkarBundle:Message')->showAllSendersMessagesDQL($user->getId(),$r);
+                $receivers=$em->getRepository('LinkarBundle:Message')->showAllReceiversMessagesDQL($user->getId(),$r);
                 $result = array_merge($senders,  $receivers);
 
                 uasort($result,function ($a, $b) {
@@ -95,13 +100,15 @@ class MessageController extends Controller
 
     public function getListMembersAction(Request $req)
     {
+        $this->denyAccessUnlessGranted('ROLE_USER');
+$user=$this->getUser();
         $em=$this->getDoctrine()->getManager();
-        $membres=$em->getRepository('LinkarBundle:Message')->getSendersDQL(14);
+        $membres=$em->getRepository('LinkarBundle:Message')->getSendersDQL($user->getId());
         $data=array();
         foreach ($membres as $membre){
             $id=$membre->getId();
-            $date=$em->getRepository('LinkarBundle:Message')->getLastDate(14,$id);
-            $count=$em->getRepository('LinkarBundle:Message')->getCountMessages(14,$id);
+            $date=$em->getRepository('LinkarBundle:Message')->getLastDate($user->getId(),$id);
+            $count=$em->getRepository('LinkarBundle:Message')->getCountMessages($user->getId(),$id);
             array_push($data,array($membre,$count,$date));
         }
 

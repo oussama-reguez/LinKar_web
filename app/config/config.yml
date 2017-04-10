@@ -81,3 +81,6 @@ fos_user:
     from_email:
           address: you@example.com
           sender_name: You
+    registration:
+            form:
+                name: app_user_registration
