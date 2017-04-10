@@ -1,12 +1,5 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
-    <title>Condensed table example - Bootsnipp.com</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+{% extends "@Admin/layout.html.twig" %}
+{% block main %}
     {# comment {% include '@Notification/Notification/showNotification.html.twig' %} #}
     <style type="text/css">
         .container2{
@@ -54,7 +47,7 @@
             font-size: 23px;
         }
     </style>
-    <script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>
+
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootbox.min.js') }}"> </script>
     <script src=" https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"> </script>
@@ -351,8 +344,7 @@ changeStatus(id,'active');
             x.send();
         }
     </script>
-</head>
-<body>
+
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -553,8 +545,4 @@ changeStatus(id,'active');
                 </tbody>
             </table>
 </div>
-<script type="text/javascript">
-
-</script>
-</body>
-</html>
+{% endblock %}

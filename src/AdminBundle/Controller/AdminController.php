@@ -20,6 +20,17 @@ class AdminController extends Controller
     }
 
 
+    public function testAction()
+
+    {
+
+
+        return $this->render('@Admin/test.html.twig');
+
+
+
+    }
+
 
     public function unverifiedUsersAction()
 
@@ -27,7 +38,7 @@ class AdminController extends Controller
         $em=$this->getDoctrine()->getManager();
         $users=$em->getRepository('LinkarBundle:Membre')->getUnverifiedUsers();
 
-        return $this->render('@Admin/gestionUtilisateur/verificationUtilisateur.html.twig',array('m'=>$users));
+        return $this->render('@Admin/verificationCompte/verificationUtilisateur.html.twig',array('m'=>$users));
 
 
 

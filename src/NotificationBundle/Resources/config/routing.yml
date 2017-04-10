@@ -7,3 +7,6 @@ notificationCenter:
 showNotification:
     path:     /showNotification
     defaults: { _controller: NotificationBundle:Notification:showNotification}
+dispayNotifCenter:
+    path:     /showNotificationCenter
+    defaults: { _controller: NotificationBundle:Notification:displayNotifCenter}

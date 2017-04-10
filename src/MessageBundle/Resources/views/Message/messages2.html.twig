@@ -5,7 +5,7 @@
     <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
     <title>chat room design - Bootsnipp.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ asset('assets/frontoffice/boostrap/css/bootstrap.css') }}" >
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <style type="text/css">
         #custom-search-input {
             background: #e8e6e7 none repeat scroll 0 0;
@@ -214,9 +214,10 @@
 
 
     </style>
-    <script src="{{ asset('assets/frontoffice/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-
+    <script src="{{ asset('assets/js/fontAwesome.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <script>
 
         function chargement(clicked_id) {

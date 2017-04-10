@@ -31,6 +31,14 @@ class MessageController extends Controller
     }
 
 
+    public function inBoxAction()
+
+
+    {
+        return $this->render('@Message/Message/displayInbox.html.twig');
+    }
+
+
     public function getConversationAction(Request $req)
     {
         if($req->isMethod('GET')){

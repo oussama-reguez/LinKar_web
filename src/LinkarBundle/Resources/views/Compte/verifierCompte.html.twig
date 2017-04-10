@@ -1,21 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
-    <title>Account Management - Bootsnipp.com</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% extends "@User/layout.html.twig" %}
+{% block main %}
     <link href="{{ asset('assets/js/bootstrap.min_3.3.0.css') }}" rel="stylesheet">
-    <style type="text/css">
-        @import url("{{ asset('assets/css/font-awesome.min.css') }}");
-        body{margin-top:20px;}
-        .fa-fw {width: 2em;}
-    </style>
-    <script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<style>
+    /* make sidebar nav vertical */
+    @media (min-width: 768px) {
+        .sidebar-nav .navbar .navbar-collapse {
+            padding: 0;
+            max-height: none;
+        }
+        .sidebar-nav .navbar ul {
+            float: none;
+            display: block;
+        }
+        .sidebar-nav .navbar li {
+            float: none;
+            display: block;
+        }
+        .sidebar-nav .navbar li a {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    }
+</style>
+
     <style>
+
+        .Mtlc{background-color: #00a7d0}
         /* leave this part out */
-        body{text-align:center; padding-top:30px;}
+
         /* leave this part out */
 
         .clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
@@ -49,86 +62,87 @@
             width: 256px;
         }
     </style>
-</head>
-<body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-3">
-            <ul class="nav nav-pills nav-stacked admin-menu">
-                <li    ><a   href="{{ path('personnelInfo') }}" ><i class="fa fa-list-alt fa-fw"></i>information Personnel</a></li>
-                <li    ><a  href="{{ path('changePassword') }}" data-target-id="Activity"><i class="fa fa-file-o fa-fw"></i>changer mot de passe </a></li>
-                <li  class="active"   ><a  href="{{ path('verificationCompte') }}"  data-target-id="Devices"><i class="fa fa-bar-chart-o fa-fw"></i>verifier Compte</a></li>
 
-            </ul>
-        </div>
-        <div class="col-md-9 well admin-content text-center  " id="home">
-
-                    {% if m.verifCin == true %}
-                        <img class="media-photo"  src="{{ asset('assets/frontoffice/images/id-card/id-card-checked2.png') }}" style="">
-
-                        <h2 align="center" >votre compte est verifier </h2>
-
-                    {% else %}
-                        {% if m.urlCin == '' %}
-                            <img class="media-photo"   src="{{ asset('assets/frontoffice/images/id-card/id-card-upload.png') }}" style="">
-
-                            <h2 align="center" >verifier vote carte d'identité</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="nav nav-pills nav-stacked admin-menu">
 
 
+                    <li     ><a   href="{{ path('personnelInfo') }}" ><i class="fa fa-list-alt fa-fw"></i>information Personnel</a></li>
+                    <li  class="active"  ><a  href="{{ path('changePassword') }}" data-target-id="Activity"><i class="fa fa-file-o fa-fw"></i>changer mot de passe </a></li>
+                    <li   ><a  href="{{ path('verificationCompte') }}"  data-target-id="Devices"><i class="fa fa-bar-chart-o fa-fw"></i>verifier Compte</a></li>
 
 
-                            <form id="uploadForm" action="{{ path('verificationCompte') }}" method="post" enctype="multipart/form-data">
+                </ul>
+            </div>
+            <div class="col-md-9 well admin-content text-center  " id="home">
 
-                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                {% if m.verifCin == true %}
+                    <img class="media-photo"  src="{{ asset('assets/frontoffice/images/id-card/id-card-checked2.png') }}" style="">
+
+                    <h2 align="center" >votre compte est verifier </h2>
+
+                {% else %}
+                    {% if m.urlCin == '' %}
+                        <img class="media-photo"   src="{{ asset('assets/frontoffice/images/id-card/id-card-upload.png') }}" style="">
+
+                        <h2 align="center" >verifier vote carte d'identité</h2>
+
+
+
+
+                        <form id="uploadForm" action="{{ path('verificationCompte') }}" method="post" enctype="multipart/form-data">
+
+                            <div class="fileupload fileupload-new" data-provides="fileupload">
     <span class="btn btn-primary btn-file"><span class="fileupload-new">Select file</span>
     <span class="fileupload-exists">Change</span>
         <input  id="upfile" name="upfile" type="file" onchange="document.getElementById('uploadForm').submit();"  /></span>
-                                    <span class="fileupload-preview"></span>
-                                    <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
-                                </div>
+                                <span class="fileupload-preview"></span>
+                                <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+                            </div>
 
 
-                            </form>
+                        </form>
 
 
 
-                        {%  else %}
+                    {%  else %}
 
-                            <img class="media-photo"  src="{{ asset('assets/frontoffice/images/id-card/id-card-wait1.png') }}" style="alignment: center">
+                        <img class="media-photo"  src="{{ asset('assets/frontoffice/images/id-card/id-card-wait1.png') }}" style="alignment: center">
 
-                            {% if success is defined %}
-                                <div class="alert alert-success">
-                                    <strong>succes</strong> votre demande a ete envoyé
-                                </div>
-                            {% endif %}
-
-                            <h2 >l'administrateur n'a pas encore  verifier  votre compte </h2>
-
+                        {% if success is defined %}
+                            <div class="alert alert-success">
+                                <strong>succes</strong> votre demande a ete envoyé
+                            </div>
                         {% endif %}
 
+                        <h2 >l'administrateur n'a pas encore  verifier  votre compte </h2>
 
                     {% endif %}
 
 
+                {% endif %}
 
 
 
 
 
-            {% if error is defined %}
-                <div class="alert alert-danger">
-                    <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
-                </div>
-            {% endif %}
+
+
+                {% if error is defined %}
+                    <div class="alert alert-danger">
+                        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+                    </div>
+                {% endif %}
+
+            </div>
+
 
         </div>
-
-
     </div>
-</div>
 
-<script type="text/javascript">
 
-</script>
-</body>
-</html>
+
+
+{% endblock %}

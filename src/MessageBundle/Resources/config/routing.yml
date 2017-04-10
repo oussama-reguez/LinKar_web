@@ -7,3 +7,6 @@ list:
 testsss:
     path:     /liste
     defaults: { _controller: MessageBundle:Message:index}
+inbox:
+    path:     /inbox
+    defaults: { _controller: MessageBundle:Message:inBox}

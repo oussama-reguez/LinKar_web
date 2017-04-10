@@ -97,10 +97,10 @@ class MembreController extends Controller
                $response->setContent('err');
             }
 
-        var_dump( $uploadedFile);
+
 
         }
-dump($uploadedFile);
+
 
         return $response;
     }
@@ -110,7 +110,7 @@ dump($uploadedFile);
     {
         $em=$this->getDoctrine()->getManager();
         $user=$this->getUser();
-        var_dump($user);
+
 
         if($req->isMethod('Post')){
             $uploadedFile = $req->files->get('upfile'); //upfile must be the value of the name attribute in the <input> tag

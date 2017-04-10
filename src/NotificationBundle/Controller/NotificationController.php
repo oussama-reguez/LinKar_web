@@ -52,6 +52,12 @@ class NotificationController extends Controller
         return $this->render('NotificationBundle:Notification:showNotification.html.twig');
     }
 
+    public function displayNotifCenterAction(){
+
+
+
+        return $this->render('@Notification/Notification/displayNotifCenter.html.twig');
+    }
 
 
 
