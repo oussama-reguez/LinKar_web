@@ -198,7 +198,7 @@ changeStatus(id,'active');
 
         }
         function test(id) {
-            alert(id);
+        //    alert(id);
             document.getElementById(id).innerHTML= '<span   class="label label-success">Active</span>';
         }
 
@@ -251,7 +251,7 @@ changeStatus(id,'active');
 
 
 
-            alert(url);
+          //  alert(url);
             x.open('GET',url,true);
             x.send();
         }
@@ -302,7 +302,7 @@ changeStatus(id,'active');
 
             url="{{path('rechercheUtilisateur')}}?name="+encodeURIComponent(name)+'&type='+type+'&order='+order
             +'&status='+status+'&dateFin='+encodeURIComponent(dateFin)+dateUrl;
-            alert(url);
+         //   alert(url);
 
         }
         function rechercher() {
@@ -340,7 +340,7 @@ changeStatus(id,'active');
 
 
 
-            alert(url);
+           // alert(url);
             x.open('GET',url,true);
             x.send();
         }

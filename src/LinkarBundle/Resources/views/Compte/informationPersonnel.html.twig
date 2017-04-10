@@ -60,13 +60,13 @@
         <div class="col-md-9 well admin-content text-center  " id="home">
 
 
-            <h1 class="page-header">Edit Profile</h1>
+            <h1 class="page-header">Modifier information personnel</h1>
             <div class="row">
                 <form class="form-horizontal" role="form"  method="post" action="{{ path('personnelInfo') }}"  enctype="multipart/form-data">
                 <!-- left column -->
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="text-center">
-                        <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="avatar">
+                        <img src="{{ app.user.urlPicture}}" class="avatar img-circle img-thumbnail" alt="avatar">
                         <h6>Upload a different photo...</h6>
                         <input type="file" id="upfile" name="upfile"  class="text-center center-block well well-sm">
                     </div>
