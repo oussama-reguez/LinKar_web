@@ -2,6 +2,7 @@
 
 namespace LinkarBundle\Controller;
 
+use LinkarBundle\Entity\Membre;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -24,8 +25,63 @@ class MembreController extends Controller
         return $this->render('LinkarBundle:Compte:verification.html.twig');
     }
 
-    public function personnelAction()
+    public function personnelAction(Request $req)
     {
+        $user=$this->getUser();
+
+        $this->denyAccessUnlessGranted('ROLE_USER');
+
+        if($req->isMethod('POST')){
+            $nom=$req->get('nom');
+            $prenom=$req->get('prenom');
+            $birth=$req->get('birth');
+            $address=$req->get('address');
+            $email=$req->get('email');
+            $user=$this->getUser();
+
+
+            $userManager = $this->get('fos_user.user_manager');
+            $user->setFirstName($prenom);
+            $user->setLastName($nom);
+            $user->setAddress($address);
+            if(  $birth = DateTime::createFromFormat('d/m/Y', $birth)){
+        $user->setBirth($birth);
+            }
+
+            $user->setEmail($email);
+
+
+            //handle upload if clicked
+            $uploadedFile = $req->files->get('upfile'); //upfile must be the value of the name attribute in the <input> tag
+            if (null != $uploadedFile){
+
+                $path = $uploadedFile->getPathname();
+                if($uploadedFile->getMimeType()=='image/jpeg') {
+                    rename($path, 'C:\wamp\www\upload\uploads\\'.$uploadedFile->getFileName().'.jpg' );
+                    $user->setUrlCin('http://localhost/upload/uploads/'.$uploadedFile->getFileName().'.jpg');
+
+                }
+                else
+                    if ($uploadedFile->getMimeType()=='image/png'){
+                        rename($path, 'C:\wamp\www\upload\uploads\\'.$uploadedFile->getFileName().'.png' );
+                       // $user->setUrlCin('http://localhost/upload/uploads/'.$uploadedFile->getFileName().'.png');
+                        var_dump('http://localhost/upload/uploads/\'.$uploadedFile->getFileName().\'.png\'');
+                    }
+                    else{
+
+                    }
+
+
+
+
+            }
+            else {
+                var_dump('nulllllll');
+            }
+            $userManager->updateUser($user);
+
+        }
+
         return $this->render('LinkarBundle:Compte:informationPersonnel.html.twig');
     }
 

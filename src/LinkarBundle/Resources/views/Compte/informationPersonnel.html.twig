@@ -62,12 +62,13 @@
 
             <h1 class="page-header">Edit Profile</h1>
             <div class="row">
+                <form class="form-horizontal" role="form"  method="post" action="{{ path('personnelInfo') }}"  enctype="multipart/form-data">
                 <!-- left column -->
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="text-center">
                         <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="avatar">
                         <h6>Upload a different photo...</h6>
-                        <input type="file" class="text-center center-block well well-sm">
+                        <input type="file" id="upfile" name="upfile"  class="text-center center-block well well-sm">
                     </div>
                 </div>
                 <!-- edit form column -->
@@ -78,25 +79,25 @@
                         This is an <strong>.alert</strong>. Use this to show important messages to the user.
                     </div>
                     <h3>Personal info</h3>
-                    <form class="form-horizontal" role="form">
+
                         <div class="form-group">
                             <label class="col-lg-3 control-label">Nom:</label>
                             <div class="col-lg-8">
-                                <input class="form-control" value="Jane" type="text">
+                                <input   name="nom" class="form-control" value="{{ app.user.lastName}}" type="text">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-3 control-label">Prenom:</label>
+                            <label  class="col-lg-3 control-label">Prenom:</label>
                             <div class="col-lg-8">
-                                <input class="form-control" value="Bishop" type="text">
+                                <input  name="prenom" class="form-control" value="{{ app.user.firstName}}" type="text">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="col-lg-3 control-label">Date de naissance :</label>
+                            <label   class="col-lg-3 control-label">Date de naissance :</label>
                             <div class="col-lg-8">
                                 <div class='input-group date' id='datetimepicker1'>
-                                    <input type='text' class="form-control" />
+                                    <input name="birth" type='text' class="form-control" value="{{ app.user.birth|date("m/d/Y")}}" />
                                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
@@ -113,23 +114,23 @@
                         <div class="form-group">
                             <label class="col-lg-3 control-label">Email:</label>
                             <div class="col-lg-8">
-                                <input class="form-control" value="janesemail@gmail.com" type="text">
+                                <input   name="email" class="form-control" value="{{app.user.email}}" type="text">
                             </div>
                         </div>
 
 
                         <div class="form-group">
-                            <label class="col-md-3 control-label">Adresse :</label>
+                            <label name="address" class="col-md-3 control-label">Adresse :</label>
                             <div class="col-md-8">
-                                <textarea class="form-control" id="textarea" name="textarea">default text</textarea>
+                                <textarea class="form-control" id="textarea" name="textarea">{{app.user.address}}</textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label"></label>
                             <div class="col-md-8">
-                                <input class="btn btn-primary" value="Save Changes" type="button">
+                                <input class="btn btn-primary" value="Save Changes" type="submit">
                                 <span></span>
-                                <input class="btn btn-default" value="Cancel" type="reset">
+
                             </div>
                         </div>
                     </form>

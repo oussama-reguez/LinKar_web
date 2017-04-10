@@ -63,6 +63,30 @@ class Notification
     private $Sender;
 
     /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="CreatedTime", type="datetime", nullable=true)
+     */
+    private $createdtime;
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedtime()
+    {
+        return $this->createdtime;
+    }
+
+    /**
+     * @param \DateTime $createdtime
+     */
+    public function setCreatedtime($createdtime)
+    {
+        $this->createdtime = $createdtime;
+    }
+
+
+    /**
      * @return int
      */
     public function getIdNotification()

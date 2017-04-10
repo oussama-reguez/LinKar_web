@@ -169,14 +169,14 @@
 
                     <td>
                         <div class="media">
-                            <a href="#" class="pull-left">
+                            <a href="" class="pull-left">
                                 <img src="{{ k.Sender.urlPicture }}" class="media-photo">
                             </a>
                             <div class="media-body">
-                                <span class="media-meta pull-right">Febrero 13, 2016</span>
+                                <span class="media-meta pull-right">{{ k.createdtime|date("m/d/Y") }}</span>
                                 <h4 class="title">
                                    {{ k.Sender.firstName }} {{ k.Sender.lastName }}
-                                    <span class="pull-right pagado">(Pagado)</span>
+                                    <span class="pull-right pagado">(notification)</span>
                                 </h4>
                                 {% if k.type  == 'message' %}
 

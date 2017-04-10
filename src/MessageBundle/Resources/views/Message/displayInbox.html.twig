@@ -6,7 +6,9 @@
 
         }
     </script>
-    <iframe   width="100%" onload="resizeIframe(this)" src="{{ path('list') }}"></iframe>
+
+
+    <iframe   width="100%" onload="resizeIframe(this)" src=" {{ path('list') }}{% if app.request.query.get("sender") is not null %}?sender={{ app.request.query.get("sender") }}{% endif %}"></iframe>
 
 
 {% endblock %}

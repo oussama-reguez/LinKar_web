@@ -69,6 +69,13 @@ class Membre extends  BaseUser
     private $gender;
 
     /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="CreatedTime", type="datetime", nullable=true)
+     */
+    private $createdtime;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="verif_number", type="boolean", nullable=true)
@@ -82,11 +89,7 @@ class Membre extends  BaseUser
      */
     private $verifCin = '0';
 
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="verif_email", type="boolean", nullable=true)
-     */
+
     private $verifEmail = '0';
 
     /**
@@ -108,20 +111,15 @@ class Membre extends  BaseUser
      *
      * @ORM\Column(name="url_picture", type="string", length=255, nullable=true)
      */
-    private $urlPicture;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="CreatedTime", type="datetime", nullable=true)
-     */
-    private $createdtime;
+    private $urlPicture="http://localhost/upload/uploads/croupier.png";
 
     /**
      * @var boolean
      *
      * @ORM\Column(name="statut", type="boolean", nullable=true)
      */
+
+
     private $statut = '1';
 
     /**

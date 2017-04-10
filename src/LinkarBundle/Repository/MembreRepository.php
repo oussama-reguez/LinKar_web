@@ -88,7 +88,7 @@ class MembreRepository extends EntityRepository
             //$query ->setParameter('last',$name.'%');
             $parameters['first']=$name.'%';
             $parameters['last']=$name.'%';
-            $statement=  $statement .' m.lastName like :last or m.firstName like :first';
+            $statement=  $statement .' ( m.lastName like :last or m.firstName like :first ) ';
         }
         if($type=='2'){
             //$query ->setParameter('last',$name.'%');
@@ -137,7 +137,7 @@ class MembreRepository extends EntityRepository
 
         }
 
-
+//var_dump($statement);
 
         $query = $this->getEntityManager();
         return    $query->createQuery($statement)->setParameters($parameters)->getResult();
