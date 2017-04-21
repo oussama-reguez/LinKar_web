@@ -26,10 +26,20 @@ class MessageController extends Controller
             array_push($data,array($membre,$count,$date));
         }
 
-        dump($data);
+
         return new \Symfony\Component\HttpFoundation\Response();
     }
 
+
+    public function testAction()
+
+
+    {
+
+
+
+        return $this->render('@Message/Message/test.html.twig');
+    }
 
     public function inBoxAction()
 
@@ -80,7 +90,7 @@ class MessageController extends Controller
 
                     return ($a->getDate() < $b->getDate()) ? -1 : 1;
                 } );
-                dump($result);
+
                 return $this->render('MessageBundle:Message:conversation.html.twig',array('m'=>$result,'sender'=>$r));
 
 

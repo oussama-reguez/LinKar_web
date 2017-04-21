@@ -10,3 +10,6 @@ testsss:
 inbox:
     path:     /inbox
     defaults: { _controller: MessageBundle:Message:inBox}
+testing:
+    path:     /listtest
+    defaults: { _controller: MessageBundle:Message:test}
