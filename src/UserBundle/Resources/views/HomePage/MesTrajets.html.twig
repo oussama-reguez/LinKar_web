@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file:///C:/Users/Beya%20Idhiba/Desktop/template/MesTrajets.html -->
+<html lang="fr"><head>
+    {% block header %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="Content-Language" content="fr">
+    <meta name="author" content="Rosemont Agency, Amoros Consulting">
+    <meta name="description" content="Site gratuit d&#39;annonces de covoiturage dans les Alpes-Maritimes, au Pays des Paillons">
+    <meta name="keywords" lang="fr" content="Covoiturage, co voiturage, petites annonces covoiturage, co-voiturage, service covoiturage, trajet professionnel, trajet régulier, recherche conducteurs, recherche passagers, déplacement journalier, déplacement occasionnel, transport alternatif, covoiturage régional, frais de transport, sports d&#39;hiver, transports en commun, transport de personnes, auto, festivals, covoiturage Sospel, covoiturage Nice, covoiturage Peille, covoiturage Peillon, covoiturage Lucéram, covoiturage l&#39;Escarène, covoiturage Drap, covoiturage Coaraze, covoiturage Cantaron, covoiturage Blausasc, covoiturage Berre les Alpes, covoiturage Bendejun">
+
+    <meta name="abstract" content="covoiturage au Pays des Paillons.">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/png" href="../../../../../web/img/logo.png">
+    <title>Linkar | Mes trajets </title>
+
+    <link rel="stylesheet" href="{{ asset('assets/backoffice/css/bootstrap.min.css') }}">
+
+
+
+
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/css/style.css') }}">
+    <script async="" src="./MesTrajets_files/analytics.js.download"></script><script async="" src="./MesTrajets_files/analytics.js(1).download"></script><script src="./MesTrajets_files/html5shiv.min.js.download"></script>
+    <script src="./MesTrajets_files/respond.min.js.download"></script>
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/css/theme-red.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/css/animate.css') }}">
+    <link rel="stylesheet" href="./MesTrajets_files/css">
+
+
+
+    <link rel="stylesheet" href="{{ asset('assets/backoffice/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/includes/css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/includes/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/includes/css/owl-carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/includes/css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/includes/css/owl.theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/includes/css/owl.transitions.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontoffice/includes/css/lightbox.min.css') }}">
+    <!-- SLIDER DES ANNONCES PUB -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontoffice/css/slider.css') }}">
+
+    <link href="./MesTrajets_files/css(1)" rel="stylesheet" type="text/css">
+    <link href="./MesTrajets_files/css(2)" rel="stylesheet" type="text/css">
+
+
+
+    <!-- DATATABLE -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontoffice/css/dataTables.bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontoffice/css/jquery.dataTables.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontoffice/css/dataTables.jqueryui.min.css') }}">
+
+
+    <!-- ROSEMONT : GOOGLE ANALYTICS -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-79531846-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/css/dataTables.bootstrap.min.css') }}">
+
+
+    <style type="text/css"></style><script type="text/javascript" charset="UTF-8" src="./MesTrajets_files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="./MesTrajets_files/util.js.download"></script><script type="text/javascript" charset="UTF-8" src="./MesTrajets_files/stats.js.download"></script><script type="text/javascript" charset="UTF-8" src="./MesTrajets_files/AuthenticationService.Authenticate"></script><script type="text/javascript" charset="UTF-8" src="./MesTrajets_files/common.js(1).download"></script><script type="text/javascript" charset="UTF-8" src="./MesTrajets_files/util.js(1).download"></script><script type="text/javascript" charset="UTF-8" src="./MesTrajets_files/stats.js(1).download"></script></head>
+<body>
+<div class="body-overlay" style="opacity: 0; z-index: -1;"></div>
+<div id="side-panel" class="dark" style="right: -300px;">
+    <div id="side-panel-trigger-close" class="side-panel-trigger"><a href="http://www.coccidriving.com/mon_compte#"><i class="fa fa-times"></i></a></div>
+    <div class="side-panel-wrap">
+        <ul class="navbar mm-panel">
+            <li><a href="http://www.coccidriving.com/">Home</a></li>
+            <li><a href="http://www.coccidriving.com/trajets">Voir les trajets</a></li>
+            <li><a href="http://www.coccidriving.com/proposer_trajet">Proposer un trajet</a></li>
+            <li><a href="http://www.coccidriving.com/evenements">Les évènements</a></li>
+            <li><a href="http://www.coccidriving.com/mon_compte#">Horaires des transports</a></li>
+            <li><a href="http://www.coccidriving.com/mon_compte">Mon Compte</a></li>
+            <li><a href="http://www.coccidriving.com/login">Connexion</a></li>
+        </ul>
+    </div>
+</div>
+<div id="wrapper" class="clearfix" style="right: 0px;">
+    <div id="mobile-bar" class="visible-xs visible-sm">
+        <a href="http://www.coccidriving.com/mon_compte#" id="offcanvas-togglers" class="menu-trigger"><i class="fa fa-bars"></i></a>
+        <h1 class="mob-title"><a href="http://www.coccidriving.com/">Home</a></h1>
+    </div>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="container2">
+                <div class="row">
+                    <div class="header">
+
+                        <div class="top-header">
+                            <div class="top-nav-bar hidden-xs hidden-sm" id="">
+
+
+
+                                <div class="slideshow" id="slideshowBann">
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="slider-box parslide">
+        <div class="custom-controls">
+            <div class="shadow">
+                <div class="slider-helper2">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner2" role="listbox">
+
+                            <div class="item active">
+                                <img src="{{ asset('assets/frontoffice/images/Layer1.png') }}" alt="img Luxury room" class="layer2">
+                                <div class="carousel-caption2">
+                                    <img src="{{ asset('assets/frontoffice/images/logo.png') }}" id="logo" alt="Theme logo">
+                                    <p class="title-up fadeInDownBig hidden-xs">Le Covoiturage</p>
+                                    <h1 class="titre"><span>Linkar</span> <em>Covoiturage</em></h1>
+                                    <p class="slide-subtitle hidden-xs">Tunisie</p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="item">
+                                <img src="{{ asset('assets/frontoffice/images/Layer5.png') }}" alt="img Luxury room" class="layer2">
+                                <div class="carousel-caption2">
+                                    <img src="{{ asset('assets/frontoffice/images/logo.png') }}" id="logo" alt="Theme logo">
+                                    <p class="title-up fadeInDownBig hidden-xs">Le Covoiturage</p>
+                                    <h1 class="titre"><span>Linkar</span> <em>Covoiturage</em></h1>
+                                    <p class="slide-subtitle hidden-xs">Tunisie</p>
+                                </div>
+                            </div>
+
+                            <div class="main-nav" style="margin-left:0px;">
+                                <div class="nav-right  hidden-xs hidden-sm">
+                                    <nav>
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/trajets">Voir les trajets</a></li>
+                                        <li><a href="http://localhost/linkar/linkar/web/app_dev.php/addann">Proposer un trajet</a></li>
+                                        <li><a href="http://localhost/linkar/linkar/web/app_dev.php/adddem">Demander un trajet</a></li>
+                                        <li><a href="/mon_compte">Mes Trajets</a></li>
+
+                                        <li style="width:50px"><a></a></li>
+                                        <li class="user-label">User Name<a></a></li>
+
+                                        </ul>
+                                    </nav>
+                                    <div id="btn-trigger">
+                                        <a id="offcanvas-toggler" class="menu-trigger" href="http://www.coccidriving.com/mon_compte#">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main" role="main">
+
+
+
+
+        <div class="wrap">
+            <div class="first-title">Mes Trajets</div>
+            <div class="row">
+
+                <!--- Sidebar -->
+                <aside class="one-fourth sidebar left">
+                    <!-- Widget -->
+                    <div class="widget">
+                        <ul class="categories">
+                            <li class="active"><a href="http://www.coccidriving.com/mon_compte#tab2">Mes trajets</a></li>
+                        </ul>
+                    </div>
+                    <!-- //Widget -->
+                </aside>
+                <!--- //Sidebar -->
+
+
+                <!--- Content MAIN -->
+                <div class="three-fourth content">
+                    <!-- Post -->
+                    <!--- Content -->
+                    <!--- Content -->
+                    <!-- Tab -->
+
+                    <!-- //Tab -->
+
+                    <!-- Tab -->
+                    <!-- Tab -->
+
+                    <!-- ----------------------------------------MES TRAJETS------------------------------------ -->
+                    <!--  LETTRES JOURS REGULIERS -->
+
+
+                    {% endblock %}
+                    <!-- Item -->
+                    {% block mestrajets %}
+                    <article class="single" id="tab2" style="display: block;">
+                        <h2>Mes trajets</h2>
+                        <div class="box history">
+                            <h6>31/03/2017 <small> à </small> 16:00
+                                <br>
+
+
+                                <br>de Nice <small>à</small>  Peille <span class="pull-right">Annonce</span> </h6>
+                            <div class="row">
+                                <div class="one-third">
+                                    <p><span>Covoitureur :</span> el ouedi s.
+                                        <img src="{{ asset('assets/frontoffice/images/NoPict-Female.png') }}" class="rounded-small-profil align-profil">
+                                    </p>
+                                </div>
+                                <div class="two-third">
+                                    <p><span>Nombre d'inscrits:</span> <a href="javascript:$(&#39;#passengers47&#39;).toggleClass(&#39;hidden&#39;)" class="trigger link" title="Read more">0</a></p>
+                                </div>
+                            </div>
+                            <div id="passengers47" class="hidden">
+                                <h4>Covoitureurs</h4>
+                                <ul>
+                                    <!------ COVOITUREURS  ------>
+
+                                    <!------- CONDUCTEUR ------>
+                                    <li class="passengers-list-item">
+                                        <img src="./MesTrajets_files/saved_resource" class="rounded-small-profil align-profil">
+                                        <img src="./MesTrajets_files/driver.png" class="rounded-small-profil align-profil driver_icon">
+                                        <div class="passengers-list-userinfo">
+                                            <span class="passengers-list-name">el ouedi s. </span>
+                                            <span class="small">Membre depuis 2016</span>
+                                        </div>
+                                    </li>
+                                    <!------ / CONDUCTEUR ------>
+                                </ul>
+                            </div>
+
+
+
+                            <div class="price">10€</div>
+                            <a href="http://www.coccidriving.com/mon_compte" data-toggle="modal" data-target="#mod-delete-trip" title="Cancel" class="link">Supprimer</a> &nbsp;|&nbsp;
+                            <a class="link" href="http://www.coccidriving.com/modifier_covoiturage/47" title="Modify">Modifier</a>
+                        </div>
+                        <!-- //Item -->
+                        {% endblock %}
+
+                        {% block notifSupp %}
+                        <!--- notif suppression covoiturage -->
+                        <div id="mod-delete-trip" tabindex="-1" role="dialog" class="modal fade">
+                            <div class="modal-dialog"><div class="modal-content">
+                                    <div class="modal-header"> <h4>Etes vous sûr de vouloir supprimer ce trajet ?</h4> </div>
+                                    <div class="modal-body">
+                                        <div class="text-center">
+                                            <p>Toutes vos données en relation avec le trajet seront supprimées.
+                                                Cette opération est irréversible </p> </div>
+                                    </div>
+                                    <div class="modal-footer"><button type="button" data-dismiss="modal" class="btn color small">Annuler</button>
+                                        <a href="http://www.coccidriving.com/supprimer_covoiturage/47"><button type="button" formtarget="" class="btn 											color small">Supprimer</button></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--- //notif suppression covoiturage -->
+                    </article>
+                    {% endblock %}
+
+
+                    {% block footer %}
+
+
+                    <!-- ----------------------------------------MES Reservations------------------------------------ -->
+
+
+                    <!-- //Tab -->
+                    <!--- //Content -->
+
+                    <!--- //Content -->
+                    <!-- //Post -->
+                </div>
+                <!-- Notification Suppression compte -->
+                <div id="mod-error" tabindex="-1" role="dialog" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4>Confirmation de suppression !</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="text-center">
+                                    <p>Êtes-vous sûr(e) de vouloir <b>supprimer</b> votre compte Linkar ?</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal" class="btn color small">Annuler</button>
+                                <a href="http://www.coccidriving.com/supprimer_compte"><button type="button" formtarget="" class="btn color small">Supprimer</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--- //notif suppression -->
+
+                <!--- //Content MAIN -->
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="http://www.coccidriving.com/mon_compte#" class="back-top" style="display: none;"><i class="fa fa-arrow-up"></i></a>
+        <div id="prefooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 no-left">
+                        <div id="links">
+                            <h4>Liens Utiles</h4><br>
+                            <ul class="row site-links">
+                                <li><a href="http://www.coccidriving.com/evenements"><i class="ion-minus"></i>Les évènements</a></li>
+                                <li><a href="http://www.coccidriving.com/trajets"><i class="ion-minus"></i>Voir les trajets</a></li>
+                                <li><a href="http://www.coccidriving.com/proposer_trajet"><i class="ion-minus"></i>Proposer un trajet</a></li>
+                                <li><a href="http://www.coccidriving.com/partenaires"><i class="ion-minus"></i>Les partenaires</a></li>
+                                <li><a href="http://www.coccidriving.com/temoignages"><i class="ion-minus"></i>Les témoignages</a></li>
+                                <li><a href="http://www.coccidriving.com/FAQ"><i class="ion-minus"></i>AIDE - Mode d'emploi</a></li>
+                                <li><a href="http://www.coccidriving.com/qui_sommes_nous"><i class="ion-minus"></i>Qui sommes-nous?</a></li>
+                                <li><a href="http://www.coccidriving.com/horaires_transports"><i class="ion-minus"></i>Horaires transports</a></li>
+                                <li><a href="http://www.coccidriving.com/utilisation_du_site"><i class="ion-minus"></i>Utilisation du site</a></li>
+                                <li><a href="http://www.coccidriving.com/mentions_legales"><i class="ion-minus"></i>Mentions légales</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div id="about">
+                            <div class="logo">
+                                <img src="{{ asset('assets/frontoffice/images/logo.png') }}" alt="">
+                            </div>
+                            <div class="coccif">
+                                <h1><span>Linkar</span> <em>Covoiturage</em></h1>
+                                <h6><a href="http://www.coccidriving.com/contact">Contactez-nous</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 no-right">
+                        <div id="newsletter">
+                            <div><h4>Inscription</h4>
+                                <span>L'inscription sur Linkar est entièrement gratuite et permet de vous inscrire à un covoiturage, de proposer un trajet et de gérer vos trajets et votre profil.</span>
+
+                                <input value="" name="subscribe_email" id="subscribe_email" placeholder="Entrez votre email" type="text">
+                                <button type="button" id="btn-subscribe-email" class="btn btn-default btn-lg">
+                                    <a href="http://www.coccidriving.com/inscription"> <i class="fa fa-arrow-right"></i></a>
+                                </button>
+                            </div>
+                            <h4>Connexion</h4>
+                            <div class="subscribe_email">
+                                <form action="http://www.coccidriving.com/login-check" method="post">
+
+                                    <input type="text" value="" name="_username" id="subscribe_email" placeholder="Entrez votre email">
+                                    <input type="text" value="" name="_password" id="subscribe_email" placeholder="Entrez votre mot de passe">
+
+                                    <button type="submit" id="btn-subscribe-email" class="btn btn-default btn-lg" name="_submit">
+                                        <i class="fa fa-arrow-right"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>© 2017 Linakr. Created by <a href="mailto:info@amoros-consulting.com">Linkode</a></p>
+        </div>
+    </footer>
+</div>
+
+
+<!-- Preloader -->
+<div class="preloader" style="display: none;">
+    <div id="followingBallsG">
+        <div id="followingBallsG_1" class="followingBallsG"></div>
+        <div id="followingBallsG_2" class="followingBallsG"></div>
+        <div id="followingBallsG_3" class="followingBallsG"></div>
+        <div id="followingBallsG_4" class="followingBallsG"></div>
+    </div>
+</div>
+<!-- //Preloader -->
+<script src="./MesTrajets_files/jquery.min.js.download"></script>
+<script src="./MesTrajets_files/jquery.uniform.min.js.download"></script>
+<script src="./MesTrajets_files/jquery.datetimepicker.js.download"></script>
+<script src="./MesTrajets_files/jquery.slicknav.min.js.download"></script>
+<script src="./MesTrajets_files/js"></script>
+<script src="./MesTrajets_files/wow.min.js.download"></script>
+<script src="./MesTrajets_files/search.js.download"></script>
+<script src="./MesTrajets_files/scripts.js.download"></script>
+<script src="./MesTrajets_files/infobox.js.download"></script>
+<script src="./MesTrajets_files/jquery.slicknav.min.js.download"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" language="javascript" src="./MesTrajets_files/jquery-1.12.3.min.js.download"></script>
+<script type="text/javascript" src="./MesTrajets_files/bootstrap.min.js.download"></script>
+<script type="text/javascript" src="./MesTrajets_files/owl.carousel.js.download"></script>
+<script type="text/javascript" src="./MesTrajets_files/moment.js.download"></script>
+<script type="text/javascript" src="./MesTrajets_files/bootstrap-datepicker.js.download"></script>
+
+<script type="text/javascript" src="./MesTrajets_files/functions.js.download"></script>
+<script type="text/javascript" src="./MesTrajets_files/jquery.elevatezoom.js.download"></script>
+<script type="text/javascript" src="./MesTrajets_files/lightbox.min.js.download"></script>
+<script type="text/javascript" src="./MesTrajets_files/room-1.js.download"></script>
+
+
+
+
+<script type="text/javascript" src="./MesTrajets_files/home.js.download"></script>
+<script src="./MesTrajets_files/slider.js.download" type="text/javascript"></script>
+<script type="text/javascript">
+    $('.examples1 a').simpleLightboxVideo();
+
+
+    //SLIDER bannieres
+
+    $("#fos_user_registration_form_username").parent('div').css("display", "none");
+    $('#fos_user_registration_form_email').focusout(function() {
+        $("#fos_user_registration_form_username").val($(this).val());
+
+
+    });
+
+    //AFFICHAGE DU CHAMP AUTRE TRAJET REGULIER
+    function showInputDepart()
+    {
+        var option=$( "#depart option:selected" ).text();
+
+        if(option=="AUTRE"){
+
+            $( "#autre_villeDepart" ).toggle("slow");
+        }
+        else{
+
+            $( "#autre_villeDepart" ).hide();
+        }
+    }
+
+    function showInputDestination()
+    {
+        var option=$( "#destination option:selected" ).text();
+
+        if(option=="AUTRE"){
+
+            $( "#autre_villeDestination" ).toggle("slow");
+        }
+        else{
+
+            $( "#autre_villeDestination" ).hide();
+        }
+    }
+    //AFFICHAGE DU CHAMP AUTRE TRAJET UNIQUE
+    function showInputDepartU()
+    {
+        var option=$( "#depart option:selected" ).text();
+
+        if(option=="AUTRE"){
+
+            $( "#autre_villeDepartU" ).toggle("slow");
+        }
+        else{
+
+            $( "#autre_villeDepartU" ).hide();
+        }
+    }
+
+    function showInputDestinationU()
+    {
+        var option=$( "#destinationU option:selected" ).text();
+
+        if(option=="AUTRE"){
+
+            $( "#autre_villeDestinationU" ).toggle("slow");
+        }
+        else{
+
+            $( "#autre_villeDestinationU" ).hide();
+        }
+    }
+
+</script>
+
+
+
+
+
+
+
+<!-- jQuery -->
+<!--  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+<script>
+
+    $('#vehicul_non').change(function() {
+        $('.vehicul_info_enable input').prop( 'disabled', true );
+        $('.vehicul_info_enable select').prop( 'disabled', true );
+        $('.vehicul_info_disabled input').prop( 'disabled', true );
+        $('.vehicul_info_disabled select').prop( 'disabled', true );
+        $('#marque').val('');
+        $('#model').val('');
+        $('#couleur').val('');
+        $('#nbPlaces').val('');
+        $('#immatriculation').val('');
+        $('#anneePermi').val('');
+    });
+
+    $('#vehicul_oui').change(function() {
+        $('.vehicul_info_enable input').prop( 'disabled', false );
+        $('.vehicul_info_enable select').prop( 'disabled', false );
+        $('.vehicul_info_disabled input').prop( 'disabled', false );
+        $('.vehicul_info_disabled select').prop( 'disabled', false );
+    });
+    $( "#close_notif" ).click(function() {
+        $('.notification_success').slideUp("slow");
+    });
+    $(document).ready(function () {
+        $('.single').hide().first().show();
+        $('.categories li:first').addClass('active');
+
+        $('.categories a').on('click', function (e) {
+            e.preventDefault();
+            $(this).closest('li').addClass('active').siblings().removeClass('active');
+            $($(this).attr('href')).show().siblings('.single').hide();
+        });
+
+        var hash = $.trim( window.location.hash );
+        if (hash) $('.categories a[href$="'+hash+'"]').trigger('click');
+    });
+
+</script>
+
+{% endblock %}
+</body></html>

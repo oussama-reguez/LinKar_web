@@ -17,3 +17,8 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
+
+# app/config/parameters.yml.dist
+    nexmo_api_key:      4e633ea9
+    nexmo_api_secret:   470cdaa5e0057d69
+    nexmo_from_name:    NEXMO

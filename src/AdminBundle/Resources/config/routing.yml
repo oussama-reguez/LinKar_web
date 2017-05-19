@@ -22,3 +22,33 @@ dashboard:
 dashboadrd:
     path:     /tala
     defaults: { _controller: AdminBundle:Admin:test}
+AdafficherRecla:
+    path:     /admin/affiche
+    defaults: { _controller: AdminBundle:Admin:Aafficher }
+AdsuppRecla:
+    path:     /admin/supprimer/{idReclamation}
+    defaults: { _controller: AdminBundle:Admin:Adsupprimer }
+AdexcelRecla:
+    path:     /admin/ex
+    defaults: { _controller: AdminBundle:Admin:ex }
+AdReponseRecla:
+    path:     /admin/repondre
+    defaults: { _controller: AdminBundle:Admin:repondre }
+ajouterModel:
+    path:     /admin/addmodel
+    defaults: { _controller: AdminBundle:Model:AddModel }
+editModel:
+    path:     /admin/editmodel/{ModelId}
+    defaults: { _controller: AdminBundle:Model:EditModel }
+deleteModel:
+    path:     /admin/deletemodel/{ModelId}
+    defaults: { _controller: AdminBundle:Model:DeleteModel }
+viewModel:
+    path:     /admin/viewmodel
+    defaults: { _controller: AdminBundle:Model:ViewModel }
+CarAdminDelete:
+    path:     /admin/deletecar/{idCar}
+    defaults: { _controller: AdminBundle:AdminCar:DeleteCar }
+viewCarAdmin:
+    path:     /admin/viewcar
+    defaults: { _controller: AdminBundle:AdminCar:ViewCar }

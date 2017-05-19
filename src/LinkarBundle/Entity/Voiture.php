@@ -3,6 +3,8 @@
 namespace LinkarBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Captcha\Bundle\CaptchaBundle\Validator\Constraints as CaptchaAssert;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Voiture
@@ -27,6 +29,134 @@ class Voiture
      * @ORM\Column(name="brand", type="string", length=255, nullable=false)
      */
     private $brand;
+
+    /**
+     * @return int
+     */
+    public function getIdVoiture()
+    {
+        return $this->idVoiture;
+    }
+
+    /**
+     * @param int $idVoiture
+     */
+    public function setIdVoiture($idVoiture)
+    {
+        $this->idVoiture = $idVoiture;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBrand()
+    {
+        return $this->brand;
+    }
+
+    /**
+     * @param string $brand
+     */
+    public function setBrand($brand)
+    {
+        $this->brand = $brand;
+    }
+
+    /**
+     * @return string
+     */
+    public function getModel()
+    {
+        return $this->model;
+    }
+
+    /**
+     * @param string $model
+     */
+    public function setModel($model)
+    {
+        $this->model = $model;
+    }
+
+    /**
+     * @return int
+     */
+    public function getIdMember()
+    {
+        return $this->idMember;
+    }
+
+    /**
+     * @param int $idMember
+     */
+    public function setIdMember($idMember)
+    {
+        $this->idMember = $idMember;
+    }
+
+    /**
+     * @return int
+     */
+    public function getConfort()
+    {
+        return $this->confort;
+    }
+
+    /**
+     * @param int $confort
+     */
+    public function setConfort($confort)
+    {
+        $this->confort = $confort;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNumberPlaces()
+    {
+        return $this->numberPlaces;
+    }
+
+    /**
+     * @param int $numberPlaces
+     */
+    public function setNumberPlaces($numberPlaces)
+    {
+        $this->numberPlaces = $numberPlaces;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUrlCarSelfie()
+    {
+        return $this->urlCarSelfie;
+    }
+
+    /**
+     * @param string $urlCarSelfie
+     */
+    public function setUrlCarSelfie($urlCarSelfie)
+    {
+        $this->urlCarSelfie = $urlCarSelfie;
+    }
+
+    /**
+     * @return string
+     */
+    public function getColor()
+    {
+        return $this->color;
+    }
+
+    /**
+     * @param string $color
+     */
+    public function setColor($color)
+    {
+        $this->color = $color;
+    }
 
     /**
      * @var string
@@ -60,6 +190,10 @@ class Voiture
      * @var string
      *
      * @ORM\Column(name="url_car_selfie", type="string", length=255, nullable=false)
+     *
+     * @Assert\NotBlank(message="Envoyer une image")
+     * @Assert\File(mimeTypes={ "image/*" })
+     * @Assert\File(mimeTypesMessage="Format non valide")
      */
     private $urlCarSelfie;
 
@@ -70,6 +204,23 @@ class Voiture
      */
     private $color;
 
+    /**
+     * @CaptchaAssert\ValidCaptcha(
+     *      message = "CAPTCHA validation failed, try again."
+     * )
+     */
 
+    /* protected $captchaCode;
+
+     public function getCaptchaCode()
+     {
+         return $this->captchaCode;
+     }
+
+     public function setCaptchaCode($captchaCode)
+     {
+         $this->captchaCode = $captchaCode;
+     }
+ */
 }
 

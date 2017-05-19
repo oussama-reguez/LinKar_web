@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Dashboard</title>
+    <title>LinKar - Espace Administrateur</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -76,7 +76,7 @@
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>A</b>LT</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Linkar</b></span>
+            <span class="logo-lg"><b>LinKar</b></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
@@ -349,13 +349,13 @@
 
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-table"></i> <span>Tables</span>
+                        <i class="fa fa-table"></i> <span>Comptes</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ path('utilisateurs') }}"><i class="fa fa-circle-o"></i> gestion des comptes </a></li>
+                        <li><a href="{{ path('utilisateurs') }}"><i class="fa fa-circle-o"></i>Gestion des comptes </a></li>
                         <li><a href="{{ path('verificationCin') }}"><i class="fa fa-circle-o"></i> Verification des comptes </a></li>
 
                     </ul>
@@ -363,18 +363,53 @@
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-pie-chart"></i>
-                        <span>Statestique</span>
+                        <span>Statistique</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ path('userStatestic') }}"><i class="fa fa-circle-o"></i> Statestique utilistateurs </a></li>
-                        <li><a href="{{ path('annoucneStatestic') }}"><i class="fa fa-circle-o"></i> Statestique Annonce </a></li>
+                        <li><a href="{{ path('userStatestic') }}"><i class="fa fa-circle-o"></i>Statistique des utilistateurs </a></li>
+                        <li><a href="{{ path('annoucneStatestic') }}"><i class="fa fa-circle-o"></i>Statistique des annonces </a></li>
 
                     </ul>
                 </li>
 
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-table"></i>
+                        <span>Annonces & demandes</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ path('adminannonces') }}"><i class="fa fa-circle-o"></i>Annonces</a></li>
+                        <li><a href="{{ path('admindemandes') }}"><i class="fa fa-circle-o"></i>Demandes</a></li>
+
+                    </ul>
+                </li>
+
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-ambulance"></i>
+                        <span>Gestion des voitures</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ path('viewCarAdmin') }}"><i class="fa fa-circle-o"></i>Liste des voitures</a></li>
+                        <li><a href="{{ path('viewModel') }}"><i class="fa fa-circle-o"></i>Liste des modèles</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="{{ path('AdafficherRecla') }}">
+                        <i class="fa fa-edit"></i> <span>Les Reclmations</span>
+                    </a>
+                </li>
 
 
 

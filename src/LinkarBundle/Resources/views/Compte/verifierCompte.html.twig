@@ -1,7 +1,10 @@
 
-{% extends "@User/layout.html.twig" %}
+{% extends "@Linkar/layout.html.twig" %}
+{% block titre %}
+    <title>LinKar | Vérifier mon compte</title>
+{% endblock %}
 {% block main %}
-    <link href="{{ asset('assets/js/bootstrap.min_3.3.0.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap-iso.css') }}" rel="stylesheet"  >
 <style>
     /* make sidebar nav vertical */
     @media (min-width: 768px) {
@@ -62,32 +65,39 @@
             width: 256px;
         }
     </style>
-
-    <div class="container">
+    <br>
+    <br>
+    <div class="bootstrap-iso" >
+    <div class="container" >
         <div class="row">
             <div class="col-md-3">
                 <ul class="nav nav-pills nav-stacked admin-menu">
-
-
-                    <li     ><a   href="{{ path('personnelInfo') }}" ><i class="fa fa-list-alt fa-fw"></i>information Personnel</a></li>
-                    <li  ><a  href="{{ path('changePassword') }}" data-target-id="Activity"><i class="fa fa-file-o fa-fw"></i>changer mot de passe </a></li>
-                    <li    class="active" ><a  href="{{ path('verificationCompte') }}"  data-target-id="Devices"><i class="fa fa-bar-chart-o fa-fw"></i>verifier Compte</a></li>
-
-
+                    <li   ><a  href="{{ path('Profile') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-user"></i>&nbsp; Mon profil</a></li>
+                    <li   ><a  href="{{ path('EditProfile') }}" data-target-id="Devices" ><i class="glyphicon glyphicon-pencil"></i>&nbsp; Modifier mes détails personnels</a></li>
+                    <li   ><a  href="{{ path('viewVoiture') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-road"></i>&nbsp; Mes voitures</a></li>
+                    <li   ><a  href="{{ path('Afficher_MesAnnonce') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-th-list"></i>&nbsp; Mes annonces</a></li>
+                    <li   ><a  href="{{ path('Afficher_MesDemandes') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-th-list"></i>&nbsp; Mes demandes</a></li>
+                    <li   ><a  href="{{ path('Afficher_MesParticipations') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-list-alt"></i>&nbsp; Mes covoiturages</a></li>
+                    <li   ><a  href="{{ path('Afficher_MesReponses') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-align-justify"></i>&nbsp; Mes réponses</a></li>
+                    <li   ><a  href="{{ path('afficherReclamation') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-print"></i>&nbsp; Mes réclamations</a></li>
+                    <li   ><a  href="{{ path('changePassword') }}" data-target-id="Activity"><i class="glyphicon glyphicon-pencil"></i>&nbsp; Changer mot de passe </a></li>
+                    <li class="active"  ><a  href="{{ path('verificationCompte') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-ok"></i>&nbsp; Vérifier mon compte</a></li>
+                    <li   ><a  href="{{ path('sendmail') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-ok"></i>&nbsp; Valider mon adresse e-mail</a></li>
                 </ul>
             </div>
+
             <div class="col-md-9 well admin-content text-center  " id="home">
 
                 {% if m.verifCin == true %}
                     <img class="media-photo"  src="{{ asset('assets/frontoffice/images/id-card/id-card-checked2.png') }}" style="">
 
-                    <h2 align="center" >votre compte est verifier </h2>
+                    <h2 align="center" >Votre compte est vérifié ☺ </h2>
 
                 {% else %}
                     {% if m.urlCin == '' %}
                         <img class="media-photo"   src="{{ asset('assets/frontoffice/images/id-card/id-card-upload.png') }}" style="">
 
-                        <h2 align="center" >verifier vote carte d'identité</h2>
+                        <h2 align="center" >Vérifier vote carte d'identité</h2>
 
 
 
@@ -113,11 +123,11 @@
 
                         {% if success is defined %}
                             <div class="alert alert-success">
-                                <strong>succes</strong> votre demande a ete envoyé
+                                <strong>Félicitations! </strong>Votre demande a été envoyé
                             </div>
                         {% endif %}
 
-                        <h2 >l'administrateur n'a pas encore  verifier  votre compte </h2>
+                        <h2 >L'administrateur n'a pas encore vérifié votre compte, merci pour votre patience. </h2>
 
                     {% endif %}
 
@@ -132,7 +142,7 @@
 
                 {% if error is defined %}
                     <div class="alert alert-danger">
-                        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+                        <strong>Erreur, veuillez ressayer</strong>
                     </div>
                 {% endif %}
 
@@ -143,6 +153,6 @@
     </div>
 
 
-
+</div>
 
 {% endblock %}

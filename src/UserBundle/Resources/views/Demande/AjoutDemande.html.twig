@@ -1,0 +1,71 @@
+{% extends "@Linkar/layout.html.twig" %}
+
+{% block titre %}
+    <title>Linkar | Poster Demande</title>
+{% endblock %}
+
+{% block main %}
+
+
+        <h1>Ajouter une Demande: </h1>
+<br>
+    {% for flash_message in app.session.flashBag.get('notice') %}
+
+        <div class="alert alert-success">
+            <h3><strong>Succès !</strong></h3><h4>Votre Demande à ete postée !</h4>
+        </div>
+    {% endfor %}
+    <br>
+
+
+{{ form_start(f) }}
+    <table class="table table-striped"  border="2" style="border-color: #ce563f;width:60%" >
+
+    <tr>
+        <td>Depart: </td><td>{{ form_widget(f.depart) }}</td>
+    </tr>
+    <tr>
+        <td>Prés de :  </td><td>{{ form_widget(f.approdep) }}</td>
+    </tr>
+    <tr>
+        <td>Destination : </td><td>{{ form_widget(f.destination) }}</td>
+    </tr>
+    <tr>
+        <td>Prés de :  </td><td>{{ form_widget(f.approdest) }}</td>
+    </tr>
+    <tr>
+        <td>Date : </td><td>{{ form_widget(f.date_demande) }}</td>
+    </tr>
+    <tr>
+        <td>Fumeur : </td><td>{{ form_widget(f.fumeur) }}</td>
+    </tr>
+    <tr>
+        <td>Bavard : </td><td>{{ form_widget(f.bavard) }}</td>
+    </tr>
+    <tr>
+        <td>Hommes uniquement : </td><td>{{ form_widget(f.men_only) }}</td>
+    </tr>
+    <tr>
+        <td>Femmes uniquement : </td><td>{{ form_widget(f.women_only) }}</td>
+    </tr>
+    <tr>
+        <td>Animaux : </td><td>{{ form_widget(f.animaux) }}</td>
+    </tr>
+    <tr>
+        <td>Tarif : </td><td>{{ form_widget(f.tarif) }}</td>
+
+    </tr>
+
+    <tr>
+        <td>Description : </td><td>{{ form_widget(f.description) }}</td>
+
+    </tr>
+    <tr>
+        <td colspan="2">
+<input type="submit" class="btn btn-success btn-lg radius" value="Ajouter" />
+        </td> </tr>
+</table>
+
+{{ form_end(f) }}
+<br>
+{% endblock %}

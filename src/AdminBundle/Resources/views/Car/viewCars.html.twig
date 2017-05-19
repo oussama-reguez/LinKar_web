@@ -1,0 +1,60 @@
+{% extends "@Admin/layout.html.twig" %}
+{% block main %}
+
+    <!-- Main content -->
+    <section class="content">
+        <form method="POST"  style="align-content: center" height="80px" padding-left="500px">
+            <h2>Rechercher par</h2>
+            <SELECT name="recherche" size="1">
+                <OPTION id="1">Membre
+                <OPTION id="2">Modèle voiture
+                <OPTION id="3">Référence voiture
+            </SELECT>
+            <input type="text" name='critere' >
+            <input type="submit" name='search' value="Rechercher" class="btn btn-primary radius" color="gold">
+        </form>
+
+        <table class="table table-striped"  border="2" style="border-color: lightgray">
+
+            <tr bgcolor="#ffd700">
+                <td>ID membre propriétaire</td>
+                <td>ID voiture</td>
+                <td>Image</td>
+                <td>Modèle</td>
+                <td>Référence Voiture</td>
+                <td>Couleur</td>
+                <td>Nombre de places</td>
+                <td>Confort</td>
+                <td>Supprimer</td>
+
+            </tr>
+            {% for k in m %}
+                <tr>
+                    {% set path = k.urlCarSelfie %}
+                    {% set confort = k.confort %}
+
+                    <td>{{ k.idMember }}</td>
+                    <td>{{ k.idVoiture }}</td>
+                    <td><img src="{{ path | imagine_filter('carpictures')}}"  /></td>
+                    <td>{{ k.model }}</td>
+                    <td>{{ k.brand}}</td>
+                    <td>{{ k.color}}</td>
+                    <td>{{ k.numberPlaces}}</td>
+                    {% if (confort == 1) %}
+                        <td>Peu Confortable</td>
+                    {%  endif %}
+                    {% if (confort == 2) %}
+                        <td>Confort Moyen</td>
+                    {%  endif %}
+                    {% if (confort == 3) %}
+                        <td>Confortable</td>
+                    {%  endif %}
+                    {% if (confort == 4) %}
+                        <td>Très confortable</td>
+                    {%  endif %}
+                    <td><a  class="btn btn-danger btn-lg " href="{{ path('CarAdminDelete',{'idCar':k.idVoiture}) }}" > <span class="glyphicon glyphicon-trash"></span></a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </section>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "@Admin/layout.html.twig" %}
+{% block main %}
+
+    <!-- Main content -->
+    <section class="content">
+        {{ form_start(form) }}
+
+        <p >{{  form_label(form.model_name)}}{{ form_widget(form.model_name, {'attr': {'placeholder': 'Modèle'}}) }}</p >
+        <br><br>
+        <p></p><center><button type="submit" class="btn btn-success btn-lg radius">Ajouter modèle</button></center>
+        {{ form_end(form) }}
+    </section>
+{% endblock %}

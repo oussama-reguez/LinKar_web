@@ -1,0 +1,55 @@
+{% extends "@Linkar/layout.html.twig" %}
+{% block titre %}
+    <title>Linkar | Envoyer une réclamation</title>
+{% endblock %}
+{% block main %}
+
+                                <h1>Faire une Réclamation</h1>
+    <br><br>
+                        {% for flash_message in app.session.flashBag.get('notice') %}
+
+                            <div class="alert alert-success">
+                                <h3><strong>Success !</strong></h3><h4>la réclamation est envoyée avec succés</h4>
+                            </div>
+                        {% endfor %}
+
+    <!--ajout recl -->
+<div class="container">
+<div style="width:800px; margin:0 auto;" align="center">
+
+
+    {{ form_start(form) }}
+
+
+
+
+    <p>{{  form_label(form.type)}}
+        {{ form_widget(form.type) }}</p> <br><br>
+
+    <p>{{  form_label(form.subject)}}{{ form_widget(form.subject, {'attr': {'placeholder': 'le sujet de la reclamation'}}) }}</p> <br><br>
+
+
+    <p>{{  form_label(form.text)}}{{ form_widget(form.text, {'attr': {'placeholder': 'le contenu de la reclamation'}}) }}</p> <br><br>
+
+    <p>{{  form_label(form.captchaCode)}}{{ form_widget(form.captchaCode) }}</p><br><br>
+
+
+    <br>
+    <p><button type="submit" class="btn btn-danger btn-lg radius">Envoyer</button></p>
+
+    <br>
+
+
+
+
+
+</div>
+</div>
+
+    {{ form_end(form) }}
+
+
+{% endblock %}
+
+
+

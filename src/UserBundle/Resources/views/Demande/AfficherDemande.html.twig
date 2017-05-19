@@ -1,0 +1,145 @@
+{% extends "@Linkar/layout.html.twig" %}
+
+{% block titre %}
+    <title>Linkar | Demandes</title>
+{% endblock %}
+
+{% block main %}
+
+        <h1>Demandes de covoiturage</h1>
+    <br>
+    <br>
+
+
+                        <form method="post" action="{{ path('Afficher_Demande') }}">
+                            <table class="table table-striped"  border="2" style="border-color:lightgrey;width:60%">
+                                <tr><td>
+                                        <center><input type="text" name="rech" placeholder="Ville. Exemple: 'Tunis'" style="width: 95%"/></center></td></tr>
+                                <tr>
+                                    <td><center><input style="width:95%" type="submit" class="btn btn-success btn-lg radius" id="submit"  value="Rechercher par ville"/></center></td>
+                                </tr>
+                                <tr></tr>
+                                <tr>  <td><center><a href="{{ path('Ajouter_Demande') }}" style="width: 95% " type="submit" class="btn btn-danger btn-lg radius"  ><h1><i class="glyphicon glyphicon-plus"></i> &nbsp; &nbsp;Créer une nouvelle demande</h1></a></center></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </article>
+
+<br>
+<br>
+    {% for flash_message in app.session.flashBag.get('notice') %}
+
+        <div class="alert alert-success">
+            <h3><strong>Succés !</strong></h3><h4>Votre réponse a été envoyée !</h4>
+        </div>
+    {% endfor %}
+
+    <br>
+    <br>
+
+    {%  for i in b  %}
+        <div style="border: solid;width: 60%;border-color: #FA8072" >
+            <table class="table table-striped"  border="2" style="border-color: lightgray;width:100%">
+                <tr>
+                    <th colspan="3">
+                        <h3>
+                            <img src="{{ asset('assets/frontoffice/images/pref/clock.png') }}">
+                            <span>{{ i.dateDemande|ago }}</span>&nbsp&nbsp&nbsp&nbsp
+                            <span class="letters">
+                          {% if i.isAnimaux()==1 %}
+                              <img src="{{ asset('assets/frontoffice/images/pref/pet.png')  }}">
+                              &nbsp&nbsp
+                          {% endif %}
+                                {% if i.isBavard()==1 %}
+                                    <img src="{{ asset('assets/frontoffice/images/pref/discussion.png') }}">
+                                    &nbsp&nbsp
+                                {% endif %}
+                                {% if i.isFumeur()==1 %}
+                                    <img src="{{ asset('assets/frontoffice/images/pref/cigarette.png') }}">
+                                    &nbsp&nbsp
+                                {% endif %}
+                                {% if i.isMenOnly()==1 %}
+                                    <img src="{{ asset('assets/frontoffice/images/pref/male.png') }}">
+                                    &nbsp&nbsp
+                                {% endif %}
+                                {% if i.isWomenOnly()==1 %}
+                                    <img src="{{ asset('assets/frontoffice/images/pref/female.png') }}">
+                                {% endif %}
+                    </span>
+                        </h3>
+                    </th>
+                    <td rowspan="3" style="width:30%" align="center">
+                        <h2><small>Tarif maximal:</small> {{ i.tarif}}
+                            <small>DT</small></h2>
+                        <p>
+                            {% if i.isEtat() %}
+
+                        <br>
+                        <p>
+
+                            {% else %}
+                            {% if app.user != i.getIdMembre() %}
+                        <p>
+                        <h2 style="color: #1abc9c"><i class="glyphicon glyphicon-ok"></i>&nbsp;Affecté</h2></p>
+                            <p><a href="{{ path('Afficher_MesDemandes') }}" class="btn btn-danger btn-lg radius">Voir mes Demandes</a>
+                        </p>
+                        <br>
+                        {% else %}
+                            <p>
+                                <a href="{{ path('Repondre',{'idDemande':i.idDemande}) }}" class="btn btn-danger btn-lg radius">Répondre</a>
+                            </p>
+                        {% endif %}
+                        <br>
+                        <p>
+                            <a href="{{ path('ajouterReclamation') }}" class="btn btn-danger btn-lg radius">Signaler la demande</a>
+                        </p>
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:20%">
+                        <span class="town">{{ i.depart}}</span>
+                        <br>
+                        {{ i.approdep }}
+                    </td>
+                    <td rowspan="2" style="width:40%">
+                        <p><b>Date:</b> {{ i.dateDemande|date("d/m/Y")}} </p>
+                        <br>
+                        <p><b>Description:</b> {{ i.description}} </p>
+                        <br>
+                        <p><b>Téléphone:</b> {{ i.idMembre.phoneNumber}} </p>
+                        <br>
+                        <center>
+                            <a data-target-id="Activity" class="btn btn-danger btn-lg radius" href="{{ path('Maps',{'idDemande':i.idDemande}) }}" ><i class="glyphicon glyphicon-map-marker"></i></a>
+                        </center>
+                    </td>
+                    <td rowspan="2">
+                        {% if i.idMembre.urlPicture != NULL %}
+                            <img src="{{ i.idMembre.urlPicture }}" class="img-profil" width="96" height="96">
+                        {% else %}
+                            {% if i.idMembre.gender == 'Femme' %}
+                                <img src="{{ asset('assets/frontoffice/images/NoPict-Female.png') }}" class="img-profil" width="96" height="96">
+                            {% else %}
+                                <img src="{{ asset('assets/frontoffice/images/NoPict-Male.png') }}" class="img-profil" width="96" height="96">
+                            {% endif %}
+                        {% endif %}
+                        <p>
+                            {{ i.idMembre.firstName}} {{ i.idMembre.lastName}}
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="town">{{ i.destination}} </span>
+                        <br>
+                        {{ i.approdest }}
+                    </td>
+                </tr>
+            </table></div><br>
+    {% endfor %}
+
+
+
+
+
+{% endblock  %}

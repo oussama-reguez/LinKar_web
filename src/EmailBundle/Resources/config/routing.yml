@@ -1,0 +1,9 @@
+emailValidationPage:
+    path:     /member/validateEmail
+    defaults: { _controller: EmailBundle:Default:ValidateMail }
+alreadyValid:
+    path:     /member/emailvalid
+    defaults: { _controller: EmailBundle:Default:ValidateMail }
+sendmail:
+    path:     /member/sendmail
+    defaults: { _controller: EmailBundle:Default:sendMail }

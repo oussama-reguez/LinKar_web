@@ -1,8 +1,11 @@
 
-{% extends "@User/layout.html.twig" %}
+{% extends "@Linkar/layout.html.twig" %}
+{% block titre %}
+    <title>LinKar | Profile</title>
+{% endblock  %}
 {% block main %}
 
-<link href="{{ asset('assets/js/bootstrap.min_3.3.0.css') }}" rel="stylesheet">
+<link href="{{ asset('assets/css/bootstrap-iso.css') }}" rel="stylesheet">
 
 
     <script type="text/javascript" src="{{ asset('assets/js/moment.min.js') }}"></script>
@@ -45,102 +48,98 @@
             width: 256px;
         }
     </style>
-</head>
-<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=731706050283534";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+<div class="bootstrap-iso">
 <div class="container">
     <div class="row">
         <div class="col-md-3">
             <ul class="nav nav-pills nav-stacked admin-menu">
-                <li    class="active" ><a   href="{{ path('personnelInfo') }}" ><i class="fa fa-list-alt fa-fw"></i>information Personnel</a></li>
-                <li    ><a  href="{{ path('changePassword') }}" data-target-id="Activity"><i class="fa fa-file-o fa-fw"></i>changer mot de passe </a></li>
-                <li   ><a  href="{{ path('verificationCompte') }}"  data-target-id="Devices"><i class="fa fa-bar-chart-o fa-fw"></i>verifier Compte</a></li>
-
+                <li  class="active" ><a  href="{{ path('Profile') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-user"></i>&nbsp; Mon profil</a></li>
+                <li   ><a  href="{{ path('EditProfile') }}" data-target-id="Devices" ><i class="glyphicon glyphicon-pencil"></i>&nbsp; Modifier mes détails personnels</a></li>
+                <li   ><a  href="{{ path('viewVoiture') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-road"></i>&nbsp; Mes voitures</a></li>
+                <li   ><a  href="{{ path('Afficher_MesAnnonce') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-th-list"></i>&nbsp; Mes annonces</a></li>
+                <li   ><a  href="{{ path('Afficher_MesDemandes') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-th-list"></i>&nbsp; Mes demandes</a></li>
+                <li   ><a  href="{{ path('Afficher_MesParticipations') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-list-alt"></i>&nbsp; Mes covoiturages</a></li>
+                <li   ><a  href="{{ path('Afficher_MesReponses') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-align-justify"></i>&nbsp; Mes réponses</a></li>
+                <li   ><a  href="{{ path('afficherReclamation') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-print"></i>&nbsp; Mes réclamations</a></li>
+                <li   ><a  href="{{ path('changePassword') }}" data-target-id="Activity"><i class="glyphicon glyphicon-pencil"></i>&nbsp; Changer mot de passe </a></li>
+                <li   ><a  href="{{ path('verificationCompte') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-ok"></i>&nbsp; Vérifier mon compte</a></li>
+                <li   ><a  href="{{ path('sendmail') }}"  data-target-id="Devices"><i class="glyphicon glyphicon-ok"></i>&nbsp; Valider mon adresse e-mail</a></li>
             </ul>
         </div>
+
         <div class="col-md-9 well admin-content text-center  " id="home">
-
-
-            <h1 class="page-header">Modifier information personnel</h1>
             <div class="row">
-                <form class="form-horizontal" role="form"  method="post" action="{{ path('personnelInfo') }}"  enctype="multipart/form-data">
-                <!-- left column -->
+                <form class="form-horizontal" role="form"  method="post" action="{{ path('Profile') }}"  enctype="multipart/form-data">
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="text-center">
                         <img src="{{ app.user.urlPicture}}" class="avatar img-circle img-thumbnail" alt="avatar">
-                        <h6>Upload a different photo...</h6>
-                        <input type="file" id="upfile" name="upfile"  class="text-center center-block well well-sm">
+                        <br>
+                      {%  if  app.user.verifEmail==1 %}
+
+                          <h2 style="color: #1abc9c"><i class="glyphicon glyphicon-ok"></i>Email vérifié</h2>
+                        {% else %}
+                            <h2 style="color: orangered"><i class="glyphicon glyphicon-remove"></i>&nbsp;Email non vérifié</h2>
+                            <a style="width:100%" class="btn btn-warning btn-lg radius" href="{{ path('sendmail') }}"  data-target-id="Devices">
+                                <i class="glyphicon glyphicon-ok"></i>&nbsp; Vérifier maintenant</a>
+
+
+                      {% endif %}
+                        <br>
+                        {%  if  app.user.verifCin==1 %}
+                            <h2 style="color: #1abc9c"><i class="glyphicon glyphicon-ok"></i>Identité vérifiée</h2>
+                        {% else %}
+                            <h2 style="color: orangered"><i class="glyphicon glyphicon-remove"></i>&nbsp;Identité non vérifiée</h2>
+                            <a style="width:100%" class="btn btn-warning btn-lg radius" href="{{ path('verificationCompte') }}"  data-target-id="Devices">
+                                <i class="glyphicon glyphicon-ok"></i>&nbsp; Vérifier maintenant</a>
+
+
+                        {% endif %}
                     </div>
                 </div>
-                <!-- edit form column -->
                 <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
-                    <div class="alert alert-info alert-dismissable">
-                        <a class="panel-close close" data-dismiss="alert">×</a>
-                        <i class="fa fa-coffee"></i>
-                        This is an <strong>.alert</strong>. Use this to show important messages to the user.
-                    </div>
-                    <h3>Personal info</h3>
-
+                   <center> <h2>{{ app.user.firstName}} {{ app.user.lastName}}</h2></center>
+<br><br>
                         <div class="form-group">
-                            <label class="col-lg-3 control-label">Nom:</label>
-                            <div class="col-lg-8">
-                                <input   name="nom" class="form-control" value="{{ app.user.lastName}}" type="text">
-                            </div>
+                            <label   class="col-lg-3 control-label">Date de naissance:</label>
+                            <div class="col-lg-8">{{ app.user.birth|date("m/d/Y")}}</div>
                         </div>
-                        <div class="form-group">
-                            <label  class="col-lg-3 control-label">Prenom:</label>
-                            <div class="col-lg-8">
-                                <input  name="prenom" class="form-control" value="{{ app.user.firstName}}" type="text">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label   class="col-lg-3 control-label">Date de naissance :</label>
-                            <div class="col-lg-8">
-                                <div class='input-group date' id='datetimepicker1'>
-                                    <input name="birth" type='text' class="form-control" value="{{ app.user.birth|date("m/d/Y")}}" />
-                                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                                </div>
-                                <script type="text/javascript">
-                                    $(function () {
-                                        $('#datetimepicker1').datetimepicker({format: 'DD/MM/YYYY'});
-                                    });
-                                </script>
-                            </div>
-                        </div>
-
-
+                    <br>
                         <div class="form-group">
                             <label class="col-lg-3 control-label">Email:</label>
-                            <div class="col-lg-8">
-                                <input   name="email" class="form-control" value="{{app.user.email}}" type="text">
-                            </div>
+                            <div class="col-lg-8">{{app.user.email}}</div>
                         </div>
-
-
+                    <br>
                         <div class="form-group">
-                            <label name="address" class="col-md-3 control-label">Adresse :</label>
-                            <div class="col-md-8">
-                                <textarea class="form-control" id="textarea" name="textarea">{{app.user.address}}</textarea>
-                            </div>
+                            <label name="address" class="col-md-3 control-label">Adresse:</label>
+                            <div class="col-md-8">{{app.user.address}}</div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label"></label>
-                            <div class="col-md-8">
-                                <input class="btn btn-primary" value="Save Changes" type="submit">
-                                <span></span>
+                    <br>
+                    <div class="form-group">
+                        <label name="address" class="col-md-3 control-label">Téléphone:</label>
+                        <div class="col-md-8">{{app.user.phoneNumber}}</div>
+                    </div>
+                    <br>
+                    <div style="border: solid;width: 60%;border-color: #FA8072" class="fb-comments" data-href="http://localhost/linkar_web_final/web/app_dev.php/member/profile" data-width="100" data-numposts="5"></div>
 
-                            </div>
-                        </div>
-                    </form>
                 </div>
+                    </form>
+
             </div>
 
         </div>
 
+        </div>
 
-    </div>
+
+</div>
 </div>
 {% endblock %}
 

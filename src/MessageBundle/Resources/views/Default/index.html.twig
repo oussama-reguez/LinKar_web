@@ -1,1 +1,56 @@
-Hello World!
+
+{% extends "UserBundle::layout.html.twig" %}
+    {% block titre %}
+        <title>LinKar | Connexion</title>
+    {% endblock %}
+{% block main %}
+    <br><br>
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/css/style.css') }}" />
+    <div style="border: solid;width: 60%;border-color: #FA8072" >
+
+        <div class="first-title">Connexion </div>
+
+        <div class="box">
+            <!-- / MESSAGE D'ERREUR --->
+            <br>
+            <form action="{{ path("fos_user_security_check") }}"  method="post">
+                {% if csrf_token %}
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                {% endif %}
+                <div class="f-row">
+                    <div class="full-width">
+                        <label for="username">Identifiant</label>
+                        <input type="text" id="username" name="_username" value="" placeholder="Nom d'utilisateur" />
+                    </div>
+                </div>
+                <div class="f-row">
+                    <div class="full-width">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" name="_password" placeholder="Votre mot de passe" />
+                    </div>
+                </div>
+
+                <div class="f-row">
+                    <div class="full-width">
+                        <input type="submit"  value="Se Connecter" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn color medium full" />
+                    </div>
+                </div>
+
+                <span><a href="mot-de-passe-oublie/reinitialisation.html" style="color: #880000;">Mot de passe oublié?</a><br />
+                                                <br />
+                                                Vous n'avez pas encore de compte? <a href="{{ path('fos_user_registration_register') }}"><span style="color: #880000;">S'inscrire</span></a>.</span>
+            </form>
+            {% trans_default_domain 'FOSUserBundle' %}
+
+            {% if error %}
+                <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+        </div>
+        <!--//Login-->
+
+
+
+    </div>
+
+{% endblock%}

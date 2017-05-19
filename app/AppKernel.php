@@ -24,6 +24,15 @@ class AppKernel extends Kernel
             new MessageBundle\MessageBundle(),
             new NotificationBundle\NotificationBundle(),
             new AdminBundle\AdminBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Liuggio\ExcelBundle\LiuggioExcelBundle(),
+            new Captcha\Bundle\CaptchaBundle\CaptchaBundle(),
+            new EmailBundle\EmailBundle(),
+            new \Nomaya\SocialBundle\NomayaSocialBundle(),
+            new UploadBundle\UploadBundle(),
+            new Liip\ImagineBundle\LiipImagineBundle(),
+            new Knp\Bundle\TimeBundle\KnpTimeBundle(),
+            new Jhg\NexmoBundle\JhgNexmoBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

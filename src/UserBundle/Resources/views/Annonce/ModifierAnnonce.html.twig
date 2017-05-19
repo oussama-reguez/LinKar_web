@@ -1,0 +1,110 @@
+{% extends "@User/HomePage/Blocks.html.twig" %}
+
+{% block titre %}
+    <title>Linkar | Modifier Annonce</title>
+{% endblock %}
+
+{% block b %}
+
+    <div class="page-header">
+        <h1>Ajouter une Annonce: </h1>
+    </div>
+
+    {% for flash_message in app.session.flashBag.get('notice') %}
+
+        <div class="alert alert-success">
+            <h3><strong>Succés !</strong></h3><h4>Votre Annonce a été modifiée !</h4>
+        </div>
+    {% endfor %}
+
+
+{% endblock %}
+{% block a %}
+<h1>Modifier votre Annonce </h1>
+<div class="container">
+    <div style="width:800px; margin:0 auto;" align="center">
+        <article class="single" id="tab1">
+            <div class="box">
+
+                {{ form_start(f) }}
+                <table>
+
+                    <tr>
+                        <td>Ville de départ: </td><td>{{ form_widget(f.depart) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Près de: </td><td>{{ form_widget(f.approdep) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Ville de destination : </td><td>{{ form_widget(f.destination) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Près de: </td><td>{{ form_widget(f.approdest) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Date : </td><td>{{ form_widget(f.date_annonce) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Heure de départ : </td><td>{{ form_widget(f.horaire_depart) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Fumeur : </td><td>{{ form_widget(f.fumeur) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Bavard : </td><td>{{ form_widget(f.bavard) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Hommes Uniquement : </td><td>{{ form_widget(f.men_only) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Femmes Uniquement : </td><td>{{ form_widget(f.women_only) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Animaux : </td><td>{{ form_widget(f.animaux) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Trajet Régulier : </td><td>{{ form_widget(f.regulier) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Places demandées : </td><td>{{ form_widget(f.places) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Montant par trajet : </td><td>{{ form_widget(f.tarif) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Voiture : </td><td>{{ form_widget(f.Voiture) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Description : </td><td>{{ form_widget(f.description) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td></td>  <td><input type="submit" id="submit2" name="submit2" class="btn color medium" value="Modifier"{{ form_widget(f.Sauvegarder) }} </td>
+                        <!-- -->
+                    </tr>
+
+                </table>
+
+                {{ form_end(f) }}
+
+
+            </div>
+        </article>
+    </div>
+</div>
+{% endblock %}

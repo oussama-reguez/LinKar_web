@@ -13,9 +13,14 @@
   </ul>
 </div></div>
 		 </div><!--new_message_head-->
-		 
+
 		 <div class="chat_area" id="chat">
 		 <ul class="list-unstyled">
+
+
+
+
+
              {% for k in m %}
                  {% if k.Sender==app.user %}
                      <li class="left clearfix admin_chat">
@@ -43,8 +48,8 @@
 
              {% endfor %}
 
-		 
-		 
+
+
 		 </ul>
 		 </div><!--chat_area-->
              <div class="message_write">

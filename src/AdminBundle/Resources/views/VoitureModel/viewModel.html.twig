@@ -1,0 +1,25 @@
+{% extends "@Admin/layout.html.twig" %}
+{% block main %}
+    <!-- Main content -->
+    <section class="content">
+        <a href="{{ path('ajouterModel') }}" > <center><button type="submit" class="btn btn-success btn-lg radius">Ajouter un nouveau modèle</button></center></a>
+        <br><br>
+        <table class="table table-striped"  border="2" style="border-color: lightgray">
+
+            <tr bgcolor="#ffd700">
+                <td>Modèle</td>
+                <td>Modifier</td>
+                <td>Supprimer</td>
+
+            </tr>
+            {% for k in m %}
+                <tr>
+                    <td>{{ k.modelName }}</td>
+                    <td><a  class="btn btn-danger btn-lg " href="{{ path('editModel',{'ModelId':k.modelId}) }}" > <span class="glyphicon glyphicon-pencil"></span></a>  </td>
+                    <td><a  class="btn btn-danger btn-lg " href="{{ path('deleteModel',{'ModelId':k.modelId}) }}" > <span class="glyphicon glyphicon-trash"></span></a>  </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </section>
+
+{% endblock %}

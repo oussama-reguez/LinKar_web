@@ -1,0 +1,145 @@
+{% extends "@Linkar/layout.html.twig" %}
+
+{% block titre %}
+    <title>Linkar | Annonces</title>
+
+{% endblock %}
+
+{% block main %}
+
+        <h1>Covoiturages disponibles</h1>
+<br>
+<br>
+        <form method="post" action="{{ path('Afficher_Annonce') }}">
+            <table class="table table-striped"  border="2" style="border-color:lightgrey;width:60%">
+                <tr><center>
+                       <td> <input type="text" name="rech"  placeholder="Ville. Exemple: 'Tunis'" style="width: 95% "/></td></center></tr>
+                <tr>  <td><center><input style="width: 95% " type="submit" class="btn btn-success btn-lg radius"  value="Rechercher par ville">
+                        </center></td>
+                </tr>
+<tr></tr>
+                <tr>  <td><center><a href="{{ path('Ajouter_Annonce') }}" style="width: 95% " type="submit" class="btn btn-danger btn-lg radius"  ><h1><i class="glyphicon glyphicon-plus"></i> &nbsp; &nbsp;Créer une nouvelle annonce</h1></a></center></td>
+                </tr>
+            </table>
+        </form>
+    <br>
+    <br>
+
+    {% for flash_message in app.session.flashBag.get('notice') %}
+
+        <div class="alert alert-success">
+            <h3><strong>Succés !</strong></h3><h4>Votre réponse a été envoyée !</h4>
+        </div>
+    {% endfor %}
+
+    <br>
+    <br>
+
+    {%  for i in c  %}
+        <div style="border: solid;width: 60%;border-color: #FA8072" >
+    <table class="table table-striped"  border="2" style="border-color: lightgray;width:100%">
+        <tr>
+            <th colspan="3">
+                <h3>
+                    <img src="{{ asset('assets/frontoffice/images/pref/clock.png') }}">
+                    <span>{{ i.dateAnnonce|ago }}</span>&nbsp&nbsp&nbsp&nbsp
+                    <span class="letters">
+                        <!-- Pref -->
+                        {% if i.isFumeur() %}
+                            <img src="{{ asset('assets/frontoffice/images/pref/cigarette.png') }}">
+                            &nbsp;&nbsp;
+                        {% endif %}
+                        {% if i.isAnimaux() %}
+                            <img src="{{ asset('assets/frontoffice/images/pref/pet.png') }}">
+                            &nbsp;&nbsp;
+                        {% endif %}
+                        {% if i.isBavard() %}
+                            <img src="{{ asset('assets/frontoffice/images/pref/discussion.png') }}">
+                            &nbsp;&nbsp;
+                        {% endif %}
+                        {% if i.isMenOnly() %}
+                            <img src="{{ asset('assets/frontoffice/images/pref/male.png') }}">
+                            &nbsp;&nbsp;
+                        {% endif %}
+                        {% if i.isWomenOnly() %}
+                            <img src="{{ asset('assets/frontoffice/images/pref/female.png') }}">
+                        {% endif %}
+                    </span>
+                </h3>
+            </th>
+            <td rowspan="3" style="width:30%" align="center">
+                    <h2>{{ i.tarif}}
+                        <small>DT</small>
+                        <span class="meta">par covoitureur</span>
+                    </h2>
+                <p>
+                    {% if i.getPlaces()==0 %}
+                <h2 style="color: orangered"><i class="glyphicon glyphicon-remove"></i>&nbsp;Trajet saturé</h2>
+                {% endif %}
+                </p>
+                <br>
+                <p>
+                    {% if (i.getPlace1()!=app.user) and (i.getPlace2()!=app.user) and (i.getPlace3()!=app.user) and (i.getPlace4()!=app.user) %}
+                <h2 style="color: #1abc9c"><i class="glyphicon glyphicon-ok"></i>&nbsp;Vous y participez</h2>
+                {% endif %}
+                </p>
+                <br>
+                <p>
+                    {% if i.getPlaces()>0 %}
+                        <a style="width:100%" href="{{ path('reponseannonce',{'idAnnonce':i.idAnnonce }) }}" class="btn btn-danger btn-lg radius">Choisir ce trajet</a>{% endif %}
+                </p>
+                    <br>
+                <p>
+                <a style="width:100%" href="{{ path('ajouterReclamation') }}" class="btn btn-danger btn-lg radius">Signaler l'annonce</a>
+                </p>
+
+            </td>
+        </tr>
+        <tr>
+            <td style="width:20%">
+                <span class="town">{{ i.depart}}</span>
+                <br>
+                {{ i.approdep }}
+            </td>
+            <td rowspan="2" style="width:40%">
+                <p>
+                    {% if i.isRegulier() %}
+                <h5>Trajet regulier</h5>
+                {% endif %}
+                {% if i.isRegulier()==false %}
+                <h5>Trajet unique</h5>
+                {% endif %}</p>
+                <br>
+                <p><b>Date:</b> {{ i.dateAnnonce|date("d/m/Y") }}</p>
+                <p><b>Heure:</b> {{ i.horaireDepart }}</p>
+                <p><b>Description:</b> {{ i.description }}</p>
+                <p><b>Places restantes:</b> {{ i.places }}</p>
+                <p><b>Voiture:</b> {{ i.Voiture.model}} </p>
+            </td>
+            <td rowspan="2">
+                <p>
+                    {% if i.idMembre.urlPicture != NULL %}
+                        <img src="{{ i.idMembre.urlPicture }}" class="img-profil" width="96" height="96">
+                    {% else %}
+                        {% if i.idMembre.gender == 'Femme' %}
+                            <img src="{{ asset('assets/frontoffice/images/NoPict-Female.png') }}" class="img-profil" width="100%" height="100%">
+                        {% else %}
+                            <img src="{{ asset('assets/frontoffice/images/NoPict-Male.png') }}" class="img-profil" width="96" height="100%">
+                        {% endif %}
+                    {% endif %}
+                </p>
+                <p>Conducteur: <br>{{ i.idMembre.firstName}} {{ i.idMembre.lastName}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="town">{{ i.destination}} </span>
+                <br>
+                {{ i.approdest }}
+            </td>
+        </tr>
+    </table></div><br>
+{% endfor %}
+
+
+{% endblock  %}

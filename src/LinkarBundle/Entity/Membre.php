@@ -89,7 +89,11 @@ class Membre extends  BaseUser
      */
     private $verifCin = '0';
 
-
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="verif_email", type="boolean", nullable=true)
+     */
     private $verifEmail = '0';
 
     /**

@@ -1,3 +1,11 @@
+upload:
+    resource: "@UploadBundle/Resources/config/routing.yml"
+    prefix:   /
+
+email:
+    resource: "@EmailBundle/Resources/config/routing.yml"
+    prefix:   /
+
 admin:
     resource: "@AdminBundle/Resources/config/routing.yml"
     prefix:   /
@@ -27,3 +35,14 @@ app:
     type: annotation
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+captcha_routing:
+  resource: "@CaptchaBundle/Resources/config/routing.yml"
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+upload:
+    resource: "@UploadBundle/Resources/config/routing.yml"
+    prefix:   /
+
+email:
+    resource: "@EmailBundle/Resources/config/routing.yml"
+

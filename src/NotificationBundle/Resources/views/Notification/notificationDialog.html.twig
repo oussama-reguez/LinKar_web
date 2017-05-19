@@ -14,7 +14,7 @@
             {% endif %}
 
             {% if  k.type  == 'reclamation' %}
-            $.notify('{{ k.Sender.firstName  }} {{ k.Sender.lastName  }}a deposer une reclamation', { allow_dismiss: false });
+            $.notify(' <img src="{{ k.Sender.urlPicture }}" class="media-photo">  {{ k.Sender.firstName  }} {{ k.Sender.lastName  }}a deposer une reclamation', { allow_dismiss: false });
 
             {% endif %}
 

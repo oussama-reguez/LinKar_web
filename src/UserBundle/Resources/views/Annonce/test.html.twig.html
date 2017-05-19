@@ -1,0 +1,93 @@
+{%  for i in c  %}
+<div style="border: solid;width: 60%;border-color: #FA8072" >
+    <table class="table table-striped"  border="2" style="border-color: lightgray;width:100%">
+        <tr>
+            <th colspan="3">
+                <h3>
+                    <img src="{{ asset('assets/frontoffice/images/pref/clock.png') }}">
+                    <span>{{ i.dateDemande|ago }}</span>&nbsp&nbsp&nbsp&nbsp
+                    <span class="letters">
+                          {% if i.isAnimaux()==1 %}
+                        <img src="{{ asset('assets/frontoffice/images/pref/pet.png')  }}">
+                         &nbsp&nbsp
+                        {% endif %}
+                        {% if i.isBavard()==1 %}
+                        <img src="{{ asset('assets/frontoffice/images/pref/discussion.png') }}">
+                          &nbsp&nbsp
+                        {% endif %}
+                        {% if i.isFumeur()==1 %}
+                        <img src="{{ asset('assets/frontoffice/images/pref/cigarette.png') }}">
+                           &nbsp&nbsp
+                        {% endif %}
+                        {% if i.isMenOnly()==1 %}
+                        <img src="{{ asset('assets/frontoffice/images/pref/male.png') }}">
+                           &nbsp&nbsp
+                        {% endif %}
+                        {% if i.isWomenOnly()==1 %}
+                        <img src="{{ asset('assets/frontoffice/images/pref/female.png') }}">
+                        {% endif %}
+                    </span>
+                </h3>
+            </th>
+            <td rowspan="3" style="width:30%" align="center">
+                <h2>{{ i.tarif}}
+                    <small>dt</small></h2>
+                <p>
+                {% if i.isEtat() %}
+                <h2>Affecté</h2>
+                <p>
+
+                {% else %}
+                {% if app.user != i.getIdMembre() %}
+                <p>
+                <button href="{{ path('Afficher_MesDemandes') }}" class="btn btn-danger btn-lg radius">Voir mes Demandes</button>
+                </p>
+                {% else %}
+                <p>
+                <button href="{{ path('Repondre',{'idDemande':i.idDemande}) }}" class="btn btn-danger btn-lg radius">Répondre</button>
+                </p>
+                {% endif %}
+                <p>
+                <button href="{{ path('ajouterReclamation') }}" class="btn btn-danger btn-lg radius">Signaler la demande</button>
+                </p>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td style="width:20%">
+                <span class="town">{{ i.depart}}</span>
+                <br>
+                {{ i.approdep }}
+            </td>
+            <td rowspan="2" style="width:40%">
+                <p><b>Date:</b> {{ i.dateDemande|date("d/m/Y")}} </p>
+                <br>
+                <p><b>Description:</b> {{ i.description}} </p>
+                <br>
+                <p><b>Tél:</b> {{ i.idMembre.phoneNumber}} </p>
+            </td>
+            <td rowspan="2">
+                {% if i.idMembre.urlPicture != NULL %}
+                <img src="{{ i.idMembre.urlPicture }}" class="img-profil" width="96" height="96">
+                {% else %}
+                {% if i.idMembre.gender == 'Femme' %}
+                <img src="{{ asset('assets/frontoffice/images/NoPict-Female.png') }}" class="img-profil" width="96" height="96">
+                {% else %}
+                <img src="{{ asset('assets/frontoffice/images/NoPict-Male.png') }}" class="img-profil" width="96" height="96">
+                {% endif %}
+                {% endif %}
+                <p>
+                    {{ i.idMembre.firstName}} {{ i.idMembre.lastName}}
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="town">{{ i.destination}} </span>
+                <br>
+                {{ i.approdest }}
+            </td>
+        </tr>
+    </table></div><br>
+{% endfor %}
+

@@ -1,0 +1,112 @@
+
+
+
+{% extends "@Admin/layout.html.twig" %}
+{% block main %}
+
+
+  <!-- Content Wrapper. Contains page content -->
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1 style="color:#0c7ca4 ">
+       Les Reclamations
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Your Page Content Here -->
+
+      <form method="POST"  style="align-content: center" height="80px" padding-left="500px">
+        <h3 style="color: #0f59a4 ">Rechercher </h3>
+        <SELECT name="recherche" size="1">
+          <OPTION>Annonce
+          <OPTION>Membre
+        </SELECT>
+
+        <input type="submit" value="Rechercher par sujet" class="btn btn-primary radius" color="gold">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </form>
+
+      <br><br>
+
+      <table class="table table-striped"  border="2" style="border-color: lightgray" >
+
+
+
+        <tr bgcolor="#ffd700">
+          <th>ID Reclamation</th>
+          <th>Image</th>
+          <th>Nom</th>
+          <th border-bottom="1px solid" border-top="1px solid"> Type</th>
+
+          <th>Sujet</th>
+          <th>Text</th>
+          <th>Date reclamation</th>
+          <th>Reponse</th>
+          <th>Supprimer</th>
+
+
+
+        </tr>
+          {% for v in reclamations %}
+            <tr>
+              <td>{{ v.idReclamation }}</td>
+              <td><img class="img-rounded" width="40px" height="40px" src='{{v.Membre.urlPicture}}'></td>
+              <td>{{ v.Membre.lastName }}</td>
+              <td>{{ v.type}}</td>
+
+              <td>{{ v.subject }}</td>
+              <td>{{ v.text}}</td>
+              <td>{{ v.dateReclamation|date("d/m/Y")}}</td>
+
+
+              <td>{{ v.reponse }}
+
+
+                <form method="POST" name="frm_reponse" action="{{ path('AdReponseRecla') }}">
+
+                  <input type="hidden" name="idReclamation" value="{{ v.idReclamation }}">
+
+                  <textarea rows="2" cols="30" type="text" name="reponse" >Nous sommes désolés de cet incident et nous vous prions de bien vouloir nous en excuser. </textarea> <br>
+
+
+                  <input type="submit" value="Répondre"   class="btn btn-primary radius" color="gold">
+
+                </form>
+
+
+
+
+
+              </td>
+
+
+
+              <td><a class="btn btn-danger btn-lg " href="{{ path('AdsuppRecla',{'idReclamation':v.idReclamation}) }}"><span class="glyphicon glyphicon-trash"></span></a> </td>
+
+
+
+            </tr>
+          {% endfor %}
+
+      </table>
+
+
+      <div class="navigation text-center">
+          {{ knp_pagination_render(reclamations) }}
+      </div>
+
+
+      <br>
+      <a  href="{{ path('AdexcelRecla') }}"  class="btn btn-primary radius" color="gold">Télecharger la liste des reclamations</a>
+
+
+    </section>
+    <!-- /.content -->
+
+  <!-- /.content-wrapper -->
+
+{% endblock %}

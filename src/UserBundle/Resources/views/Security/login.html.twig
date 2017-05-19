@@ -1,27 +1,15 @@
 
 {% extends "UserBundle::layout.html.twig" %}
+    {% block titre %}
+        <title>LinKar | Connexion</title>
+    {% endblock %}
 {% block main %}
+    <br><br>
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/css/style.css') }}" />
+    <div style="border: solid;width: 60%;border-color: #FA8072" >
 
-
-        <div class="wrap">
             <div class="first-title">Connexion </div>
-            <div class="row">
 
-                <!--- Content MAIN -->
-                <div class="three-fourth content">
-                    <!-- Post -->
-                    <article class="single hentry">
-                        <div class="entry-content">
-
-                            <div class="wrap">
-                                <div class="row">
-                                    <!--- Content -->
-                                    <div class="full-width content">
-                                        <!--- //Content -->
-
-                                        <div class="content one-half modal">
-                                            <!--Login-->
-                                            <a href="login.html">Connexion</a>
                                             <div class="box">
                                                 <!-- / MESSAGE D'ERREUR --->
                                                 <br>
@@ -50,7 +38,7 @@
 
                                                     <span><a href="mot-de-passe-oublie/reinitialisation.html" style="color: #880000;">Mot de passe oublié?</a><br />
                                                 <br />
-                                                Vous n'avez pas encore de compte? <a href="inscription.html"><span style="color: #880000;">S'inscrireeeee</span></a>.</span>
+                                                Vous n'avez pas encore de compte? <a href="{{ path('fos_user_registration_register') }}"><span style="color: #880000;">S'inscrire</span></a>.</span>
                                                 </form>
                                                 {% trans_default_domain 'FOSUserBundle' %}
 
@@ -60,121 +48,9 @@
 
                                             </div>
                                             <!--//Login-->
-                                        </div>
-
-                                        <!--- //Content -->
-                                    </div>
-                                    <!--- //Content -->
-                                </div>
-                            </div>
-
-                        </div>
-                    </article>
-                    <!-- //Post -->
-                </div>
-                <!--- //Content MAIN -->
-
-                <!--- Sidebar -->
-                <aside class="one-fourth sidebar left">
-                    <!-- Widget -->
-                    <form method="post" action="http://www.coccidriving.com/chercher_trajets" role="form" data-toggle="validator" >
-
-                        <div class="widget">
-                            <h4>Rechercher un trajet</h4>
-                            <div class="textwidget">
-
-                                <div class="alerte1">
-                                    <label>Départ</label>
-                                    <select name="villeDepart" required>
-                                        <option>Ville de départ</option>
-
-                                        <option value="Bendejun">Bendejun</option>
-                                        <option value="Berre-les-Alpes">Berre-les-Alpes</option>
-                                        <option value="Blausasc">Blausasc</option>
-                                        <option value="Cantaron">Cantaron</option>
-                                        <option value="Châteauneuf-Villevieille">Châteauneuf-Villevieille</option>
-                                        <option value="Coaraze">Coaraze</option>
-                                        <option value="Drap">Drap</option>
-                                        <option value="L'Escarène">L'Escarène</option>
-                                        <option value="Lucéram">Lucéram</option>
-                                        <option value="Nice">Nice</option>
-                                        <option value="Peille">Peille</option>
-                                        <option value="Peillon">Peillon</option>
-                                        <option value="Touët-de-l'Escarène">Touët-de-l'Escarène</option>
-                                        <option value="AUTRE">AUTRE</option>
-                                    </select>
-                                </div>
-                                <div class="alerte1">
-                                    <label>Arrivé</label>
-
-                                    <select  name="villeDestination" required>
-
-                                        <option>Ville de destination</option>
-                                        <option value="Bendejun">Bendejun</option>
-                                        <option value="Berre-les-Alpes">Berre-les-Alpes</option>
-                                        <option value="Blausasc">Blausasc</option>
-                                        <option value="Cantaron">Cantaron</option>
-                                        <option value="Châteauneuf-Villevieille">Châteauneuf-Villevieille</option>
-                                        <option value="Coaraze">Coaraze</option>
-                                        <option value="Drap">Drap</option>
-                                        <option value="L'Escarène">L'Escarène</option>
-                                        <option value="Lucéram">Lucéram</option>
-                                        <option value="Nice">Nice</option>
-                                        <option value="Peille">Peille</option>
-                                        <option value="Peillon">Peillon</option>
-                                        <option value="Touët-de-l'Escarène">Touët-de-l'Escarène</option>
-                                        <option value="ChampAutre">AUTRE</option>
-                                    </select>
-                                    <input type="text" name="ChampAutre" value="<?=$ChampAutre?>" id="ChampAutre" style="display:none;" />
-                                </div>
-                                <div class="alerte2">
-                                    <input type="submit" class="btn grey" value="Rechercher">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- //Widget -->
-                    </form>
-                    <!-- Widget -->
-                    <div class="widget">
-                        <h4>Publicité</h4>
 
 
 
-
-
-                    </div>
-                    <!-- //Widget -->
-
-
-                    <!-- Widget -->
-                    <div class="col-xs-12 col-sm-12 no-right" id="upcoming">
-                        <!-- <img src="images/upcoming.png" alt="Upcoming Events" class="img-responsive"> --><figure id="contact-room">
-                            <div id="contact">
-                                <a href="#" title=""><img src="{{ asset('assets/frontoffice/images/upcoming.png') }}" alt="img upcoming" class="img-responsive pr-img"></a>
-                            </div>
-                            <figcaption class="sub-upcoming">
-
-                                <h3><span style="font-size: 18px;">Evénements à venir</span></h3>
-                                <div id="owl-example" class="owl-carousel">
-                                    <div class="upcoming-ul">
-                                        <div class="button-ok btn-more">
-                                            <a href="evenements.html"><span style="font-size: 13px;">Tous les évènements</span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </figcaption>
-                        </figure></div>
-                </aside>
-                <!--- //Sidebar -->
-
-
-
-            </div>
-        </div>
-
-
-
+</div>
 
 {% endblock%}

@@ -1,0 +1,114 @@
+{% extends "@Admin/layout.html.twig" %}
+
+{% block main %}
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <!-- /.box -->
+
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">Annonces</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <div style="height:100%; width:100%; overflow-x:hidden; overflow-x: scroll; padding-bottom:10px;">
+                        <div class="box-body">
+                            <table id="example1" class="table table-striped"  border="2" style="border-color: lightgray">
+                                <thead>
+                                <tr>
+                                    <th>Num</th>
+                                    <th>Depart</th>
+                                    <th>Point de départ</th>
+                                    <th>Destination</th>
+                                    <th>Point d'arrivée</th>
+                                    <th>Fumeur</th>
+                                    <th>Bavard</th>
+                                    <th>Hommes</th>
+                                    <th>Femmes</th>
+                                    <th>Animaux</th>
+                                    <th>Regulier</th>
+                                    <th>Date</th>
+                                    <th>Heure</th>
+                                    <th>Places</th>
+                                    <th>Tarif</th>
+                                    <th>Description</th>
+                                    <th>Conducteur</th>
+                                    <th>Tel</th>
+                                    <th>Voiture</th>
+                                    <th>Passager 1</th>
+                                    <th>Passager 2</th>
+                                    <th>Passager 3</th>
+                                    <th>Passager 4</th>
+                                    <th>Supprimer</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for i in c %}
+                                <tr>
+                                    <td>{{ i.IdAnnonce }}</td>
+                                    <td>{{ i.Depart }}</td>
+                                    <td>{{ i.Approdep }}</td>
+                                    <td>{{ i.Destination }}</td>
+                                    <td>{{ i.Approdest }}</td>
+                                    <td>{{ i.Fumeur }}</td>
+                                    <td>{{ i.Bavard }}</td>
+                                    <td>{{ i.MenOnly }}</td>
+                                    <td>{{ i.WomenOnly }}</td>
+                                    <td>{{ i.Animaux }}</td>
+                                    <td>{{ i.Regulier }}</td>
+                                    <td>{{ i.DateAnnonce|date("d/m/Y") }}</td>
+                                    <td>{{ i.HoraireDepart }}</td>
+                                    <td>{{ i.Places }}</td>
+                                    <td>{{ i.Tarif }}</td>
+                                    <td>{{ i.Description }}</td>
+                                    <td>{{ i.IdMembre.firstName }} {{ i.IdMembre.lastName }}</td>
+                                    <td>{{ i.IdMembre.phoneNumber }}</td>
+                                    <td>{{ i.Voiture.model }}</td>
+                                    <td>
+                                        {% if i.place1 != NULL %}
+                                    {{ i.Place1.firstName }} {{ i.Place1.lastName }}
+                                        {% else %}
+                                        VIDE
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if i.place2 != NULL %}
+                                            {{ i.Place2.firstName }} {{ i.Place2.lastName }}
+                                        {% else %}
+                                            VIDE
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if i.place3 != NULL %}
+                                            {{ i.Place3.firstName }} {{ i.Place3.lastName }}
+                                        {% else %}
+                                            VIDE
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if i.place4 != NULL %}
+                                            {{ i.Place4.firstName }} {{ i.Place4.lastName }}
+                                        {% else %}
+                                            VIDE
+                                        {% endif %}
+                                    </td>
+                                    <td><a href="{{ path('adminannoncessup',{'idAnnonce':i.idAnnonce}) }}" class="btn btn-danger">Supprimer</a></td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+
+                        </div></div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </section>
+        <!-- /.content -->
+    </div>
+{% endblock %}

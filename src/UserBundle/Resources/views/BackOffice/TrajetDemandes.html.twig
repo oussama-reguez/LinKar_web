@@ -1,0 +1,79 @@
+{% extends "@Admin/layout.html.twig" %}
+
+{% block main %}
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <!-- /.box -->
+
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">Demandes</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <div style="height:100%; width:100%; overflow-x:hidden; overflow-x: scroll; padding-bottom:10px;">
+                        <div class="box-body">
+                            <table id="example1" class="table table-striped"  border="2" style="border-color: lightgray">
+                                <thead>
+                                <tr>
+                                    <th>Num</th>
+                                    <th>Depart</th>
+                                    <th>Point de départ</th>
+                                    <th>Destination</th>
+                                    <th>Point d'arrivée</th>
+                                    <th>Fumeur</th>
+                                    <th>Bavard</th>
+                                    <th>Hommes</th>
+                                    <th>Femmes</th>
+                                    <th>Animaux</th>
+                                    <th>Date</th>
+                                    <th>Tarif</th>
+                                    <th>Description</th>
+                                    <th>Conducteur</th>
+                                    <th>Tel</th>
+                                    <th>Conducteur</th>
+                                    <th>Supprimer</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for i in c %}
+                                    <tr>
+                                        <td>{{ i.IdDemande }}</td>
+                                        <td>{{ i.Depart }}</td>
+                                        <td>{{ i.Approdep }}</td>
+                                        <td>{{ i.Destination }}</td>
+                                        <td>{{ i.Approdest }}</td>
+                                        <td>{{ i.Fumeur }}</td>
+                                        <td>{{ i.Bavard }}</td>
+                                        <td>{{ i.MenOnly }}</td>
+                                        <td>{{ i.WomenOnly }}</td>
+                                        <td>{{ i.Animaux }}</td>
+                                        <td>{{ i.DateDemande|date("d/m/Y") }}</td>
+                                        <td>{{ i.Tarif }}</td>
+                                        <td>{{ i.Description }}</td>
+                                        <td>{{ i.IdMembre.firstName }} {{ i.IdMembre.lastName }}</td>
+                                        <td>{{ i.IdMembre.phoneNumber }}</td>
+                                        <td>
+                                            {% if i.Idrep != NULL %}
+                                                {{ i.Idrep.firstName }} {{ i.Idrep.lastName }}
+                                            {% else %}
+                                                VIDE
+                                            {% endif %}
+                                        </td>
+                                        <td><a href="{{ path('admindemandessup',{'idDemande':i.idDemande}) }}" class="btn btn-danger">Supprimer</a></td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div></div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </section>
+{% endblock %}

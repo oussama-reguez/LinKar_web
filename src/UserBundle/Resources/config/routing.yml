@@ -11,8 +11,69 @@ member_homepage:
 backoffice_homepage:
     path:     /admin
     defaults: { _controller: UserBundle:Default:index2 }
-
-
+Ajouter_Demande:
+    path:     /member/adddem
+    defaults: { _controller: UserBundle:Demande:AjoutDemande }
+Ajouter_Annonce:
+    path:     /member/addann
+    defaults: { _controller: UserBundle:Annonce:AjoutAnnonce }
+Afficher_Annonce:
+    path:     /member/affann
+    defaults: { _controller: UserBundle:Annonce:listAnnonce }
+Afficher_Demande:
+    path:     /member/affdem
+    defaults: { _controller: UserBundle:Demande:listDemande }
+Afficher_MesDemandes:
+    path:     /member/affmesdem
+    defaults: { _controller: UserBundle:Demande:listMesDemandes }
+Afficher_MesReponses:
+    path:     /member/affmesrep
+    defaults: { _controller: UserBundle:Demande:listMesReponses }
+delete:
+    path: /member/supprimer/{idDemande}
+    defaults: {_controller: UserBundle:Demande:suppDemande}
+Repondre:
+    path: /member/repondre/{idDemande}
+    defaults: {_controller: UserBundle:Demande:repDemande}
+edit_Demande:
+    path: /member/edit/{idDemande}
+    defaults: {_controller: UserBundle:Demande:editDemande}
+Maps:
+    path:     /member/maps/{idDemande}
+    defaults: { _controller: UserBundle:Demande:maps }
+Afficher_MesAnnonce:
+    path:     /member/affmesann
+    defaults: { _controller: UserBundle:Annonce:listMesAnnonces }
+deleteann:
+    path:     /member/suppann/{idAnnonce}
+    defaults: {_controller: UserBundle:Annonce:suppAnnonce}
+edit:
+    path:     /member/editann/{idAnnonce}
+    defaults: {_controller: UserBundle:Annonce:editAnnonce}
+reponseannonce:
+    path:     /member/ann/{idAnnonce}
+    defaults: { _controller: UserBundle:Annonce:repAnnonce }
+adminannonces:
+    path:     /admin/annonces
+    defaults: { _controller: UserBundle:Annonce:AnnoncesAdmin }
+adminannoncessup:
+    path:     /admin/supprimer/{idAnnonce}
+    defaults: { _controller: UserBundle:Annonce:suppAnnonceAdmin }
+admindemandes:
+    path:     /admin/demandes
+    defaults: { _controller: UserBundle:Demande:DemandesAdmin }
+admindemandessup:
+    path:     /admin/supprimerDem/{idDemande}
+    defaults: { _controller: UserBundle:Demande:suppDemandesAdmin }
+Afficher_MesParticipations:
+    path:     /member/affmespart
+    defaults: { _controller: UserBundle:Annonce:listMesParticipations }
+Afficher_MesParticipatiodns:
+    path:     /rest/ajouter
+    defaults: { _controller: UserBundle:Demande:AjoutDemande1 }
+MapsMobile:
+    path:     /mapsMobile/{idDemande}
+    defaults: { _controller: UserBundle:Demande:mapsmobile }
 
 
 

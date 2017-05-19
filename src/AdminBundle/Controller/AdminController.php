@@ -6,6 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use \DateTime;
+use Symfony\Component\HttpFoundation\ResponseHeaderBag;
+
 class AdminController extends Controller
 {
 
@@ -307,5 +309,140 @@ class AdminController extends Controller
 
 
           }
+
+    public function AafficherAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        /**
+         * @var \Doctrine\ORM\QueryBuilder $qb
+         */
+        $qb = $em->createQueryBuilder();
+        $qb
+            ->select('r')
+            ->from('LinkarBundle:Reclamation', 'r')
+            ->orderBy('r.dateReclamation', 'DESC');
+
+        if($request->isMethod("POST"))
+        {
+            if ($type = $request->get('recherche'))
+            {
+                $qb->where('r.type = ?1');
+                $qb->setParameter('1', $type);
+            }
+        }
+
+
+        $reclamation = $qb->getQuery()->getResult();
+
+
+        $paginator = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $reclamation,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit',10)
+
+
+        );
+
+
+        return $this->render('@Admin/ReclamationAdmin/starter.html.twig', array('reclamations' => $reclamation
+        , 'reclamations'=>$result));
+
+
+    }
+
+    public function AdsupprimerAction($idReclamation)
+
+    {
+        $em=$this->getDoctrine()->getManager();
+        $reclamation=$em->getRepository('LinkarBundle:Reclamation')->find($idReclamation);
+        $em->remove($reclamation);
+        $em->flush();
+
+        return $this->redirectToRoute('AdafficherRecla');
+
+    }
+
+    public function exAction(Request $request)
+    {
+        // ask the service for a Excel5
+        $phpExcelObject = $this->get('phpexcel')->createPHPExcelObject();
+
+        $phpExcelObject->getProperties()->setCreator("liuggio")
+            ->setLastModifiedBy("Giulio De Donato")
+            ->setTitle("Office 2005 XLSX Test Document")
+            ->setSubject("Office 2005 XLSX Test Document")
+            ->setDescription("Test document for Office 2005 XLSX, generated using PHP classes.")
+            ->setKeywords("office 2005 openxml php")
+            ->setCategory("Test result file");
+        $phpExcelObject->setActiveSheetIndex(0)
+            ->setCellValue('A1', 'Id_Reclamation')
+            ->setCellValue('B1', 'Nom utilisateur')
+            ->setCellValue('C1', 'Sujet')
+            ->setCellValue('D1', 'Le contenu de la reclamation')
+            ->setCellValue('E1', 'Date')
+            ->setCellValue('F1', 'Reponse')
+
+
+
+
+        ;;
+
+
+        $em=$this->getDoctrine()->getManager();
+        $reclamation=$em->getRepository('LinkarBundle:Reclamation')->findAll();
+
+        $aux=2;
+        foreach ($reclamation as $reclamations){
+            $phpExcelObject->setActiveSheetIndex(0)->setCellValue('A'.$aux, $reclamations->getIdReclamation())->setCellValue('B'.$aux, $reclamations->getMembre()->getLastName())
+                ->setCellValue('C'.$aux, $reclamations->getSubject())->setCellValue('E'.$aux, $reclamations->getDateReclamation())->setCellValue('D'.$aux, $reclamations->getText())
+                ->setCellValue('F'.$aux, $reclamations->getReponse())
+
+
+            ;
+            $aux++;
+
+
+        };
+        $phpExcelObject->getActiveSheet()->setTitle('Simple');
+        // Set active sheet index to the first sheet, so Excel opens this as the first sheet
+        $phpExcelObject->setActiveSheetIndex(0);
+
+        // create the writer
+        $writer = $this->get('phpexcel')->createWriter($phpExcelObject, 'Excel5');
+        // create the response
+        $response = $this->get('phpexcel')->createStreamedResponse($writer);
+        // adding headers
+        $dispositionHeader = $response->headers->makeDisposition(
+            ResponseHeaderBag::DISPOSITION_ATTACHMENT,
+            'La liste des reclamations.xls'
+        );
+        $response->headers->set('Content-Type', 'text/vnd.ms-excel; charset=utf-8');
+        $response->headers->set('Pragma', 'public');
+        $response->headers->set('Cache-Control', 'maxage=1');
+        $response->headers->set('Content-Disposition', $dispositionHeader);
+
+        return $response;
+    }
+
+    public function repondreAction(Request $request)
+    {
+        $rec_id = $request->get('idReclamation');
+        $rec_reponse = $request->get('reponse');
+
+        $em=$this->getDoctrine()->getManager();
+        /**
+         * @var reclamations $reclamation
+         */
+        $reclamation=$em->getRepository('LinkarBundle:Reclamation')->find($rec_id);
+        $reclamation->setReponse($rec_reponse);
+        $em->persist($reclamation);
+        $em->flush();
+
+        return $this->redirectToRoute('AdafficherRecla');
+    }
+
+
 
 }

@@ -4,6 +4,9 @@ linkar_homepage:
 stat:
     path:     /state
     defaults: { _controller: LinkarBundle:Membre:index}
+member_homepage:
+    path:     /member
+    defaults: { _controller: UserBundle:Default:index3 }
 compte:
     path:     /compte
     defaults: { _controller: LinkarBundle:Membre:index2}
@@ -16,10 +19,43 @@ verificationCompte:
 changePassword:
     path:     /changePassword
     defaults: { _controller: LinkarBundle:Membre:changePassword}
-personnelInfo:
-    path:     /personnelInfo
+Profile:
+    path:     /member/profile
     defaults: { _controller: LinkarBundle:Membre:personnel}
+EditProfile:
+    path:     /member/editprofile
+    defaults: { _controller: LinkarBundle:Membre:editprofile}
+ajouterReclamation:
+    path:     /member/ajouterReclamation
+    defaults: { _controller: LinkarBundle:Membre:ajouter }
 
+afficherReclamation:
+    path:     /member/afficherReclamation
+    defaults: { _controller: LinkarBundle:Membre:afficher }
+suppReclamation:
+    path:     /member/supprimerReclamation/{idReclamation}
+    defaults: { _controller: LinkarBundle:Membre:supprimer }
+modiReclamation:
+    path:     /member/modifierReclamation/{idReclamation}
+    defaults: { _controller: LinkarBundle:Membre:modifier }
+RechReclamation:
+    path:     /member/rechercher
+    defaults: { _controller: LinkarBundle:Membre:rechercher }
+ajouterVoiture:
+    path:     /member/addcar
+    defaults: { _controller: LinkarBundle:Car:AddCar }
+editVoiture:
+    path:     /member/editcar/{idVoiture}
+    defaults: { _controller: LinkarBundle:Car:EditCar }
+viewVoiture:
+    path:     /member/viewcar
+    defaults: { _controller: LinkarBundle:Car:ViewCar }
+deleteVoiture:
+    path:     /deletecar/{idVoiture}
+    defaults: { _controller: LinkarBundle:Car:DeleteCar}
+sendMail:
+    path:     /member/sendmail
+    defaults: { _controller: EmailBundle:Default:sendMail}
 
 
 
